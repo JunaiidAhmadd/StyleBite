@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StyleBite | Discover Contests</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be_Vietnam_Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#5C1F28",
+                        "on-tertiary-fixed-variant": "#8A5A00",
+                        "error-dim": "#9f0519",
+                        "error-container": "#f74b6d",
+                        "on-surface": "#2f2f2e",
+                        "secondary-fixed": "#FFD4BF",
+                        "on-secondary-container": "#7A2F10",
+                        "on-primary": "#fff7f3",
+                        "surface-tint": "#FF4D6D",
+                        "inverse-on-surface": "#9e9c9c",
+                        "surface-dim": "#d6d4d3",
+                        "tertiary-dim": "#E9B949",
+                        "on-tertiary-fixed": "#5A3A00",
+                        "on-error": "#ffefef",
+                        "secondary-container": "#FFE1D6",
+                        "secondary-fixed-dim": "#FFC29E",
+                        "primary-dim": "#E54360",
+                        "secondary-dim": "#B14A1F",
+                        "outline": "#9A8F8A",
+                        "primary": "#FF4D6D",
+                        "tertiary": "#FFD166",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f6f5",
+                        "inverse-primary": "#FF8A5B",
+                        "primary-fixed": "#FF8A5B",
+                        "primary-fixed-dim": "#FF6B57",
+                        "primary-container": "#FF8A5B",
+                        "surface-variant": "#dfdcdc",
+                        "on-secondary-fixed-variant": "#8B3A14",
+                        "inverse-surface": "#0e0e0e",
+                        "on-tertiary-container": "#7A2E00",
+                        "on-secondary": "#fff3ec",
+                        "background": "#f9f6f5",
+                        "surface-container-low": "#f3f0ef",
+                        "tertiary-fixed-dim": "#F3D98B",
+                        "on-tertiary": "#5A3A00",
+                        "on-background": "#2f2f2e",
+                        "tertiary-container": "#FFE7A8",
+                        "on-primary-fixed-variant": "#7A2834",
+                        "on-surface-variant": "#5c5b5b",
+                        "surface-bright": "#f9f6f5",
+                        "outline-variant": "#afadac",
+                        "surface-container-highest": "#dfdcdc",
+                        "on-secondary-fixed": "#5A1E00",
+                        "tertiary-fixed": "#FFE29A",
+                        "surface-container-high": "#e4e2e1",
+                        "surface-container": "#eae7e7",
+                        "secondary": "#C65A22",
+                        "error": "#b41340",
+                        "on-primary-fixed": "#000000",
+                        "on-error-container": "#510017"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .hide-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f6f5]/80 dark:bg-[#2f2f2e]/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<span class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent font-extrabold font-['Plus_Jakarta_Sans'] tracking-tight text-2xl">StyleBite</span>
+</div>
+<a class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white px-6 py-2 rounded-full font-bold font-['Plus_Jakarta_Sans'] hover:scale-105 transition-transform duration-200 scale-95 active:opacity-80" href="create_contest.html">Create</a>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Hero Editorial Section -->
+<section class="mb-12">
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6">
+<div>
+<span class="text-primary font-bold tracking-widest text-sm uppercase mb-2 block">Curation Hub</span>
+<h1 class="font-headline font-extrabold text-5xl md:text-6xl tracking-tighter text-on-surface">Style <span class="italic text-outline-variant font-light">Arena</span></h1>
+</div>
+<div class="flex bg-surface-container-low p-1.5 rounded-full" id="contestCategoryTabs">
+<button aria-pressed="true" class="contest-tab-btn bg-surface-container-lowest text-primary px-8 py-2.5 rounded-full font-bold text-sm shadow-sm transition-all" data-target="admin" type="button">Admin-created</button>
+<button aria-pressed="false" class="contest-tab-btn text-on-surface-variant px-8 py-2.5 rounded-full font-bold text-sm hover:text-on-surface transition-all" data-target="community" type="button">Community-created</button>
+</div>
+</div>
+</section>
+<!-- Admin Contests (Featured Bento Grid) -->
+<section class="mb-16 contest-section" data-section="admin" id="adminContestSection">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline font-bold text-2xl tracking-tight">Admin Contests</h2>
+<a class="text-primary font-semibold text-sm hover:opacity-80 transition-opacity" href="leaderboard.html?contest=admin-metropolis-minimalist&period=global&category=outfit">View Leaderboard</a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<!-- Large Featured Card -->
+<div class="md:col-span-2 group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_50px_rgba(47,47,46,0.04)] hover:shadow-xl transition-all duration-500">
+<div class="aspect-[16/9] w-full relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="high-fashion street style editorial photography of a model in a vibrant yellow coat in a minimalist urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBXmOecsf2I60et56zDw8s1-ypCYAKEUWbywG4dL8DiwPKTeoLdXp2tQHbCUJvYxgse4oQSQzQRo3jDgfCxkjFOriYGuwoXXu-4XzaD6WHp8UOkOjf633YRtVCgDNSdwWW_5RBp63BExbnp3nKDnrps8OOD5QM26twTW6-Fs8tHt6uKdaSu_o406c9nsyap5TWqXVeXxcuwQf7r_3KStWUhUXUXQr0HIZEYoYKAJjWFMQWfsA1rxbve1dUBzqjUi3m85_32HUTR7NM"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent"></div>
+<div class="absolute top-6 left-6 flex gap-2">
+<span class="bg-primary text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">Active</span>
+<span class="bg-white/20 backdrop-blur-md text-white text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">City vs City</span>
+</div>
+<div class="absolute bottom-6 left-6 right-6">
+<div class="flex justify-between items-end">
+<div>
+<h3 class="text-white font-headline font-bold text-3xl mb-1 italic">Metropolis Minimalist</h3>
+<p class="text-white/80 font-medium">Winner gets 5,000 Reward Points</p>
+</div>
+<div class="text-right">
+<p class="text-white/60 text-xs uppercase tracking-widest font-bold mb-1">Time Left</p>
+<p class="text-white font-headline font-bold text-xl">14h 22m</p>
+</div>
+</div>
+</div>
+</div>
+<div class="p-6 flex flex-col gap-4 md:flex-row md:justify-between md:items-center bg-white">
+<div class="flex -space-x-3">
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-container">
+<img data-alt="portrait of a smiling woman with glasses" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDpc_AMbUo8I32xocIZQDrf6F56HD4YsZgEAcd1g4saTkUKzzI4w9VQqgLdkHV0q3tq8ey6Z9nSAyaQbfbtN_yO7pef_Esbfvgv3mFhaQpbTx6jcL46O1YyYylJ3uguD02AymwLrhl53olFtftM8_nU-va0uHnBLSFLG1xD2qUTfGnV_cNuzmtd82jkKYyf3RoPH9OlDFNVMISMlqZqMlTDljQ_ghUvlhIbAQ2cxbPLjr8_ZLTJxoVGpooh2gW6HKi1CFP09b-95x8"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-container">
+<img data-alt="portrait of a man with short hair" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA9TjP03kkwAaebmC9CaxOsPDxTctFUz78TZ3DVhYpeMvkK7n70Sz5fDrsWhMAuyx3oPwi8QgOAUwCsBRC826y5QFy6iSzFWV78eeAB-eV3IMto021oSFEN40uJHBLcGa2gPzZnoq07zmu1omUUIZuXY8oEux1Oc-IiIh-EOLXwmhSuTI3blfnPApWKPyMKKEF1Rv3vI4UfQvuUuJcBc-7eaz940UhTf5Rxa4HPci1mhkyw-yQulCodQ_SZpqqYGqKqmPgJM876TwU"/>
+</div>
+<div class="w-10 h-10 rounded-full border-2 border-white overflow-hidden bg-surface-container flex items-center justify-center bg-surface text-[10px] font-bold text-on-surface-variant">+420</div>
+</div>
+<div class="flex w-full md:w-auto gap-3">
+<a class="flex-1 md:flex-none text-center bg-gradient-to-r from-primary to-secondary text-white px-8 py-3 rounded-full font-bold shadow-lg hover:scale-105 active:scale-95 transition-all" href="contest_detail.html?contest=admin-metropolis-minimalist&source=admin&type=city">Join Contest</a>
+<a class="flex-1 md:flex-none text-center bg-surface-container-high text-on-surface px-6 py-3 rounded-full font-bold hover:bg-surface-container-highest transition-colors" href="leaderboard.html?contest=admin-metropolis-minimalist&period=global&category=outfit">Leaderboard</a>
+</div>
+</div>
+</div>
+<!-- Secondary Card -->
+<div class="group relative overflow-hidden rounded-xl bg-surface-container-lowest shadow-[0_20px_50px_rgba(47,47,46,0.04)] flex flex-col">
+<div class="aspect-square relative overflow-hidden">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" data-alt="moody editorial fashion photography of a model wearing retro sunglasses and a silk headscarf in soft twilight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoBYOD9TG5da9bb-SuemK9jzigz9OmU6JFdX3BaEvd2kte1hzBeGVwDYh6xuMS4IaSugNHYYn3yDeWibiIM59YA4IvSne62BQK2aeTCqhgzhxbqLZYYlZOgfKflte5m4pFA_E6QcUHHEJuuBUn4NCqXEhx3Pz8DCOlEkEEoeiBvHh11-ZVZlY0pHiXmlLBatLXvMO0PfQbjhzlA3DWp1-RYNx7pgbplBisaS_eMOuzwv8O7dyCp0-fELDUe1bklAa9B3ziDPOdjls"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/40 to-transparent"></div>
+<div class="absolute top-4 left-4">
+<span class="bg-secondary-container text-on-secondary-container text-[10px] font-bold px-3 py-1 rounded-full uppercase tracking-wider">1v1 Duel</span>
+</div>
+<div class="absolute bottom-4 left-4">
+<p class="text-white/60 text-[10px] uppercase tracking-widest font-bold mb-0.5">Prize</p>
+<p class="text-white font-headline font-bold text-lg">Limited Edition Badge</p>
+</div>
+</div>
+<div class="p-5 flex-grow flex flex-col justify-between">
+<div>
+<h3 class="font-headline font-bold text-xl mb-1">Retro Futurism</h3>
+<div class="flex items-center gap-2 text-on-surface-variant text-sm mb-4">
+<span class="material-symbols-outlined text-sm" data-icon="schedule">schedule</span>
+<span>2 Days Left</span>
+</div>
+</div>
+<a class="block w-full py-3 text-center rounded-full bg-surface-container-high text-on-surface font-bold hover:bg-surface-container-highest transition-colors" href="contest_detail.html?contest=admin-retro-futurism&source=admin&type=1v1">Join</a>
+</div>
+</div>
+</div>
+</section>
+<!-- Community Contests -->
+<section class="contest-section hidden" data-section="community" id="communityContestSection">
+<div class="flex items-center justify-between mb-8">
+<h2 class="font-headline font-bold text-2xl tracking-tight">Community Contests</h2>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="tune">tune</span>
+</button>
+</div>
+</div>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- Community Card 1 -->
+<div class="bg-surface-container-low rounded-xl p-4 group transition-all duration-300 hover:bg-surface-container-lowest hover:shadow-xl">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover" data-alt="overhead shot of curated clothing items and accessories neatly arranged on a neutral surface" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAQKAl0hbcyTTFWCj-fz6knPnSy20AJ-yBolRVd3hLA3AB69y9A_HZdWpJV7pWOuspUcQpEAMpaGS-kLrMfYfHLyLWI-Cih2YxetQtBCCLZ1FsyJaFeC-TO-jSyGSL-pqx0qbElOm5TgBFYKOwDW-_r7_yWnKBUzWcoE_FAUMD6bE2QLRXT7KeTy5Cfvquiwf_3vxyAbSWKz5ZzlqDGcb4FgfS9ckhEOYG3EyFl6mGvQ4lZA4bG7ozW7XLcm9GBeumDBovt34E56p0"/>
+<div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all"></div>
+<div class="absolute bottom-3 right-3">
+<span class="bg-white/90 backdrop-blur-sm text-primary text-[10px] font-black px-2 py-1 rounded">VOTING</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface leading-tight">Boho-Chic Essentials</h4>
+<span class="text-[10px] font-bold text-secondary-dim bg-secondary-fixed/30 px-2 py-0.5 rounded">Group</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full overflow-hidden bg-surface-variant">
+<img data-alt="user avatar profile small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_z7ui6BqI6nRCrXaGELOk0353KiQOJoV1DKIHAvCEa0iHFSJu9etdYiFreXDLflxZUyRlchIbJ-iH0-6Qw5LQeak0c_2zAZJGvk4S8Qoch-b0BZ_jd02yeYjF78t0jRjjma-fmRlyhEiBSOhkS9grC8k9baSwvM7K2fFWG0mUQWT5OYp7106FbtKfgToxmB5pOuROihjDzh0Id0Nz3gmTrJAx2hEOzJcvtBwEnguYtcmW3HnqXTN8vgUAm-ofhOd813dkbGshRok"/>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">@alex_vibe</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Ends in 4h</span>
+</div>
+<a class="block w-full py-2.5 text-center rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all duration-300" href="contest_detail.html?contest=community-boho-group&source=community&type=group">Vote Now</a>
+</div>
+</div>
+<!-- Community Card 2 -->
+<div class="bg-surface-container-low rounded-xl p-4 group transition-all duration-300 hover:bg-surface-container-lowest hover:shadow-xl">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover" data-alt="macro shot of high-quality denim texture with silver buttons and expert stitching details" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDEUr9XhO4ZENKm_nueuNxWpN-BoSXSzCezI8kYACg8WyYGnxdcffyl3dol8Znm2kguvZ_wgRBs099bcmWaY2yASK64QCZC5qipjDbgZGb9GV0L87Qa1gg2Tp5ORZJh660UmR4LjUUZTBSe0HIa9Z7iVwFw4yQA-yYlwFN-uQDytV1sjNKc51AHNfrKJLp1c90vR6hEKDoUhlN_WWs4abPGMVyRdevJR9F1Z3UpNEhCKgULz2vA8jwuhgySLlRHTbOph-q9FIfYw"/>
+<div class="absolute top-3 left-3">
+<span class="bg-white/90 backdrop-blur-sm text-on-primary-container text-[10px] font-black px-2 py-1 rounded">1v1v1v1</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface leading-tight">Denim Mastery</h4>
+<span class="text-[10px] font-bold text-primary bg-primary-container/30 px-2 py-0.5 rounded">Active</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full overflow-hidden bg-surface-variant">
+<img data-alt="user avatar profile small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCkTG9_qBKqZTM4oyQrOsK5nuHQBAI-NCgUO8EPQVRV7xJgnzAxdk1o7c2zVcCKZveecc49Y4wj4atcgylp_oandhV-FC45h2lzksiknBcCju3mv9GnThT--O0QtL_jH05ceX5PUGq7lIkAhD4GdxWP8XXX_m2kI4hhrXVIzjDnJxHMIHhpYVObqIqMOLQM9kBEBoluqImAn-3tWRrGHrwvtUQu3oFmdHBzSBatOkbr3BiPPT1o52EUjofDuWQSOBm728HGdfOY1os"/>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">@denim_head</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Ends in 12h</span>
+</div>
+<a class="block w-full py-2.5 text-center rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all duration-300" href="contest_detail.html?contest=community-denim-brand&source=community&type=brand">Join</a>
+</div>
+</div>
+<!-- Community Card 3 -->
+<div class="bg-surface-container-low rounded-xl p-4 group transition-all duration-300 hover:bg-surface-container-lowest hover:shadow-xl opacity-80">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative grayscale">
+<img class="w-full h-full object-cover" data-alt="black and white photography of high fashion editorial models in avant-garde outfits" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPM4KG7Zwo72uZ0mSdbYxcR0SSkWIOsBZGvppLttGlinIxUDwvq5axXTzfo_WLBZYXjolNcmy858nJdeyu05wsKIHC97tLj3O9P5Gsp6Ko-oWdiZPbnlN9Jwga2UxeXpsZNJiNkkQUSXtDGerY229RJe4PWbq4O3UJWL5Fa0Poj8cRMJoxNwm34vDCsbqNdcQ8q97sAIZ3SKWGHv7KkVOJol2lyrdag5uOW_vd199qz1wN-pTyHqs3poWh_r9ANGGQgnv4YcYbmbI"/>
+<div class="absolute inset-0 bg-black/40 flex items-center justify-center">
+<span class="bg-white text-on-surface text-xs font-bold px-4 py-1.5 rounded-full shadow-lg">ENDED</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface-variant leading-tight">Noir Avant-Garde</h4>
+<span class="text-[10px] font-bold text-outline-variant bg-surface-variant px-2 py-0.5 rounded">1v1</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full overflow-hidden bg-surface-variant">
+<img data-alt="user avatar profile small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCfezp6IW6tg0NKWBFWsc2Eyhsp5xMwAS_RDh2wyDpxXR3s6xxVP_JSV1_-d0bLgdztopfpLPq7GamROoZqflWZD_Fayj0gH86OxCQv09qbhLJL9on-7Q8qzhbTolFrYCvlRtgPX6yds3Y97YBQpgIjK5LrJEQ6d3We1XlNOoeVBQeIeqjzpk_MjK1mfMwOGPjHhiahe5dU-K7HuHCCE8LO1n8KjEkvaOMaz5z0YMMqM0s20FtMGtkmuN65Fefwddyr-x5fnTQJ1n0"/>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">@midnight_muse</span>
+</div>
+</div>
+<a class="block w-full py-2.5 text-center rounded-full bg-surface-container-highest text-on-surface-variant text-sm font-bold hover:bg-surface-container-high transition-colors" href="leaderboard.html?contest=community-noir-duel&period=monthly&category=battles">View Results</a>
+</div>
+</div>
+<!-- Community Card 4 -->
+<div class="bg-surface-container-low rounded-xl p-4 group transition-all duration-300 hover:bg-surface-container-lowest hover:shadow-xl">
+<div class="aspect-[3/4] rounded-lg overflow-hidden mb-4 relative">
+<img class="w-full h-full object-cover" data-alt="colorful luxury accessories and silk scarves displayed in an elegant boutique window" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCuMbaLs1_p821s4wBXL7I23b8pHf154FDfJw3ctu0KDWoPdhVkYF9uGsMmJoqC81r4qtViNGVhaB8AcylGrtylo1JzB8h3_dYKxMUNbOl5xtFlGFePp--hWP_wdh2vu2Yq_tuKyu7gljLtBecfA9D8TQ3Q50MdkYH54b8odgoMQBSzayJD_CQ6CqggApxHA8K91InCxnBJGILD1NOi4aV7fTbQVn8JHBtKWSuQ23TVy8jKjqrSL2VWOOrgH9AJzhcvFSWzirxLxQY"/>
+</div>
+<div class="space-y-3">
+<div class="flex justify-between items-start">
+<h4 class="font-bold text-on-surface leading-tight">Accessory Overload</h4>
+<span class="text-[10px] font-bold text-secondary-dim bg-secondary-fixed/30 px-2 py-0.5 rounded">City</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<div class="w-5 h-5 rounded-full overflow-hidden bg-surface-variant">
+<img data-alt="user avatar profile small" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3CY7FSdAkYUl1b2cZAm0DG_8DMCEaOQ2nhbPQlZCN2FEeQx5FztzR5ghTz-BsM1bpatztO59fOZ1yk0PYm0m2cgtRwI--nvucucHMTG8F2Ydf_FhAEdCvmkG3HVIU0Kf_tGa8k2tM98MG26H-c4MMz6LztL-Bq4NqJTgVPW3dOuUQQWe4PX8dB3_k54HRBw72mIYTM6Y1jxyM0MKDHieCtOKlCIhitej-B-0ot0uPvu1_W5hIv27cg24vVW6JBEItG0P2q7XCIjg"/>
+</div>
+<span class="text-xs text-on-surface-variant font-medium">@glam_queen</span>
+</div>
+<span class="text-[10px] text-on-surface-variant font-bold uppercase tracking-tighter">Starts in 2h</span>
+</div>
+<a class="block w-full py-2.5 text-center rounded-full border border-primary text-primary text-sm font-bold hover:bg-primary hover:text-white transition-all duration-300" href="contest_detail.html?contest=community-accessory-city&source=community&type=city">Set Reminder</a>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="contest_home.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+<script>
+  (() => {
+    const tabButtons = Array.from(document.querySelectorAll(".contest-tab-btn"));
+    const sections = Array.from(document.querySelectorAll(".contest-section"));
+
+    function setCategory(category) {
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.target === category;
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.classList.toggle("bg-surface-container-lowest", isActive);
+        button.classList.toggle("text-primary", isActive);
+        button.classList.toggle("shadow-sm", isActive);
+        button.classList.toggle("text-on-surface-variant", !isActive);
+      });
+
+      sections.forEach((section) => {
+        section.classList.toggle("hidden", section.dataset.section !== category);
+      });
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => setCategory(button.dataset.target));
+    });
+
+    setCategory("admin");
+  })();
+</script>
+</body></html>
+
+

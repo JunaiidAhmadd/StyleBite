@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Contest Details - StyleBite</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-container": "#5C1F28",
+                        "on-tertiary-fixed-variant": "#8A5A00",
+                        "error-dim": "#9f0519",
+                        "error-container": "#f74b6d",
+                        "on-surface": "#2f2f2e",
+                        "secondary-fixed": "#FFD4BF",
+                        "on-secondary-container": "#7A2F10",
+                        "on-primary": "#fff7f3",
+                        "surface-tint": "#FF4D6D",
+                        "inverse-on-surface": "#9e9c9c",
+                        "surface-dim": "#d6d4d3",
+                        "tertiary-dim": "#E9B949",
+                        "on-tertiary-fixed": "#5A3A00",
+                        "on-error": "#ffefef",
+                        "secondary-container": "#FFE1D6",
+                        "secondary-fixed-dim": "#FFC29E",
+                        "primary-dim": "#E54360",
+                        "secondary-dim": "#B14A1F",
+                        "outline": "#9A8F8A",
+                        "primary": "#FF4D6D",
+                        "tertiary": "#FFD166",
+                        "surface-container-lowest": "#ffffff",
+                        "surface": "#f9f6f5",
+                        "inverse-primary": "#FF8A5B",
+                        "primary-fixed": "#FF8A5B",
+                        "primary-fixed-dim": "#FF6B57",
+                        "primary-container": "#FF8A5B",
+                        "surface-variant": "#dfdcdc",
+                        "on-secondary-fixed-variant": "#8B3A14",
+                        "inverse-surface": "#0e0e0e",
+                        "on-tertiary-container": "#7A2E00",
+                        "on-secondary": "#fff3ec",
+                        "background": "#f9f6f5",
+                        "surface-container-low": "#f3f0ef",
+                        "tertiary-fixed-dim": "#F3D98B",
+                        "on-tertiary": "#5A3A00",
+                        "on-background": "#2f2f2e",
+                        "tertiary-container": "#FFE7A8",
+                        "on-primary-fixed-variant": "#7A2834",
+                        "on-surface-variant": "#5c5b5b",
+                        "surface-bright": "#f9f6f5",
+                        "outline-variant": "#afadac",
+                        "surface-container-highest": "#dfdcdc",
+                        "on-secondary-fixed": "#5A1E00",
+                        "tertiary-fixed": "#FFE29A",
+                        "surface-container-high": "#e4e2e1",
+                        "surface-container": "#eae7e7",
+                        "secondary": "#C65A22",
+                        "error": "#b41340",
+                        "on-primary-fixed": "#000000",
+                        "on-error-container": "#510017"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "1rem",
+                        "lg": "2rem",
+                        "xl": "3rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Be Vietnam Pro"],
+                        "label": ["Be Vietnam Pro"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .vibe-gradient {
+            background: linear-gradient(135deg, #FF4D6D, #FF8A5B);
+        }
+        .glass-header {
+            background: rgba(249, 246, 245, 0.8);
+            backdrop-filter: blur(24px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f9f6f5]/80 dark:bg-[#2f2f2e]/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<a class="hover:scale-105 transition-transform duration-200 active:scale-95 text-[#FF4D6D]" href="contest_home.html">
+<span class="material-symbols-outlined" data-icon="arrow_back">arrow_back</span>
+</a>
+<h1 class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent font-extrabold font-['Plus_Jakarta_Sans'] tracking-tight text-2xl">StyleBite</h1>
+</div>
+<a class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white px-6 py-2 rounded-full font-headline font-bold text-sm hover:scale-105 transition-transform duration-200 active:scale-95" href="create_contest.html">Create</a>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto space-y-16">
+<section class="rounded-3xl bg-surface-container-low p-6 md:p-8 shadow-[0_16px_34px_rgba(47,47,46,0.06)]" id="contestHeroSection">
+<div class="flex flex-col md:flex-row md:items-start md:justify-between gap-6">
+<div class="space-y-3">
+<div class="flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest" id="contestSourceBadge">Community-created</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-high text-on-surface text-xs font-bold uppercase tracking-widest" id="contestTypeBadge">1v1 Duel</span>
+</div>
+<h2 class="font-headline font-extrabold text-4xl md:text-5xl tracking-tight text-on-surface" id="contestHeroTitle">Street Style Duel</h2>
+<p class="text-on-surface-variant text-base md:text-lg max-w-2xl" id="contestHeroSubtitle">Two titans of minimalism go head-to-head. Pick the look that defines the season.</p>
+</div>
+<div class="rounded-2xl bg-surface-container-lowest p-5 min-w-[220px]">
+<p class="text-[11px] uppercase tracking-widest text-on-surface-variant font-bold mb-1">Prize Pool</p>
+<p class="text-2xl font-headline font-extrabold text-primary" id="contestHeroPrize">$5,000</p>
+<p class="text-xs text-on-surface-variant mt-1" id="contestHeroTime">Ends in 2d 04h</p>
+</div>
+</div>
+<div class="mt-5 flex flex-wrap gap-3">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white font-bold text-sm shadow-[0_10px_24px_rgba(255,77,109,0.28)] hover:scale-105 active:scale-95 transition-transform" href="leaderboard.html?contest=street-style-duel&period=weekly&category=outfit" id="contestHeroLeaderboardLink">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+                        View Leaderboard
+                    </a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-lowest text-on-surface font-bold text-sm hover:bg-surface-container-high transition-colors active:scale-95" href="private_earning.html">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                        My Earnings
+                    </a>
+</div>
+</section>
+
+<section class="hidden bg-surface-container-low rounded-2xl p-6" id="adminTopUsersSection">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline font-bold text-2xl">Top Contest Creators</h3>
+<a class="text-primary text-sm font-bold hover:opacity-80 transition-opacity" href="leaderboard.html" id="adminTopUsersLeaderboardLink">See Full Ranking</a>
+</div>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4" id="adminTopUsersGrid"></div>
+</section>
+
+<!-- SECTION 1: 1v1 Contest -->
+<section class="space-y-8 contest-module" data-module="1v1" id="module1v1">
+<div class="flex flex-col gap-2">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface" id="duelTitle">Street Style Duel</h2>
+<p class="text-on-surface-variant text-lg max-w-2xl" id="duelSubtitle">Two titans of minimalism go head-to-head. Pick the look that defines the season.</p>
+</div>
+<div class="flex flex-wrap items-center gap-3">
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white font-bold text-sm shadow-[0_10px_24px_rgba(255,77,109,0.28)] hover:scale-105 active:scale-95 transition-transform" href="leaderboard.html?contest=street-style-duel&period=weekly&category=outfit" id="duelLeaderboardLink">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">leaderboard</span>
+                        View Leaderboard
+                    </a>
+<a class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-surface-container-low text-on-surface font-bold text-sm hover:bg-surface-container-high transition-colors active:scale-95" href="private_earning.html">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
+                        My Earnings
+                    </a>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+<!-- Competitor Left -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_10px_40px_rgba(47,47,46,0.04)] flex flex-col gap-6">
+<div class="relative group overflow-hidden rounded-lg">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-110" data-alt="high fashion model in oversized beige trench coat posing against a concrete wall with dramatic shadows" id="duelLeftImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCE9rd_7HRkuc8ei-mlpkDbNh3btlFcJ0v38znm-DePBDC7yWezhCLG7tJTgboDv8YW0bk0t5UFxs1vvhB076Tv01ZObthuMMq_Z7h5NhWDI8mgJ8KY1pVLBnFnTF10CHg-E7ScqzJ3nXlFGWc4B8SYnMKY_IkqPRUwaJDrcNPesgFWOMWCqDwzvTwh2H56wCYca1YqrPZlLrLLI9XNS6KK3e7vvl8iebbZR7LTADp2Vvm90aKL5U4J2OctxFiFXcKi7UDsEQdFzg"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full">
+<span class="font-headline font-bold text-primary" id="duelLeftHandle">@lexi_style</span>
+</div>
+</div>
+<button class="vibe-gradient text-white py-4 rounded-full font-headline font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all" id="duelLeftVoteBtn">
+                        Vote for Lexi
+                    </button>
+</div>
+<!-- Competitor Right -->
+<div class="bg-surface-container-lowest rounded-xl p-4 shadow-[0_10px_40px_rgba(47,47,46,0.04)] flex flex-col gap-6">
+<div class="relative group overflow-hidden rounded-lg">
+<img class="w-full aspect-[3/4] object-cover transition-transform duration-500 group-hover:scale-110" data-alt="male model in avant-garde black streetwear with neon accents standing in a neon-lit urban alleyway" id="duelRightImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDuSA7uFt4HLiW8UcX4mb7-LrWicIJx2sA8W14fpwB1p9tj8ez3tyMGFa0pLctVpwP8-k0jwT6IptveCzXRA_i-39B_ekzHv5bhdya_ykejRqE8pa3dIq8VPzkNtZx0XnR0G5-jw0N_9qbt9_cbH02FYFqkPi8w0crEDpAGPi6Kc-Vj5Bu8q2mIeEqVY0A1_HSl9K_PFtbHu7_RqnRWvQeKMm-Cqs3ThxyGwmN8U8m0z8L7v51ZnFnPBnHsAPJBIhXsfE0ybpirvXE"/>
+<div class="absolute bottom-4 left-4 bg-white/90 backdrop-blur-md px-4 py-2 rounded-full">
+<span class="font-headline font-bold text-primary" id="duelRightHandle">@marcus_vibe</span>
+</div>
+</div>
+<button class="vibe-gradient text-white py-4 rounded-full font-headline font-bold text-lg hover:scale-[1.02] active:scale-[0.98] transition-all" id="duelRightVoteBtn">
+                        Vote for Marcus
+                    </button>
+</div>
+</div>
+</section>
+<!-- SECTION 2: 1v1v1v1 Brand Contest -->
+<section class="bg-surface-container-low rounded-xl p-8 md:p-12 space-y-12 contest-module" data-module="brand" id="moduleBrand">
+<div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+<div class="space-y-4">
+<div class="flex items-center gap-3">
+<span class="bg-primary-container text-on-primary-container px-3 py-1 rounded-full text-xs font-bold uppercase tracking-widest">Brand Sponsored</span>
+<span class="text-secondary font-bold font-headline">LuxAura Presents</span>
+</div>
+<h2 class="font-headline font-extrabold text-5xl tracking-tighter text-on-surface" id="brandTitle">The Summer Gala Invitational</h2>
+<p class="text-on-surface-variant text-lg max-w-xl" id="brandSubtitle">A curated selection of the season's most promising designers competing for the LuxAura Grant.</p>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-lg text-center min-w-[200px]">
+<span class="block text-on-surface-variant font-label text-sm uppercase tracking-widest mb-1">Prize Pool</span>
+<span class="text-3xl font-headline font-extrabold text-primary" id="brandPrize">$15,000</span>
+</div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-6">
+<!-- User 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex flex-col items-center text-center gap-4 hover:scale-105 transition-transform cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="portrait of a confident woman with short dark hair in a professional studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnuHSRhn-uIxLMbMvdgJUwZSa85suajBta2L7Q1kUVmA9PVBXRYA_uU1vZRjlchaqJ01wq4Pxap8LEM00yhYnrRu76ERqlFKdxHON3yVKwjRtiGf6na8xTe44tNN4cODnajee-fGMS66zi2sZ5GeN-V881NVIAVs0Y9GknmmGMBZv-ByIlF24TCaGEvxhfeM8sF7WB-Pepk4Oay7AEta6srJzA35DNwIHwDga1TqBsK7RGTP-kPiCBAcrOgIv6KSNG8uFdWUQSA1w"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Elena Rossi</h4>
+<p class="text-xs text-on-surface-variant font-medium">Digital Knitwear</p>
+</div>
+</div>
+<!-- User 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex flex-col items-center text-center gap-4 hover:scale-105 transition-transform cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="smiling young man with beard and glasses wearing a beige sweater" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBPFmtDj7nyoxzyL-8feVKJCvaNWz26dQBDY5I31qO9SnD-1KmRqSRX0AdEchy-UoEptVet_uF5MFcelVJxKS9cXtObp69hPZzNmkYogk-mnaF4PUhQazj5QFxs6iXXDMSA_b6SnYPn2chazVN5S3hD3ug5gP3GNUni7OiG1j3dS_hruOg5falaJcFNsWNUTFR1kHOEGjtE7KaBfURRWxT1Nl4POndtezK4VGWQmf7ifN6dTy7AlKgaBUU8M3jt7rLz84w3oZZ9eQM"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Julian Chen</h4>
+<p class="text-xs text-on-surface-variant font-medium">Sustainable Tech-wear</p>
+</div>
+</div>
+<!-- User 3 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex flex-col items-center text-center gap-4 hover:scale-105 transition-transform cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="glamour portrait of a woman with red lipstick and vintage hairstyle" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCleJqSO51uBFaJkl61vUIgK07Wc7BO7vLaXqnbijJkYItxGZm4JrDcEiQyJDkcMF0Fw0eBvogiJ74LXzwmtHBWGCwufPDjOhLfkyzr2XnJX1m7mZIR73XN0uOuiXgjLqXnSKpvjUO2Tex_OjEFjFlobHo5-3y1JTJeYG9GBi_k3mVFxAFcW5IEycIH4Eza7zJBgozZetoL1fM5iwCzvvZVg1GKCoTXrfjXRxbmVHCqK_ahXod5mj6BZobZUoGqLcjl01lsRtwNdmw"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">Sarah Bloom</h4>
+<p class="text-xs text-on-surface-variant font-medium">Avant-Garde Floral</p>
+</div>
+</div>
+<!-- User 4 -->
+<div class="bg-surface-container-lowest p-6 rounded-lg flex flex-col items-center text-center gap-4 hover:scale-105 transition-transform cursor-pointer">
+<div class="w-24 h-24 rounded-full overflow-hidden border-4 border-primary/20">
+<img class="w-full h-full object-cover" data-alt="middle aged man with kind eyes wearing a denim jacket outdoors" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZf3iWaq5u82kLwoWnrYwlmuGfLrwCx884rFA01mAIaQlPkHxZJqndgRMvvj6L3Dk9K3XM_ReI7zjULlS-q-RQwPuVRKlMYziMuL2D08BtFxnReVBlU0_XFeLw9tSs4_4YS0NOw1bJ99mXCQmL_17PqxQ8QA2YOQTapEwYct9Wp04j9KD9XkdjkqJy22b8b7KkCr56P0WEJYTAsd_APXPBm3zG76XZS4y4whGzwQTRla2klmp0LgwYMj9yPJkqEk2oT364fpo7Gdk"/>
+</div>
+<div>
+<h4 class="font-headline font-bold text-on-surface">David Vance</h4>
+<p class="text-xs text-on-surface-variant font-medium">Reconstructed Denim</p>
+</div>
+</div>
+</div>
+</section>
+<!-- SECTION X: Group vs Group -->
+<section class="hidden bg-surface-container-low rounded-xl p-8 md:p-12 space-y-10 contest-module" data-module="group" id="moduleGroup">
+<div class="space-y-3">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 text-primary text-xs font-bold uppercase tracking-widest">Group Battle</div>
+<h2 class="font-headline font-extrabold text-4xl tracking-tight text-on-surface" id="groupTitle">Boho-Chic Essentials</h2>
+<p class="text-on-surface-variant text-lg max-w-3xl" id="groupSubtitle">Two creative squads competing on styling, cohesion, and originality.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest rounded-xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-2xl" id="groupLeftName">Group Aurora</h3>
+<span class="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary" id="groupLeftVotes">2,312 votes</span>
+</div>
+<p class="text-sm text-on-surface-variant" id="groupLeftDesc">Street-ethnic blend with handcrafted details and layered accessories.</p>
+<ul class="space-y-2 text-sm text-on-surface-variant" id="groupLeftMembers"></ul>
+<button class="w-full py-3 rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white font-bold hover:scale-[1.02] active:scale-[0.98] transition-transform" id="groupLeftVoteBtn">Vote Group Aurora</button>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 space-y-4">
+<div class="flex items-center justify-between">
+<h3 class="font-headline font-bold text-2xl" id="groupRightName">Group Nova</h3>
+<span class="text-xs font-bold px-3 py-1 rounded-full bg-primary/10 text-primary" id="groupRightVotes">2,108 votes</span>
+</div>
+<p class="text-sm text-on-surface-variant" id="groupRightDesc">Monochrome utility silhouettes with modern sneaker-forward styling.</p>
+<ul class="space-y-2 text-sm text-on-surface-variant" id="groupRightMembers"></ul>
+<button class="w-full py-3 rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white font-bold hover:scale-[1.02] active:scale-[0.98] transition-transform" id="groupRightVoteBtn">Vote Group Nova</button>
+</div>
+</div>
+</section>
+<!-- SECTION 3: Group Contest - City vs City -->
+<section class="space-y-10 contest-module" data-module="city" id="moduleCity">
+<div class="text-center space-y-4">
+<h2 class="font-headline font-extrabold text-4xl tracking-tight" id="cityTitle">Metropolis Face-Off</h2>
+<div class="flex items-center justify-center gap-4 text-primary font-bold">
+<span class="material-symbols-outlined">schedule</span>
+<span id="cityTimer">VOTING STARTS IN: 04:22:15</span>
+</div>
+<a class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low text-on-surface text-sm font-bold hover:bg-surface-container-high transition-colors active:scale-95" href="leaderboard.html?contest=metropolis-faceoff&period=city&category=battles" id="cityLeaderboardLink">
+<span class="material-symbols-outlined text-[18px]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+                    View Full Standings
+                </a>
+</div>
+<div class="relative grid grid-cols-1 md:grid-cols-2 gap-4 rounded-xl overflow-hidden bg-surface-container">
+<!-- City 1: NYC -->
+<div class="relative min-h-[500px] flex flex-col justify-end p-8 group overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="cinematic shot of New York City skyline at dusk with shimmering lights and a purple sky" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCxT4yfQsVot8KiZ3-Gd6kFSeBGBTFHmhxlgGNsQWorS_fi31FRmSraazUkx6qxpsvhmaEX8aKQmQl2doLSVRtVHhNMJdh3BQQ27sLuC0uu72osR5zdGaQ1yYNw3ovGT0WHFzzxroiEUrbi3fmUu7hKqhYpXQ9UskxXdzqfJeaV8WJhlSW693dqv1U8zJK6IMbetJAacQz30zkF3eT2HcD94HyqkkL91qo5NxbfiVUrfuU5t2qU6lfZT4lFvs0Ng2Gz36Eqtw4UqrE"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2f2f2e]/90 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="space-y-2">
+<h3 class="font-headline font-black text-6xl text-white tracking-tighter italic" id="cityLeftName">NEW YORK</h3>
+<p class="text-white/80 font-medium" id="cityLeftParticipants">42,890 Participants joined</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-white font-bold text-sm">
+<span>Support Rating</span>
+<span id="cityLeftSupport">58%</span>
+</div>
+<div class="w-full h-3 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full vibe-gradient w-[58%] rounded-full" id="cityLeftBar"></div>
+</div>
+</div>
+<button class="w-full py-4 bg-white text-on-surface font-headline font-bold rounded-lg hover:bg-white/90 transition-colors" id="cityLeftBtn">Join Team NYC</button>
+</div>
+</div>
+<!-- City 2: Tokyo -->
+<div class="relative min-h-[500px] flex flex-col justify-end p-8 group overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="vibrant street scene in Shibuya, Tokyo at night with glowing neon signs and rain-slicked pavement" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCsFhg9WlxEvmztfxbJYgIqY4SIyR1129LFYChqKzIft4JqW2PkFTeZMkEZAWg5B7gYwgyfLqcNsebtuyn1zsc40egiiyOn5CPEMKRGJLpHZebGkPT1iZGi7BHcIQedvrUS99nKa3_ijBk9SIdU58OWJ7HpOQe0LpzBnarwYt-2z0OnIP_8unrcd-C9x3sMNjg_knQZPFvUEcB0JbVoQLHfbInEGEObDbRYyYgtwb89VvRzg0t0rT4aVqsG9vbmSgWvF72mniOeZTs"/>
+<div class="absolute inset-0 bg-gradient-to-t from-[#2f2f2e]/90 to-transparent"></div>
+</div>
+<div class="relative z-10 space-y-6">
+<div class="space-y-2 text-right">
+<h3 class="font-headline font-black text-6xl text-white tracking-tighter italic" id="cityRightName">TOKYO</h3>
+<p class="text-white/80 font-medium" id="cityRightParticipants">38,122 Participants joined</p>
+</div>
+<div class="space-y-2">
+<div class="flex justify-between text-white font-bold text-sm">
+<span>Support Rating</span>
+<span id="cityRightSupport">42%</span>
+</div>
+<div class="w-full h-3 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full vibe-gradient w-[42%] rounded-full" id="cityRightBar"></div>
+</div>
+</div>
+<button class="w-full py-4 bg-white text-on-surface font-headline font-bold rounded-lg hover:bg-white/90 transition-colors" id="cityRightBtn">Join Team Tokyo</button>
+</div>
+</div>
+<!-- VS Badge -->
+<div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20 hidden md:flex w-20 h-20 items-center justify-center bg-white rounded-full shadow-2xl border-4 border-surface">
+<span class="font-headline font-black text-2xl text-primary">VS</span>
+</div>
+</div>
+</section>
+<!-- Information & Rules -->
+<section class="grid grid-cols-1 md:grid-cols-3 gap-12 pt-12 border-t border-outline-variant/15">
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-xl text-on-surface">Contest Description</h4>
+<p class="text-on-surface-variant leading-relaxed" id="contestDescription">This season's 'Metropolis Face-Off' focuses on local identity. We want to see how the architecture, culture, and energy of your city informs your daily fit. Winners will be featured on the StyleBite global discover page.</p>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-xl text-on-surface">Participation Rules</h4>
+<ul class="space-y-3 text-on-surface-variant list-disc list-inside marker:text-primary" id="contestRulesList"></ul>
+</div>
+<div class="space-y-4">
+<h4 class="font-headline font-bold text-xl text-on-surface">How to Enter</h4>
+<div class="space-y-4" id="contestHowToList"></div>
+</div>
+</section>
+</main>
+<script>
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const contestKey = params.get("contest") || "street-style-duel";
+
+    const catalog = {
+      "street-style-duel": {
+        source: "Community-created",
+        type: "1v1",
+        typeLabel: "1v1 Duel",
+        title: "Street Style Duel",
+        subtitle: "Two style creators in a head-to-head outfit battle. Vote your winner.",
+        prize: "$5,000",
+        time: "Ends in 2d 04h",
+        leaderboard: "leaderboard.html?contest=street-style-duel&period=weekly&category=outfit",
+        description: "Community showdown where creators post one signature look each and audience voting decides the winner.",
+        rules: [
+          "Each creator can submit one main outfit post",
+          "Voting remains open until timer ends",
+          "No reposted or AI-generated outfit images",
+          "Top engagement adds bonus points"
+        ],
+        steps: [
+          "Open both contestant looks and compare styling quality.",
+          "Cast a single vote for your preferred look.",
+          "Track final rank and rewards on leaderboard."
+        ],
+        duel: {
+          title: "Street Style Duel",
+          subtitle: "Vote between both featured looks.",
+          leftHandle: "@lexi_style",
+          rightHandle: "@marcus_vibe",
+          leftVoteText: "Vote for Lexi",
+          rightVoteText: "Vote for Marcus",
+          leftImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDCE9rd_7HRkuc8ei-mlpkDbNh3btlFcJ0v38znm-DePBDC7yWezhCLG7tJTgboDv8YW0bk0t5UFxs1vvhB076Tv01ZObthuMMq_Z7h5NhWDI8mgJ8KY1pVLBnFnTF10CHg-E7ScqzJ3nXlFGWc4B8SYnMKY_IkqPRUwaJDrcNPesgFWOMWCqDwzvTwh2H56wCYca1YqrPZlLrLLI9XNS6KK3e7vvl8iebbZR7LTADp2Vvm90aKL5U4J2OctxFiFXcKi7UDsEQdFzg",
+          rightImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDuSA7uFt4HLiW8UcX4mb7-LrWicIJx2sA8W14fpwB1p9tj8ez3tyMGFa0pLctVpwP8-k0jwT6IptveCzXRA_i-39B_ekzHv5bhdya_ykejRqE8pa3dIq8VPzkNtZx0XnR0G5-jw0N_9qbt9_cbH02FYFqkPi8w0crEDpAGPi6Kc-Vj5Bu8q2mIeEqVY0A1_HSl9K_PFtbHu7_RqnRWvQeKMm-Cqs3ThxyGwmN8U8m0z8L7v51ZnFnPBnHsAPJBIhXsfE0ybpirvXE"
+        }
+      },
+      "admin-metropolis-minimalist": {
+        source: "Admin-created",
+        type: "city",
+        typeLabel: "City vs City",
+        title: "Metropolis Minimalist",
+        subtitle: "Official featured contest curated by StyleBite editors with top creator entries.",
+        prize: "$15,000",
+        time: "Ends in 14h 22m",
+        leaderboard: "leaderboard.html?contest=admin-metropolis-minimalist&period=global&category=outfit",
+        description: "Admin-created premium contest where top city creators compete for major rewards and featured placement.",
+        rules: [
+          "Only approved creator accounts can submit",
+          "Each city entry must include full outfit breakdown",
+          "Community + editorial panel both contribute to score",
+          "Highest combined score wins the grand prize"
+        ],
+        steps: [
+          "Enroll in your city faction and submit contest look.",
+          "Collect votes and maintain engagement on submission.",
+          "Leaderboard finalizes when editorial review closes."
+        ],
+        topUsers: [
+          { name: "Aria Chic", handle: "@aria.chic", points: "56.8k" },
+          { name: "Julian Vibe", handle: "@julian_vibe", points: "42.1k" },
+          { name: "Marcus Edge", handle: "@marcus_edge", points: "38.4k" },
+          { name: "Elena Style", handle: "@elena_style", points: "32.2k" }
+        ],
+        city: {
+          title: "Metropolis Face-Off",
+          timer: "VOTING CLOSES IN: 14:22:10",
+          leftName: "NEW YORK",
+          leftParticipants: "42,890 Participants joined",
+          leftSupport: 58,
+          leftButton: "Join Team NYC",
+          rightName: "TOKYO",
+          rightParticipants: "38,122 Participants joined",
+          rightSupport: 42,
+          rightButton: "Join Team Tokyo"
+        }
+      },
+      "admin-retro-futurism": {
+        source: "Admin-created",
+        type: "1v1",
+        typeLabel: "1v1 Duel",
+        title: "Retro Futurism",
+        subtitle: "Admin spotlight 1v1 between two editorial-selected creators.",
+        prize: "$8,000",
+        time: "Ends in 2d 10h",
+        leaderboard: "leaderboard.html?contest=admin-retro-futurism&period=weekly&category=outfit",
+        description: "Curated duel challenging both creators to merge retro aesthetics with futuristic silhouettes.",
+        rules: [
+          "One submission per creator",
+          "No duplicate looks from previous battles",
+          "Community vote contributes 70% of final score"
+        ],
+        steps: [
+          "Review both published looks in detail.",
+          "Vote for the strongest concept execution.",
+          "Check leaderboard for real-time rank changes."
+        ],
+        topUsers: [
+          { name: "Lexi Style", handle: "@lexi_style", points: "31.2k" },
+          { name: "Marcus Vibe", handle: "@marcus_vibe", points: "30.7k" },
+          { name: "Sasha Flux", handle: "@sasha_flux", points: "22.3k" },
+          { name: "Theo Boutique", handle: "@theo_btq", points: "20.8k" }
+        ],
+        duel: {
+          title: "Retro Futurism Duel",
+          subtitle: "Minimal retro palette vs bold neon accents.",
+          leftHandle: "@lexi_style",
+          rightHandle: "@marcus_vibe",
+          leftVoteText: "Vote Retro Lexi",
+          rightVoteText: "Vote Neon Marcus",
+          leftImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDCE9rd_7HRkuc8ei-mlpkDbNh3btlFcJ0v38znm-DePBDC7yWezhCLG7tJTgboDv8YW0bk0t5UFxs1vvhB076Tv01ZObthuMMq_Z7h5NhWDI8mgJ8KY1pVLBnFnTF10CHg-E7ScqzJ3nXlFGWc4B8SYnMKY_IkqPRUwaJDrcNPesgFWOMWCqDwzvTwh2H56wCYca1YqrPZlLrLLI9XNS6KK3e7vvl8iebbZR7LTADp2Vvm90aKL5U4J2OctxFiFXcKi7UDsEQdFzg",
+          rightImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDuSA7uFt4HLiW8UcX4mb7-LrWicIJx2sA8W14fpwB1p9tj8ez3tyMGFa0pLctVpwP8-k0jwT6IptveCzXRA_i-39B_ekzHv5bhdya_ykejRqE8pa3dIq8VPzkNtZx0XnR0G5-jw0N_9qbt9_cbH02FYFqkPi8w0crEDpAGPi6Kc-Vj5Bu8q2mIeEqVY0A1_HSl9K_PFtbHu7_RqnRWvQeKMm-Cqs3ThxyGwmN8U8m0z8L7v51ZnFnPBnHsAPJBIhXsfE0ybpirvXE"
+        }
+      },
+      "community-boho-group": {
+        source: "Community-created",
+        type: "group",
+        typeLabel: "Group vs Group",
+        title: "Boho-Chic Essentials",
+        subtitle: "Two creator squads compete on styling consistency and overall group presentation.",
+        prize: "$3,500",
+        time: "Ends in 4h",
+        leaderboard: "leaderboard.html?contest=community-boho-group&period=weekly&category=battles",
+        description: "Group battle format where team coordination and theme execution decide winners.",
+        rules: [
+          "Each team must include 3 to 6 members",
+          "All member looks should follow announced theme",
+          "Total team votes determine winner"
+        ],
+        steps: [
+          "Open both group profiles and review all member looks.",
+          "Vote for the team with stronger cohesion and quality.",
+          "Monitor team rank in dynamic leaderboard."
+        ],
+        group: {
+          title: "Boho-Chic Essentials",
+          subtitle: "Group Aurora vs Group Nova",
+          left: {
+            name: "Group Aurora",
+            votes: "2,312 votes",
+            desc: "Street-ethnic blend with handcrafted details and layered accessories.",
+            members: ["Areeba", "Noor", "Saba", "Iqra"],
+            button: "Vote Group Aurora"
+          },
+          right: {
+            name: "Group Nova",
+            votes: "2,108 votes",
+            desc: "Monochrome utility silhouettes with modern sneaker-forward styling.",
+            members: ["Hoor", "Maham", "Rayan", "Aiza"],
+            button: "Vote Group Nova"
+          }
+        }
+      },
+      "community-denim-brand": {
+        source: "Community-created",
+        type: "brand",
+        typeLabel: "Brand 1v1v1v1",
+        title: "Denim Mastery",
+        subtitle: "Brand-sponsored multi-creator format where four stylists compete in parallel.",
+        prize: "$12,000",
+        time: "Ends in 12h",
+        leaderboard: "leaderboard.html?contest=community-denim-brand&period=weekly&category=outfit",
+        description: "A 1v1v1v1 brand contest where each creator submits a statement look under the same campaign brief.",
+        rules: [
+          "Exactly one look per participant",
+          "Brand brief compliance is mandatory",
+          "Audience and jury scores are combined"
+        ],
+        steps: [
+          "Review all four creator submissions in the gallery.",
+          "Cast your vote for one participant only.",
+          "Track ranking shifts on leaderboard."
+        ],
+        brand: {
+          title: "Denim Mastery Brand Invitational",
+          subtitle: "Four-way sponsored battle by Denim Lab Studio.",
+          prize: "$12,000"
+        }
+      },
+      "community-accessory-city": {
+        source: "Community-created",
+        type: "city",
+        typeLabel: "City vs City",
+        title: "Accessory Overload",
+        subtitle: "Community city battle focused on statement accessory styling.",
+        prize: "$4,200",
+        time: "Starts in 2h",
+        leaderboard: "leaderboard.html?contest=community-accessory-city&period=city&category=battles",
+        description: "City teams submit accessory-first outfits and compete on styling creativity and audience votes.",
+        rules: [
+          "Looks must highlight at least 2 hero accessories",
+          "City tag and contest hashtag required",
+          "Top-voted city wins the weekly feature slot"
+        ],
+        steps: [
+          "Join your city roster before voting opens.",
+          "Publish your accessory-focused contest look.",
+          "Collect votes and push city rank upward."
+        ],
+        city: {
+          title: "Accessory Overload City Battle",
+          timer: "BATTLE STARTS IN: 02:00:00",
+          leftName: "KARACHI",
+          leftParticipants: "12,340 Participants joined",
+          leftSupport: 51,
+          leftButton: "Join Team Karachi",
+          rightName: "LAHORE",
+          rightParticipants: "11,982 Participants joined",
+          rightSupport: 49,
+          rightButton: "Join Team Lahore"
+        }
+      },
+      "community-noir-duel": {
+        source: "Community-created",
+        type: "1v1",
+        typeLabel: "1v1 Duel",
+        title: "Noir Avant-Garde",
+        subtitle: "Completed duel contest with finalized winner and locked leaderboard.",
+        prize: "$2,000",
+        time: "Completed",
+        leaderboard: "leaderboard.html?contest=community-noir-duel&period=monthly&category=battles",
+        description: "Finished 1v1 battle archived for results and performance analytics.",
+        rules: [
+          "Result has been finalized by system and panel",
+          "No further votes are accepted",
+          "Top creator reward already distributed"
+        ],
+        steps: [
+          "Open leaderboard to view final rank distribution.",
+          "Check winner insights and engagement stats.",
+          "Enter next active duel from contest home."
+        ],
+        duel: {
+          title: "Noir Avant-Garde Final",
+          subtitle: "Result locked. Winner announced.",
+          leftHandle: "@midnight_muse",
+          rightHandle: "@void_edge",
+          leftVoteText: "Winner: Midnight Muse",
+          rightVoteText: "Runner-up: Void Edge",
+          leftImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuDPM4KG7Zwo72uZ0mSdbYxcR0SSkWIOsBZGvppLttGlinIxUDwvq5axXTzfo_WLBZYXjolNcmy858nJdeyu05wsKIHC97tLj3O9P5Gsp6Ko-oWdiZPbnlN9Jwga2UxeXpsZNJiNkkQUSXtDGerY229RJe4PWbq4O3UJWL5Fa0Poj8cRMJoxNwm34vDCsbqNdcQ8q97sAIZ3SKWGHv7KkVOJol2lyrdag5uOW_vd199qz1wN-pTyHqs3poWh_r9ANGGQgnv4YcYbmbI",
+          rightImage: "https://lh3.googleusercontent.com/aida-public/AB6AXuA6T5LbonDkAVL7NPvOsAwLE580BTfwDe5Eq8PRhdjZGgpmKtLPsSt3W4ON9pUkX71Whld9Bz_4Oq21OJ9RkzC0kYzoZkTD-vAaUG1o_H-F2aZD9RcwOQpuAMpTM3EiH_7HBRfhcLoFbaVWkXT6LJRc99Sqg07q0bzBZB34uNDg8nF8ZglvzPmm1sxSVq4Eov8EeoMaWMwKCkmKYlUuBZRwpSfS4FOguXSA9EI841dJ-phsDLwU5hEXr0_rNMmrLJzQ_-7hXAukl2UX"
+        }
+      }
+    };
+
+    const current = catalog[contestKey] || catalog["street-style-duel"];
+
+    function setText(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.textContent = value;
+    }
+
+    function setSrc(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.src = value;
+    }
+
+    function setHref(id, value) {
+      const el = document.getElementById(id);
+      if (el) el.setAttribute("href", value);
+    }
+
+    function showModule(type) {
+      const modules = Array.from(document.querySelectorAll(".contest-module"));
+      modules.forEach((module) => {
+        module.classList.toggle("hidden", module.dataset.module !== type);
+      });
+    }
+
+    setText("contestSourceBadge", current.source);
+    setText("contestTypeBadge", current.typeLabel);
+    setText("contestHeroTitle", current.title);
+    setText("contestHeroSubtitle", current.subtitle);
+    setText("contestHeroPrize", current.prize);
+    setText("contestHeroTime", current.time);
+    setHref("contestHeroLeaderboardLink", current.leaderboard);
+
+    setText("contestDescription", current.description);
+
+    const rulesList = document.getElementById("contestRulesList");
+    if (rulesList) {
+      rulesList.innerHTML = "";
+      (current.rules || []).forEach((rule) => {
+        const li = document.createElement("li");
+        li.textContent = rule;
+        rulesList.appendChild(li);
+      });
+    }
+
+    const howTo = document.getElementById("contestHowToList");
+    if (howTo) {
+      howTo.innerHTML = "";
+      (current.steps || []).forEach((step, idx) => {
+        const row = document.createElement("div");
+        row.className = "flex items-start gap-4";
+        row.innerHTML = "<span class='flex-shrink-0 w-8 h-8 bg-primary rounded-full text-white flex items-center justify-center font-bold text-sm'>" + (idx + 1) + "</span><p class='text-sm text-on-surface-variant'>" + step + "</p>";
+        howTo.appendChild(row);
+      });
+    }
+
+    const topUsersSection = document.getElementById("adminTopUsersSection");
+    const topUsersGrid = document.getElementById("adminTopUsersGrid");
+    if (current.source === "Admin-created" && current.topUsers && topUsersSection && topUsersGrid) {
+      topUsersSection.classList.remove("hidden");
+      topUsersGrid.innerHTML = current.topUsers.map((user, idx) => (
+        "<div class='bg-surface-container-lowest rounded-xl p-4 text-center'>" +
+          "<p class='text-xs font-black text-primary mb-2'>#" + (idx + 1) + "</p>" +
+          "<p class='font-bold text-sm text-on-surface'>" + user.name + "</p>" +
+          "<p class='text-[11px] text-on-surface-variant'>" + user.handle + "</p>" +
+          "<p class='text-xs font-bold text-primary mt-1'>" + user.points + "</p>" +
+        "</div>"
+      )).join("");
+      setHref("adminTopUsersLeaderboardLink", current.leaderboard);
+    } else if (topUsersSection) {
+      topUsersSection.classList.add("hidden");
+    }
+
+    if (current.duel) {
+      setText("duelTitle", current.duel.title);
+      setText("duelSubtitle", current.duel.subtitle);
+      setText("duelLeftHandle", current.duel.leftHandle);
+      setText("duelRightHandle", current.duel.rightHandle);
+      setText("duelLeftVoteBtn", current.duel.leftVoteText);
+      setText("duelRightVoteBtn", current.duel.rightVoteText);
+      setSrc("duelLeftImage", current.duel.leftImage);
+      setSrc("duelRightImage", current.duel.rightImage);
+      setHref("duelLeaderboardLink", current.leaderboard);
+    }
+
+    if (current.brand) {
+      setText("brandTitle", current.brand.title);
+      setText("brandSubtitle", current.brand.subtitle);
+      setText("brandPrize", current.brand.prize);
+    }
+
+    if (current.group) {
+      setText("groupTitle", current.group.title);
+      setText("groupSubtitle", current.group.subtitle);
+      setText("groupLeftName", current.group.left.name);
+      setText("groupLeftVotes", current.group.left.votes);
+      setText("groupLeftDesc", current.group.left.desc);
+      setText("groupLeftVoteBtn", current.group.left.button);
+      setText("groupRightName", current.group.right.name);
+      setText("groupRightVotes", current.group.right.votes);
+      setText("groupRightDesc", current.group.right.desc);
+      setText("groupRightVoteBtn", current.group.right.button);
+      const leftMembers = document.getElementById("groupLeftMembers");
+      const rightMembers = document.getElementById("groupRightMembers");
+      if (leftMembers) {
+        leftMembers.innerHTML = "";
+        current.group.left.members.forEach((member) => {
+          const li = document.createElement("li");
+          li.textContent = "- " + member;
+          leftMembers.appendChild(li);
+        });
+      }
+      if (rightMembers) {
+        rightMembers.innerHTML = "";
+        current.group.right.members.forEach((member) => {
+          const li = document.createElement("li");
+          li.textContent = "- " + member;
+          rightMembers.appendChild(li);
+        });
+      }
+    }
+
+    if (current.city) {
+      setText("cityTitle", current.city.title);
+      setText("cityTimer", current.city.timer);
+      setText("cityLeftName", current.city.leftName);
+      setText("cityLeftParticipants", current.city.leftParticipants);
+      setText("cityLeftSupport", current.city.leftSupport + "%");
+      setText("cityLeftBtn", current.city.leftButton);
+      setText("cityRightName", current.city.rightName);
+      setText("cityRightParticipants", current.city.rightParticipants);
+      setText("cityRightSupport", current.city.rightSupport + "%");
+      setText("cityRightBtn", current.city.rightButton);
+      const leftBar = document.getElementById("cityLeftBar");
+      const rightBar = document.getElementById("cityRightBar");
+      if (leftBar) leftBar.style.width = current.city.leftSupport + "%";
+      if (rightBar) rightBar.style.width = current.city.rightSupport + "%";
+      setHref("cityLeaderboardLink", current.leaderboard);
+    }
+
+    showModule(current.type);
+  })();
+</script>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="contest_home.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+</body></html>
+
+

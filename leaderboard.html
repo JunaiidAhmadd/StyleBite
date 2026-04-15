@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>StyleBite | Leaderboard</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#FF8A5B",
+                    "on-tertiary-container": "#7A2E00",
+                    "secondary-container": "#FFE1D6",
+                    "outline": "#9A8F8A",
+                    "primary-fixed-dim": "#FF6B57",
+                    "surface-container-low": "#f3f0ef",
+                    "on-surface-variant": "#5c5b5b",
+                    "secondary-fixed-dim": "#FFC29E",
+                    "surface-container": "#eae7e7",
+                    "inverse-surface": "#0e0e0e",
+                    "secondary-dim": "#B14A1F",
+                    "surface-tint": "#FF4D6D",
+                    "error-dim": "#a70138",
+                    "inverse-primary": "#FF8A5B",
+                    "surface-bright": "#f9f6f5",
+                    "on-primary": "#fff7f3",
+                    "error": "#b41340",
+                    "tertiary-dim": "#E9B949",
+                    "primary-dim": "#E54360",
+                    "secondary": "#C65A22",
+                    "secondary-fixed": "#FFD4BF",
+                    "tertiary": "#FFD166",
+                    "error-container": "#f74b6d",
+                    "on-secondary-fixed-variant": "#8B3A14",
+                    "on-tertiary-fixed": "#5A3A00",
+                    "background": "#f9f6f5",
+                    "on-primary-fixed": "#000000",
+                    "on-surface": "#2f2f2e",
+                    "surface": "#f9f6f5",
+                    "inverse-on-surface": "#9e9c9c",
+                    "on-primary-container": "#5C1F28",
+                    "on-primary-fixed-variant": "#7A2834",
+                    "on-error-container": "#510017",
+                    "tertiary-fixed-dim": "#F3D98B",
+                    "on-background": "#2f2f2e",
+                    "tertiary-fixed": "#FFE29A",
+                    "surface-variant": "#dfdcdc",
+                    "surface-dim": "#d6d4d3",
+                    "on-secondary-container": "#7A2F10",
+                    "on-tertiary-fixed-variant": "#8A5A00",
+                    "on-error": "#ffefef",
+                    "outline-variant": "#afadac",
+                    "surface-container-highest": "#dfdcdc",
+                    "on-secondary-fixed": "#5A1E00",
+                    "on-secondary": "#fff3ec",
+                    "on-tertiary": "#5A3A00",
+                    "primary": "#FF4D6D",
+                    "primary-fixed": "#FF8A5B",
+                    "surface-container-high": "#e4e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#FFE7A8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      .power-gradient {
+        background: linear-gradient(135deg, #FF4D6D 0%, #FF8A5B 100%);
+      }
+      .power-text {
+        background: linear-gradient(135deg, #FF4D6D 0%, #FF8A5B 100%);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface pb-32">
+<header class="fixed top-0 w-full z-50 bg-[#f9f6f5]/80 backdrop-blur-xl border-b border-white/80">
+<div class="flex items-center justify-between h-16 px-6">
+<a class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors active:scale-95" href="contest_home.html">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">arrow_back</span>
+</a>
+<h1 class="text-2xl font-black bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent tracking-tight">Leaderboard</h1>
+<a class="w-10 h-10 rounded-full flex items-center justify-center text-primary hover:bg-surface-container-low transition-colors active:scale-95" href="contest_detail.html" id="lbHeaderContestLink">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</a>
+</div>
+</header>
+
+<main class="pt-24 px-6 max-w-4xl mx-auto">
+<div class="mb-8">
+<p class="text-xs font-bold uppercase tracking-wider text-primary" id="lbHeadingLabel">Contest Rankings</p>
+<h2 class="font-headline text-5xl md:text-6xl font-extrabold tracking-tight text-on-surface" id="lbContestName">Metropolis Face-Off</h2>
+<p class="text-on-surface-variant mt-2" id="lbContestSubtitle">Live standings for active city battle and creator performance.</p>
+<div class="mt-3 flex flex-wrap gap-2">
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface text-xs font-bold" id="lbContestFormat">City vs City</span>
+<span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold" id="lbContestWindow">Ends in 14h 22m</span>
+</div>
+</div>
+
+<div class="power-gradient rounded-3xl p-6 mb-8 text-white shadow-[0_20px_40px_-20px_rgba(255,77,109,0.55)]">
+<div class="flex flex-wrap items-start justify-between gap-4">
+<div>
+<div class="inline-flex items-center gap-2 bg-white/20 rounded-full px-3 py-1 text-xs font-bold uppercase tracking-widest mb-3">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">radio_button_checked</span>
+<span id="lbHeroStatus">Live Voting</span>
+          </div>
+<h3 class="font-headline text-2xl font-extrabold" id="lbHeroTitle">NYC vs Tokyo</h3>
+<p class="text-white/85 text-sm" id="lbHeroMeta">Contest ends in 14h 22m | Prize Pool $15,000</p>
+</div>
+<div class="text-right">
+<p class="text-white/70 text-xs uppercase tracking-widest font-bold">Participants</p>
+<p class="font-headline text-3xl font-black" id="lbParticipants">81,012</p>
+</div>
+</div>
+<div class="mt-5 flex flex-wrap gap-3">
+<a class="px-5 py-2 rounded-full bg-white text-primary text-sm font-bold hover:scale-105 active:scale-95 transition-transform" href="contest_detail.html" id="lbContestDetailLinkTop">Contest Detail</a>
+<a class="px-5 py-2 rounded-full bg-white/20 text-white text-sm font-bold hover:bg-white/30 transition-colors" href="private_earning.html">My Earnings</a>
+</div>
+</div>
+
+<div class="flex gap-2 overflow-x-auto pb-3 no-scrollbar mb-4" id="periodTabs">
+<button class="lb-period-btn px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap power-gradient text-white shadow-[0_10px_20px_-12px_rgba(255,77,109,0.8)]" data-period="global" type="button">Global</button>
+<button class="lb-period-btn px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-period="city" type="button">City</button>
+<button class="lb-period-btn px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-period="weekly" type="button">Weekly</button>
+<button class="lb-period-btn px-6 py-3 rounded-full text-sm font-bold whitespace-nowrap bg-surface-container-low text-on-surface-variant hover:bg-surface-container-high transition-colors" data-period="monthly" type="button">Monthly</button>
+</div>
+
+<div class="flex flex-wrap gap-2 items-center mb-10" id="categoryTabs">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest mr-2">Filter:</span>
+<button class="lb-category-btn px-4 py-1.5 rounded-full bg-surface-container-highest text-on-surface text-xs font-semibold" data-category="outfit" type="button">Outfit</button>
+<button class="lb-category-btn px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold hover:bg-surface-container-high transition-colors" data-category="food" type="button">Food</button>
+<button class="lb-category-btn px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-semibold hover:bg-surface-container-high transition-colors" data-category="battles" type="button">Battles</button>
+</div>
+
+<div class="flex items-end justify-center gap-4 mb-14 px-2">
+<div class="flex flex-col items-center w-1/3">
+<div class="relative mb-4">
+<div class="w-20 h-20 rounded-full border-4 border-surface-container-low p-1 bg-white overflow-hidden">
+<img alt="Rank 2 user" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZ7ivZRaXudso6GNdRctDwDEt4gt0O2yV3Lh6bRK8ADdyQMrGac7_CM-JarE6DD4HQhclBNUdEYmWaEWdHVGg6otFZd_gabo_wgPGcge2xwVUc59WXu69P9M2jMpty4pMbc_mMPQDmUvPeBAvFwvVtqgnmC--zaUSGfrOK4JOobwjUN4A5CnEURhQvScnDT8SV_bcBQ_JrRokb0MCPPbFiTHg2LWVSqbMRhrWYXLwygoDO5nmuypigAcjrMBwWOPjtPbmcrnIEPtlR"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-surface-container-high px-3 py-0.5 rounded-full text-xs font-bold">#2</div>
+</div>
+<div class="text-center mb-6">
+<p class="font-bold text-sm truncate">Julian_Vibe</p>
+<p class="text-xs text-on-surface-variant">42.1k pts</p>
+</div>
+<div class="w-full h-28 bg-surface-container-low rounded-t-2xl flex items-end justify-center pb-4">
+<span class="material-symbols-outlined text-surface-container-highest scale-150">military_tech</span>
+</div>
+</div>
+
+<div class="flex flex-col items-center w-1/3">
+<div class="relative mb-6">
+<div class="w-28 h-28 rounded-full border-4 border-primary p-1 bg-white overflow-hidden relative z-10">
+<img alt="Rank 1 user" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRUeQlYmPIPmFEme3WnzNLmgNLKxTsc3kzWYP1GyhC7QPF1-q8oMzrNB7-VZlwUvFFNgDV59pc5Zluo4JlnDF__IaNb1o3BiBwU-QMEliY1W6PT9u-twyzsTIQL2GicA5gxLQ2ikylvPajOyjhW1M0IlyOsrMxTuL_5JHfMa_gXuhMMxXXvuBI9JcX7WJj-SU4GyzNegs0dx6vWJseBIPVeRLXeFkBeU89Iu1mi5VJO7HYmehDFoAgZC463l3dNk-1o_LZ1VboT4M2"/>
+</div>
+<div class="absolute -top-6 left-1/2 -translate-x-1/2 text-primary scale-150">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">crown</span>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 power-gradient text-white px-4 py-1 rounded-full text-sm font-black shadow-lg">#1</div>
+</div>
+<div class="text-center mb-8">
+<p class="font-bold text-lg truncate">Aria.Chic</p>
+<p class="text-sm font-bold power-text">56.8k pts</p>
+</div>
+<div class="w-full h-44 power-gradient rounded-t-2xl flex items-center justify-center">
+<span class="material-symbols-outlined text-white/40 scale-[3]" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+</div>
+
+<div class="flex flex-col items-center w-1/3">
+<div class="relative mb-4">
+<div class="w-20 h-20 rounded-full border-4 border-surface-container-low p-1 bg-white overflow-hidden">
+<img alt="Rank 3 user" class="w-full h-full object-cover rounded-full" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6T5LbonDkAVL7NPvOsAwLE580BTfwDe5Eq8PRhdjZGgpmKtLPsSt3W4ON9pUkX71Whld9Bz_4Oq21OJ9RkzC0kYzoZkTD-vAaUG1o_H-F2aZD9RcwOQpuAMpTM3EiH_7HBRfhcLoFbaVWkXT6LJRc99Sqg07q0bzBZB34uNDg8nF8ZglvzPmm1sxSVq4Eov8EeoMaWMwKCkmKYlUuBZRwpSfS4FOguXSA9EI841dJ-phsDLwU5hEXr0_rNMmrLJzQ_-7hXAukl2UX"/>
+</div>
+<div class="absolute -bottom-2 left-1/2 -translate-x-1/2 bg-surface-container-high px-3 py-0.5 rounded-full text-xs font-bold">#3</div>
+</div>
+<div class="text-center mb-6">
+<p class="font-bold text-sm truncate">Marcus_Edge</p>
+<p class="text-xs text-on-surface-variant">38.4k pts</p>
+</div>
+<div class="w-full h-20 bg-surface-container-low rounded-t-2xl flex items-end justify-center pb-4">
+<span class="material-symbols-outlined text-surface-container-highest scale-125">military_tech</span>
+</div>
+</div>
+</div>
+
+<div class="mb-10">
+<div class="flex px-4 text-[10px] uppercase font-bold text-on-surface-variant tracking-widest mb-4">
+<div class="w-12 text-center">Rank</div>
+<div class="flex-grow">Creator</div>
+<div class="w-20 text-right">Points</div>
+<div class="w-24 text-right">Earnings</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:scale-[1.01] transition-transform duration-300">
+<div class="w-12 text-center font-black text-on-surface-variant">4</div>
+<div class="flex flex-grow items-center gap-3">
+<img alt="User 4" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCo8U1RQwmNGHyEVPapSXYWRN-4R-Yu8hQsaw2dhDilpEcc3E_DDAxk0nX9o5doH7Wdq-0mbylRRhaJJQ6ZGgGAmgzjKgi385P7Wvv-hyIXSfoZpHyTjyG8d8YbkIXZo83uv9nc3EX-JyWVGaSNZRAvSMzH1NTDFei7Hp6_bnBDSHI1bcJEBpK3KDQ1kBpuNzozLptneRLbbwUkbbETKokQUbTvBocslBzgnh9W0LBJEZdot48wSWHX-rO8x62Udq-qUjCm2JvNHQvd"/>
+<div>
+<p class="font-bold text-sm">Elena_Style</p>
+<p class="text-[10px] text-on-surface-variant">@elenasbite</p>
+</div>
+</div>
+<div class="w-20 text-right text-sm font-bold">32.2k</div>
+<div class="w-24 text-right text-sm font-black text-primary">$1,420</div>
+</div>
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:scale-[1.01] transition-transform duration-300">
+<div class="w-12 text-center font-black text-on-surface-variant">5</div>
+<div class="flex flex-grow items-center gap-3">
+<img alt="User 5" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBCUVOjUpkEMgdotys5WEYdFhHEX0iDx4bU3_ErDe18OzI1eruCedKZcOWkyr-hSWngYPber39xe6OBAB_uQg-oJLE9QKtePYp29fOQma6B3Rw7FWNfCaIOwW23VuxyYE5nq5FuwWKUQG2_JtGjVDC_XqFb0_by4xmhZH7kgQ-_U9AbAVp-Z5I4PHqSBtnU-Ep64MXUPcSGL5wH7EPDnQvsoLpWvtCkspkuAoCQN-xHYdKbF2pXCXjABlN3CPDpKZXgZFUBqXIVExqE"/>
+<div>
+<p class="font-bold text-sm">Sasha_Flux</p>
+<p class="text-[10px] text-on-surface-variant">@flux_sasha</p>
+</div>
+</div>
+<div class="w-20 text-right text-sm font-bold">31.8k</div>
+<div class="w-24 text-right text-sm font-black text-primary">$1,280</div>
+</div>
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:scale-[1.01] transition-transform duration-300">
+<div class="w-12 text-center font-black text-on-surface-variant">6</div>
+<div class="flex flex-grow items-center gap-3">
+<img alt="User 6" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCZasrvBVTUQKpxxpbGNrflCvbZ6Rto3z47NhE-kRB0Zk0mRbcKVaB-eg8AMALc7rVBqxENoKq9WHa6lC-0YdTQJyNLUi0HAp_EDhDYBq4HftCYKyv7eMO9d1hdBEn3srrs9LEuw_4p29CXMpHodzfS9EhDAtQ8mVdyR4HLlM1KaIey2gsgiXA-JsKAapZfxdcnLi6KaktJNi9L73VPrvN6Ej8pyDN2KGeX3WHoyOZQPzB0ZPCHzfp9YtA37OZ-DJb4LRL_8NKykIVA"/>
+<div>
+<p class="font-bold text-sm">Theo_Boutique</p>
+<p class="text-[10px] text-on-surface-variant">@theo_btq</p>
+</div>
+</div>
+<div class="w-20 text-right text-sm font-bold">29.4k</div>
+<div class="w-24 text-right text-sm font-black text-primary">$940</div>
+</div>
+<div class="flex items-center bg-surface-container-low p-4 rounded-2xl hover:scale-[1.01] transition-transform duration-300">
+<div class="w-12 text-center font-black text-on-surface-variant">7</div>
+<div class="flex flex-grow items-center gap-3">
+<img alt="User 7" class="w-10 h-10 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBE_UvKNWMRL8jAnlpV6NAjDv-DxIzJ-dWrbJMZOV2bxGIXTj3w7bqxclJzeCuJMo4gGTA4uEcIdhclx1PurVczLwnMNiGhEjan3Dxtd9ZjpPRben4-qhLpD3fTFXzpor_jhDT1Gm7bwL9JxUvJZ0E0ysR3Wfl13u-yIyx1VKBw516VO9cbKeJ0m66u5w4rwde1W-nLkkx0sx8figSMAAlBal9yVtpUgfIYKVGAVM5JpogMfPt6RD8wRxZ8La5dSkSApcNknxg82jwQ"/>
+<div>
+<p class="font-bold text-sm">Lola_Luxe</p>
+<p class="text-[10px] text-on-surface-variant">@lola_luxe_official</p>
+</div>
+</div>
+<div class="w-20 text-right text-sm font-bold">28.1k</div>
+<div class="w-24 text-right text-sm font-black text-primary">$820</div>
+</div>
+</div>
+</div>
+
+<section class="mb-10 bg-surface-container-low rounded-3xl p-6" id="lbTeamStandingsSection">
+<div class="flex items-center justify-between mb-4">
+<h3 class="font-headline text-2xl font-bold">Team Standings</h3>
+<a class="text-sm font-bold text-primary hover:opacity-80 transition-opacity" href="contest_detail.html" id="lbContestDetailLinkTeam">View Contest</a>
+</div>
+<div class="space-y-4">
+<div>
+<div class="flex items-center justify-between text-sm font-bold mb-1">
+<span id="lbTeam1Name">Team New York</span>
+<span id="lbTeam1Pct">58%</span>
+</div>
+<div class="h-2.5 bg-white rounded-full overflow-hidden">
+<div class="h-full w-[58%] power-gradient rounded-full" id="lbTeam1Bar"></div>
+</div>
+</div>
+<div>
+<div class="flex items-center justify-between text-sm font-bold mb-1">
+<span id="lbTeam2Name">Team Tokyo</span>
+<span id="lbTeam2Pct">42%</span>
+</div>
+<div class="h-2.5 bg-white rounded-full overflow-hidden">
+<div class="h-full w-[42%] power-gradient rounded-full" id="lbTeam2Bar"></div>
+</div>
+</div>
+</div>
+</section>
+
+<div class="mt-10 p-8 rounded-[2rem] power-gradient text-white flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-rose-500/20">
+<div class="text-center md:text-left">
+<h3 class="font-headline text-2xl font-bold mb-2">Rise to the top?</h3>
+<p class="text-white/85 text-sm max-w-[320px]">Participate in the latest battle and improve your rank before weekly reset.</p>
+</div>
+<div class="flex flex-wrap justify-center gap-3">
+<a class="bg-white text-primary px-7 py-3 rounded-full font-bold text-sm hover:scale-105 transition-transform active:scale-95" href="contest_detail.html" id="lbEnterBattleLink">Enter Battle</a>
+<a class="bg-white/20 text-white px-7 py-3 rounded-full font-bold text-sm hover:bg-white/30 transition-colors" href="private_earning.html">My Earnings</a>
+</div>
+</div>
+</main>
+
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="contest_home.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+
+<script>
+  (() => {
+    const periodButtons = Array.from(document.querySelectorAll(".lb-period-btn"));
+    const categoryButtons = Array.from(document.querySelectorAll(".lb-category-btn"));
+    const params = new URLSearchParams(window.location.search);
+
+    const contestCatalog = {
+      "admin-metropolis-minimalist": {
+        source: "Admin-created",
+        name: "Metropolis Minimalist",
+        subtitle: "Official city battle curated by StyleBite editors.",
+        format: "City vs City",
+        window: "Ends in 14h 22m",
+        status: "Featured Live",
+        heroTitle: "New York vs Tokyo",
+        heroMeta: "Contest ends in 14h 22m | Prize Pool $15,000",
+        participants: "81,012",
+        hasTeams: true,
+        team1: { name: "Team New York", pct: 58 },
+        team2: { name: "Team Tokyo", pct: 42 },
+        defaultPeriod: "global",
+        defaultCategory: "outfit",
+        detailHref: "contest_detail.html?contest=admin-metropolis-minimalist&source=admin&type=city"
+      },
+      "admin-retro-futurism": {
+        source: "Admin-created",
+        name: "Retro Futurism",
+        subtitle: "Editorial-picked 1v1 with premium creator submissions.",
+        format: "1v1 Duel",
+        window: "Ends in 2d 10h",
+        status: "Open Voting",
+        heroTitle: "Lexi Style vs Marcus Vibe",
+        heroMeta: "Contest ends in 2d 10h | Prize Pool $8,000",
+        participants: "39,408",
+        hasTeams: false,
+        defaultPeriod: "weekly",
+        defaultCategory: "outfit",
+        detailHref: "contest_detail.html?contest=admin-retro-futurism&source=admin&type=1v1"
+      },
+      "community-boho-group": {
+        source: "Community-created",
+        name: "Boho-Chic Essentials",
+        subtitle: "Group vs group battle decided by total team votes.",
+        format: "Group vs Group",
+        window: "Ends in 4h",
+        status: "Live Voting",
+        heroTitle: "Group Aurora vs Group Nova",
+        heroMeta: "Contest ends in 4h | Prize Pool $3,500",
+        participants: "24,106",
+        hasTeams: true,
+        team1: { name: "Group Aurora", pct: 52 },
+        team2: { name: "Group Nova", pct: 48 },
+        defaultPeriod: "weekly",
+        defaultCategory: "battles",
+        detailHref: "contest_detail.html?contest=community-boho-group&source=community&type=group"
+      },
+      "community-denim-brand": {
+        source: "Community-created",
+        name: "Denim Mastery",
+        subtitle: "Brand-sponsored 1v1v1v1 contest with jury + community scoring.",
+        format: "Brand 1v1v1v1",
+        window: "Ends in 12h",
+        status: "Sponsored Live",
+        heroTitle: "4-way creator invitational",
+        heroMeta: "Contest ends in 12h | Prize Pool $12,000",
+        participants: "33,920",
+        hasTeams: false,
+        defaultPeriod: "weekly",
+        defaultCategory: "outfit",
+        detailHref: "contest_detail.html?contest=community-denim-brand&source=community&type=brand"
+      },
+      "community-accessory-city": {
+        source: "Community-created",
+        name: "Accessory Overload",
+        subtitle: "Community city battle focused on statement accessory looks.",
+        format: "City vs City",
+        window: "Starts in 2h",
+        status: "Upcoming",
+        heroTitle: "Karachi vs Lahore",
+        heroMeta: "Battle starts in 2h | Prize Pool $4,200",
+        participants: "24,322",
+        hasTeams: true,
+        team1: { name: "Team Karachi", pct: 51 },
+        team2: { name: "Team Lahore", pct: 49 },
+        defaultPeriod: "city",
+        defaultCategory: "battles",
+        detailHref: "contest_detail.html?contest=community-accessory-city&source=community&type=city"
+      },
+      "community-noir-duel": {
+        source: "Community-created",
+        name: "Noir Avant-Garde",
+        subtitle: "Completed duel with finalized winner and locked standings.",
+        format: "1v1 Duel",
+        window: "Completed",
+        status: "Result Finalized",
+        heroTitle: "Midnight Muse vs Void Edge",
+        heroMeta: "Rewards distributed to top performers",
+        participants: "12,406",
+        hasTeams: false,
+        defaultPeriod: "monthly",
+        defaultCategory: "battles",
+        detailHref: "contest_detail.html?contest=community-noir-duel&source=community&type=1v1"
+      },
+      "street-style-duel": {
+        source: "Community-created",
+        name: "Street Style Duel",
+        subtitle: "Head-to-head creator showdown with community votes.",
+        format: "1v1 Duel",
+        window: "Ends in 2d 04h",
+        status: "Open Voting",
+        heroTitle: "Lexi Style vs Marcus Vibe",
+        heroMeta: "Contest ends in 2d 04h | Prize Pool $5,000",
+        participants: "42,890",
+        hasTeams: false,
+        defaultPeriod: "weekly",
+        defaultCategory: "outfit",
+        detailHref: "contest_detail.html?contest=street-style-duel&source=community&type=1v1"
+      },
+      "metropolis-faceoff": {
+        source: "Admin-created",
+        name: "Metropolis Face-Off",
+        subtitle: "Live standings for active city battle and creator performance.",
+        format: "City vs City",
+        window: "Ends in 14h 22m",
+        status: "Live Voting",
+        heroTitle: "NYC vs Tokyo",
+        heroMeta: "Contest ends in 14h 22m | Prize Pool $15,000",
+        participants: "81,012",
+        hasTeams: true,
+        team1: { name: "Team New York", pct: 58 },
+        team2: { name: "Team Tokyo", pct: 42 },
+        defaultPeriod: "city",
+        defaultCategory: "battles",
+        detailHref: "contest_detail.html?contest=admin-metropolis-minimalist&source=admin&type=city"
+      },
+      "metropolis-minimalist": {
+        source: "Admin-created",
+        name: "Metropolis Minimalist",
+        subtitle: "Official city battle curated by StyleBite editors.",
+        format: "City vs City",
+        window: "Ends in 14h 22m",
+        status: "Featured Live",
+        heroTitle: "New York vs Tokyo",
+        heroMeta: "Contest ends in 14h 22m | Prize Pool $15,000",
+        participants: "81,012",
+        hasTeams: true,
+        team1: { name: "Team New York", pct: 58 },
+        team2: { name: "Team Tokyo", pct: 42 },
+        defaultPeriod: "global",
+        defaultCategory: "outfit",
+        detailHref: "contest_detail.html?contest=admin-metropolis-minimalist&source=admin&type=city"
+      },
+      "noir-avant-garde": {
+        source: "Community-created",
+        name: "Noir Avant-Garde",
+        subtitle: "Completed duel with finalized winner and locked standings.",
+        format: "1v1 Duel",
+        window: "Completed",
+        status: "Result Finalized",
+        heroTitle: "Midnight Muse vs Void Edge",
+        heroMeta: "Rewards distributed to top performers",
+        participants: "12,406",
+        hasTeams: false,
+        defaultPeriod: "monthly",
+        defaultCategory: "battles",
+        detailHref: "contest_detail.html?contest=community-noir-duel&source=community&type=1v1"
+      }
+    };
+
+    function setText(id, value) {
+      const el = document.getElementById(id);
+      if (el && typeof value === "string") el.textContent = value;
+    }
+
+    function setHref(id, value) {
+      const el = document.getElementById(id);
+      if (el && typeof value === "string") el.setAttribute("href", value);
+    }
+
+    function setPeriod(active) {
+      periodButtons.forEach((button) => {
+        const isActive = button.dataset.period === active;
+        button.classList.toggle("power-gradient", isActive);
+        button.classList.toggle("text-white", isActive);
+        button.classList.toggle("shadow-[0_10px_20px_-12px_rgba(255,77,109,0.8)]", isActive);
+        button.classList.toggle("bg-surface-container-low", !isActive);
+        button.classList.toggle("text-on-surface-variant", !isActive);
+      });
+    }
+
+    function setCategory(active) {
+      categoryButtons.forEach((button) => {
+        const isActive = button.dataset.category === active;
+        button.classList.toggle("bg-surface-container-highest", isActive);
+        button.classList.toggle("text-on-surface", isActive);
+        button.classList.toggle("bg-surface-container-low", !isActive);
+        button.classList.toggle("text-on-surface-variant", !isActive);
+      });
+    }
+
+    function hasCategory(value) {
+      return categoryButtons.some((button) => button.dataset.category === value);
+    }
+
+    function hasPeriod(value) {
+      return periodButtons.some((button) => button.dataset.period === value);
+    }
+
+    function applyContestContext(contest) {
+      setText("lbHeadingLabel", (contest.source || "Contest") + " Leaderboard");
+      setText("lbContestName", contest.name);
+      setText("lbContestSubtitle", contest.subtitle);
+      setText("lbContestFormat", contest.format);
+      setText("lbContestWindow", contest.window);
+      setText("lbHeroStatus", contest.status);
+      setText("lbHeroTitle", contest.heroTitle);
+      setText("lbHeroMeta", contest.heroMeta);
+      setText("lbParticipants", contest.participants);
+
+      setHref("lbHeaderContestLink", contest.detailHref);
+      setHref("lbContestDetailLinkTop", contest.detailHref);
+      setHref("lbContestDetailLinkTeam", contest.detailHref);
+      setHref("lbEnterBattleLink", contest.detailHref);
+
+      const teamSection = document.getElementById("lbTeamStandingsSection");
+      if (teamSection) {
+        if (contest.hasTeams) {
+          teamSection.classList.remove("hidden");
+          const team1 = contest.team1 || { name: "Team A", pct: 50 };
+          const team2 = contest.team2 || { name: "Team B", pct: 50 };
+          setText("lbTeam1Name", team1.name);
+          setText("lbTeam1Pct", team1.pct + "%");
+          setText("lbTeam2Name", team2.name);
+          setText("lbTeam2Pct", team2.pct + "%");
+          const bar1 = document.getElementById("lbTeam1Bar");
+          const bar2 = document.getElementById("lbTeam2Bar");
+          if (bar1) bar1.style.width = team1.pct + "%";
+          if (bar2) bar2.style.width = team2.pct + "%";
+        } else {
+          teamSection.classList.add("hidden");
+        }
+      }
+    }
+
+    periodButtons.forEach((button) => {
+      button.addEventListener("click", () => setPeriod(button.dataset.period));
+    });
+
+    categoryButtons.forEach((button) => {
+      button.addEventListener("click", () => setCategory(button.dataset.category));
+    });
+
+    const contestKey = params.get("contest") || "metropolis-faceoff";
+    const contest = contestCatalog[contestKey] || contestCatalog["metropolis-faceoff"];
+    applyContestContext(contest);
+
+    const periodFromQuery = params.get("period");
+    const categoryFromQuery = params.get("category");
+    const selectedPeriod = hasPeriod(periodFromQuery) ? periodFromQuery : contest.defaultPeriod;
+    const selectedCategory = hasCategory(categoryFromQuery) ? categoryFromQuery : contest.defaultCategory;
+
+    setPeriod(selectedPeriod || "global");
+    setCategory(selectedCategory || "outfit");
+  })();
+</script>
+</body></html>

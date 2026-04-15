@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-surface-variant": "#5a4042",
+                        "inverse-on-surface": "#f0f0f2",
+                        "tertiary-container": "#757474",
+                        "inverse-primary": "#ffb2b8",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary": "#9f4118",
+                        "surface-variant": "#e2e2e4",
+                        "surface-container-low": "#f3f3f5",
+                        "tertiary": "#5d5c5b",
+                        "secondary-fixed-dim": "#ffb599",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "on-error": "#ffffff",
+                        "secondary-container": "#fd885a",
+                        "on-primary-container": "#fffbff",
+                        "surface-container": "#edeef0",
+                        "on-background": "#1a1c1d",
+                        "on-secondary-fixed-variant": "#7f2b01",
+                        "error-container": "#ffdad6",
+                        "outline-variant": "#e2bec0",
+                        "on-secondary": "#ffffff",
+                        "surface-container-high": "#e8e8ea",
+                        "on-primary": "#ffffff",
+                        "primary": "#b60e3d",
+                        "background": "#f9f9fb",
+                        "on-surface": "#1a1c1d",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-tint": "#ba1340",
+                        "surface-container-highest": "#e2e2e4",
+                        "on-secondary-container": "#702400",
+                        "error": "#ba1a1a",
+                        "primary-fixed-dim": "#ffb2b8",
+                        "outline": "#8e6f71",
+                        "tertiary-fixed": "#e5e2e1",
+                        "on-tertiary-container": "#f7feff",
+                        "surface-dim": "#d9dadc",
+                        "secondary-fixed": "#ffdbce",
+                        "primary-container": "#da3054",
+                        "on-secondary-fixed": "#370e00",
+                        "on-error-container": "#93000a",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-bright": "#f9f9fb",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#f9f9fb",
+                        "primary-fixed": "#ffdadb",
+                        "on-primary-fixed": "#40000f",
+                        "on-primary-fixed-variant": "#91002d",
+                        "inverse-surface": "#2f3132"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .glass-header {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+        .power-gradient {
+            background: linear-gradient(135deg, #FF4D6D 0%, #FF8A5B 100%);
+        }
+        .message-shadow {
+            box-shadow: 0 4px 20px -5px rgba(26, 26, 26, 0.05);
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface font-body selection:bg-secondary-container selection:text-on-secondary-container">
+<!-- Top Navigation Anchor -->
+<header class="fixed top-0 w-full z-50 glass-header border-b-[0.5px] border-white/20 shadow-[0_40px_40px_-15px_rgba(26,26,26,0.04)]">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<a class="active:scale-95 duration-200 text-on-surface" href="message.html">
+<span class="material-symbols-outlined">arrow_back</span>
+</a>
+<div class="flex items-center gap-3">
+<div class="relative">
+<img alt="Profile" class="w-10 h-10 rounded-full object-cover ring-2 ring-white" data-alt="portrait of a fashionable young woman with a sleek aesthetic and soft studio lighting" id="chatAvatar" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHKXYcTX7NUTivFQFiO-8VqUNJxCWj1XycLF8Wf_cd0OvuIwZpEMlGjYwKNlU0kexBx-GWxFzLbQ8IdH1LUcxmiOd6PRWsfgakOpA_fCkGOWTgXCLrKEmVv32LMwSaJlXNRfCBVO3OZQxkBjeW5rw1y2769Kpd0plTqrCvetzaeGsDhE9CCQ2z0P4fnwV3KGVQIGNH8LkKQbwx0tlS0jcHVas1jnVGTetCEOiryjZNkXH4QnKwNqKwlWCHDSb40NU3PekHMv-HKjWI"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-green-500 border-2 border-white rounded-full" id="chatPresenceDot"></div>
+</div>
+<div class="flex flex-col">
+<span class="text-sm font-headline font-bold text-on-surface leading-tight" id="chatName">Sienna Blake</span>
+<span class="text-[10px] font-label font-bold text-on-surface-variant uppercase tracking-widest" id="chatStatus">Active Now</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-on-surface active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="videocam">videocam</span>
+</button>
+<button class="text-on-surface active:scale-95 duration-200">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</header>
+<!-- Main Chat Canvas -->
+<main class="pt-24 pb-32 px-6 flex flex-col gap-6 max-w-2xl mx-auto" id="chatMessages">
+<!-- Date Divider -->
+<div class="flex justify-center my-4">
+<span class="bg-surface-container-high px-4 py-1 rounded-full text-[10px] font-label font-bold text-on-surface-variant tracking-widest uppercase">Today</span>
+</div>
+<!-- Receiver Message -->
+<div class="flex items-end gap-2 group max-w-[85%]">
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest text-on-surface px-5 py-3 rounded-[1.5rem] rounded-bl-none message-shadow border-[0.5px] border-outline/10">
+<p class="text-[15px] leading-relaxed">Hey! Did you see the new editorial drop for the spring collection yet? 🌿</p>
+</div>
+<span class="text-[10px] font-label font-bold text-on-surface-variant uppercase ml-1">09:41 AM</span>
+</div>
+</div>
+<!-- Sender Message -->
+<div class="flex flex-row-reverse items-end gap-2 group self-end max-w-[85%]">
+<div class="flex flex-col items-end gap-1">
+<div class="power-gradient text-white px-5 py-3 rounded-[1.5rem] rounded-br-none message-shadow">
+<p class="text-[15px] leading-relaxed">Just saw it! Those asymmetrical blazers are honestly a whole mood. I'm obsessed with the color palette. 💖</p>
+</div>
+<span class="text-[10px] font-label font-bold text-on-surface-variant uppercase mr-1">09:43 AM</span>
+</div>
+</div>
+<!-- Receiver Message with Image -->
+<div class="flex items-end gap-2 group max-w-[85%]">
+<div class="flex flex-col gap-1">
+<div class="bg-surface-container-lowest text-on-surface p-2 rounded-[1.5rem] rounded-bl-none message-shadow border-[0.5px] border-outline/10">
+<img alt="Fashion Preview" class="w-full rounded-xl object-cover mb-2" data-alt="high fashion model wearing an avant-garde outfit with vibrant orange and pink accents in a minimalist studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIJN1UME6icrhV0nm6SHiFk4Tj8w7AEkgbxRpH-frnX0lXi2Ws-PdFBQAM5FTn0CKswhLayy3mwgx8mddeB-EZhxVdX8t145LmD0-hUG0U9PSFcu6uhF74O0yocsOhF8D9G68qLpA0t4RRAkd8PqdBxfGdyzUNDckiK7O94fP1PVorw88pgNg1RRAHLle_FhnEeM5uDLwv-AQ9AMLs4Rwc3zkUBFEzHiFkVkbOkBH28UPen6tufM14tM3EwSE-jEDCA2-suNbCrdsM"/>
+<p class="text-[15px] px-3 pb-2 leading-relaxed">Right?? This look specifically is giving pure energy. We should feature something similar for the next StyleBite spotlight.</p>
+</div>
+<span class="text-[10px] font-label font-bold text-on-surface-variant uppercase ml-1">09:45 AM</span>
+</div>
+</div>
+<!-- Sender Message -->
+<div class="flex flex-row-reverse items-end gap-2 group self-end max-w-[85%]">
+<div class="flex flex-col items-end gap-1">
+<div class="power-gradient text-white px-5 py-3 rounded-[1.5rem] rounded-br-none message-shadow">
+<p class="text-[15px] leading-relaxed">Absolutely. Let's draft the moodboard tonight!</p>
+</div>
+<div class="flex items-center gap-1 mr-1">
+<span class="text-[10px] font-label font-bold text-on-surface-variant uppercase">09:46 AM</span>
+<span class="material-symbols-outlined text-[14px] text-rose-500" style="font-variation-settings: 'FILL' 1;">done_all</span>
+</div>
+</div>
+</div>
+<!-- Typing Indicator -->
+<div class="flex items-center gap-1 px-4 opacity-60">
+<div class="w-1.5 h-1.5 bg-on-surface-variant rounded-full animate-bounce"></div>
+<div class="w-1.5 h-1.5 bg-on-surface-variant rounded-full animate-bounce [animation-delay:0.2s]"></div>
+<div class="w-1.5 h-1.5 bg-on-surface-variant rounded-full animate-bounce [animation-delay:0.4s]"></div>
+</div>
+</main>
+<!-- Fixed Bottom Input Area -->
+<footer class="fixed bottom-0 left-0 w-full z-50 glass-header px-6 pb-8 pt-4">
+<div class="max-w-2xl mx-auto flex items-center gap-3">
+<!-- Attachment Button -->
+<button class="w-12 h-12 flex items-center justify-center bg-surface-container-high rounded-full text-on-surface active:scale-90 transition-transform">
+<span class="material-symbols-outlined">add</span>
+</button>
+<!-- Input Container -->
+<div class="flex-1 bg-surface-container-low rounded-full px-5 py-3 flex items-center gap-2 group focus-within:bg-surface-container-high transition-colors">
+<input class="flex-1 bg-transparent border-none focus:ring-0 text-[15px] placeholder:text-on-surface-variant font-body" id="chatInput" placeholder="Type a message..." type="text"/>
+<button class="text-on-surface-variant hover:text-on-surface transition-colors">
+<span class="material-symbols-outlined">sentiment_satisfied</span>
+</button>
+</div>
+<!-- Send Button -->
+<button class="power-gradient w-12 h-12 flex items-center justify-center rounded-full text-white shadow-lg active:scale-90 transition-transform" id="sendButton">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">send</span>
+</button>
+</div>
+</footer>
+<!-- Bottom Navigation Suppression Logic: Not rendering primary Nav for focused task/sub-page -->
+<script>
+  (() => {
+    const params = new URLSearchParams(window.location.search);
+    const name = params.get("name");
+    const status = params.get("status");
+    const avatar = params.get("avatar");
+    const online = params.get("online");
+
+    const chatName = document.getElementById("chatName");
+    const chatStatus = document.getElementById("chatStatus");
+    const chatAvatar = document.getElementById("chatAvatar");
+    const presenceDot = document.getElementById("chatPresenceDot");
+    const messages = document.getElementById("chatMessages");
+    const chatInput = document.getElementById("chatInput");
+    const sendButton = document.getElementById("sendButton");
+
+    if (name) {
+      chatName.textContent = name;
+      document.title = "StyleBite | " + name;
+    }
+    if (status) {
+      chatStatus.textContent = status;
+    }
+    if (avatar) {
+      chatAvatar.src = avatar;
+    }
+    if (online === "0") {
+      presenceDot.classList.remove("bg-green-500");
+      presenceDot.classList.add("bg-zinc-300");
+    }
+
+    function appendMessage(text) {
+      if (!text.trim()) return;
+      const wrapper = document.createElement("div");
+      wrapper.className = "flex flex-row-reverse items-end gap-2 group self-end max-w-[85%]";
+      wrapper.innerHTML = '<div class="flex flex-col items-end gap-1"><div class="power-gradient text-white px-5 py-3 rounded-[1.5rem] rounded-br-none message-shadow"><p class="text-[15px] leading-relaxed"></p></div><span class="text-[10px] font-label font-bold text-on-surface-variant uppercase mr-1">Now</span></div>';
+      wrapper.querySelector("p").textContent = text.trim();
+      messages.appendChild(wrapper);
+      chatInput.value = "";
+      window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+    }
+
+    sendButton.addEventListener("click", () => appendMessage(chatInput.value));
+    chatInput.addEventListener("keydown", (event) => {
+      if (event.key === "Enter") {
+        event.preventDefault();
+        appendMessage(chatInput.value);
+      }
+    });
+  })();
+</script>
+</body></html>

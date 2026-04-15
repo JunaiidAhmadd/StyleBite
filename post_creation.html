@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Be+Vietnam+Pro:ital,wght@0,100..900;1,100..900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#FF8A5B",
+                    "on-tertiary-container": "#7A2E00",
+                    "secondary-container": "#FFE1D6",
+                    "outline": "#9A8F8A",
+                    "primary-fixed-dim": "#FF6B57",
+                    "surface-container-low": "#f3f0ef",
+                    "on-surface-variant": "#5c5b5b",
+                    "secondary-fixed-dim": "#FFC29E",
+                    "surface-container": "#eae7e7",
+                    "inverse-surface": "#0e0e0e",
+                    "secondary-dim": "#B14A1F",
+                    "surface-tint": "#FF4D6D",
+                    "error-dim": "#a70138",
+                    "inverse-primary": "#FF8A5B",
+                    "surface-bright": "#f9f6f5",
+                    "on-primary": "#fff7f3",
+                    "error": "#b41340",
+                    "tertiary-dim": "#E9B949",
+                    "primary-dim": "#E54360",
+                    "secondary": "#C65A22",
+                    "secondary-fixed": "#FFD4BF",
+                    "tertiary": "#FFD166",
+                    "error-container": "#f74b6d",
+                    "on-secondary-fixed-variant": "#8B3A14",
+                    "on-tertiary-fixed": "#5A3A00",
+                    "background": "#f9f6f5",
+                    "on-primary-fixed": "#000000",
+                    "on-surface": "#2f2f2e",
+                    "surface": "#f9f6f5",
+                    "inverse-on-surface": "#9e9c9c",
+                    "on-primary-container": "#5C1F28",
+                    "on-primary-fixed-variant": "#7A2834",
+                    "on-error-container": "#510017",
+                    "tertiary-fixed-dim": "#F3D98B",
+                    "on-background": "#2f2f2e",
+                    "tertiary-fixed": "#FFE29A",
+                    "surface-variant": "#dfdcdc",
+                    "surface-dim": "#d6d4d3",
+                    "on-secondary-container": "#7A2F10",
+                    "on-tertiary-fixed-variant": "#8A5A00",
+                    "on-error": "#ffefef",
+                    "outline-variant": "#afadac",
+                    "surface-container-highest": "#dfdcdc",
+                    "on-secondary-fixed": "#5A1E00",
+                    "on-secondary": "#fff3ec",
+                    "on-tertiary": "#5A3A00",
+                    "primary": "#FF4D6D",
+                    "primary-fixed": "#FF8A5B",
+                    "surface-container-high": "#e4e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#FFE7A8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Be Vietnam Pro', sans-serif;
+            background-color: #f9f6f5;
+            color: #2f2f2e;
+        }
+        h1, h2, h3 {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(32px);
+        }
+        .hide-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface min-h-screen pb-32">
+<header class="bg-[#f9f6f5]/70 backdrop-blur-xl text-[#FF4D6D] sticky top-0 z-50 flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-highest">
+<img class="w-full h-full object-cover" data-alt="vibrant professional headshot of a young woman with a trendy aesthetic in soft daylight studio setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbiU8zvmWG_n88aZJvIdEQstFkwdiP1wa8qQ9o2K0vfCgCMTmoWN5JhZDOm463MiLThZGBHQegGO0R0ZCtqNsLwWiW3Y5eaUPUqI6lNKVla7X-UMjU6iKl6iH8dHE4FSAm1iS9MN2sp29G4u1ZmQ0Yl3sGfTKVqx0abZ48tGVCI24EB7M2KkJrOTAcxf14qX3HfOvm2Gjhchzhaz1rf_8wCPhyfxUBqxYxiNALQ4f4hHlUssSfmAqhUZKs4GXcxevNO2a2ATBOiRqH"/>
+</div>
+<h1 class="text-2xl font-black bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent">StyleBite</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-lowest shadow-sm border border-outline-variant/10">
+<span class="material-symbols-outlined text-primary text-xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span class="font-bold text-on-surface text-sm">7 Days</span>
+</div>
+</div>
+</header>
+<main class="max-w-2xl mx-auto px-6 py-8 space-y-10">
+<section class="grid grid-cols-2 gap-4">
+<button aria-pressed="true" class="post-type-btn flex flex-col items-center justify-center gap-4 p-8 rounded-xl bg-surface-container-lowest transition-all group border-2 border-primary/20 shadow-[0_10px_26px_rgba(255,77,109,0.12)] active:scale-95" data-post-type="outfit" id="postTypeOutfit" type="button">
+<div class="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center text-primary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">checkroom</span>
+</div>
+<span class="font-headline font-bold text-on-surface">Post Outfit</span>
+</button>
+<button aria-pressed="false" class="post-type-btn flex flex-col items-center justify-center gap-4 p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all group border-2 border-transparent hover:border-tertiary/20 active:scale-95" data-post-type="food" id="postTypeFood" type="button">
+<div class="w-16 h-16 rounded-full bg-tertiary/10 flex items-center justify-center text-tertiary group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-4xl">restaurant</span>
+</div>
+<span class="font-headline font-bold text-on-surface">Post Food</span>
+</button>
+</section>
+<section class="space-y-6">
+<div class="relative group aspect-[4/5] rounded-xl overflow-hidden bg-surface-container-highest flex flex-col items-center justify-center text-on-surface-variant border-2 border-dashed border-outline-variant/30">
+<img class="absolute inset-0 w-full h-full object-cover opacity-60 group-hover:opacity-80 transition-opacity" data-alt="minimalist fashion shot of a pastel yellow hoodie against a clean studio background with soft editorial lighting" id="previewMediaImage" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjR6VYR1NWMnsoP7adZC-mIzxHIu7fwncBpxL9q-fRplj-mm_4y43LGnwfoZfEx1cjyGPaRLYVTfLJLg56nSX9fQ_vdJ_5F8KT3MYBPPD6QYu9ngfUGMD2EqBJnUbtoN2v5x7wKfUDA8QisYfqiIWUzehPdMEAyaCZFn2FldyVGYdY6lXsnMT_xs-qV9V26-A4dpcRzspUkZiY0Bjo2v1tbEL5QR1ioC7mYSVzRE69CI6AMD6aFDWJQq7aHnpbGGn7vK8s7-NFjBQG"/>
+<div class="z-10 flex flex-col items-center text-center p-6 bg-surface-container-lowest/80 backdrop-blur-md rounded-lg shadow-xl max-w-xs">
+<span class="material-symbols-outlined text-4xl mb-2 text-primary">cloud_upload</span>
+<p class="font-bold text-on-surface">Change Preview</p>
+<p class="text-xs text-on-surface-variant mt-1">Tap to upload your video or photo</p>
+</div>
+<div class="absolute top-4 right-4 z-20 flex gap-2">
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-primary transition-colors" type="button">
+<span class="material-symbols-outlined">auto_fix_high</span>
+</button>
+<button class="w-10 h-10 rounded-full bg-surface-container-lowest/90 backdrop-blur-sm flex items-center justify-center text-on-surface hover:text-error transition-colors" type="button">
+<span class="material-symbols-outlined">delete</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-4" for="captionInput" id="captionLabel">Caption</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-lg p-6 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all min-h-[120px] text-on-surface placeholder:text-outline/50" id="captionInput" placeholder="Write a short vibe check..."></textarea>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-4" for="tagsInput">Tags</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">tag</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-sm" id="tagsInput" placeholder="streetwear, brunch, vibe" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-4" for="locationInput">Location</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">location_on</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-sm font-medium" id="locationInput" type="text" value="New York City, NY"/>
+</div>
+</div>
+</div>
+<div class="space-y-4" id="styleFields">
+<div class="flex items-center justify-between p-4 rounded-xl bg-surface-container-low">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined">star</span>
+</div>
+<div>
+<p class="font-bold text-on-surface text-sm">Rating enabled</p>
+<p class="text-xs text-on-surface-variant">Allow your Vibed to vote on this look</p>
+</div>
+</div>
+<button class="w-14 h-8 rounded-full bg-primary p-1 flex justify-end items-center transition-colors" type="button">
+<div class="w-6 h-6 rounded-full bg-on-primary"></div>
+</button>
+</div>
+</div>
+<div class="space-y-4 hidden" id="foodFields">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-4" for="dishNameInput">Dish Name</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">local_dining</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-sm font-medium" id="dishNameInput" placeholder="BBQ Tonight" type="text"/>
+</div>
+</div>
+<div class="space-y-2">
+<label class="text-xs font-bold uppercase tracking-widest text-on-surface-variant px-4" for="restaurantNameInput">Restaurant</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">storefront</span>
+<input class="w-full bg-surface-container-low border-none rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 focus:bg-surface-container-lowest transition-all text-sm font-medium" id="restaurantNameInput" placeholder="karachi_eats" type="text"/>
+</div>
+</div>
+</div>
+<div class="rounded-xl bg-surface-container-low p-4 space-y-4">
+<div class="flex items-center justify-between">
+<div>
+<p class="font-bold text-on-surface text-sm" id="foodPreviewTitle">BBQ Tonight</p>
+<p class="text-xs text-on-surface-variant" id="foodPreviewLocation">Gulshan, Karachi</p>
+</div>
+<div class="px-3 py-1.5 rounded-full bg-tertiary-container text-on-tertiary-container text-xs font-bold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">star</span>
+<span id="overallFoodRating">4.2</span>
+</div>
+</div>
+<div class="space-y-3">
+<div class="flex items-center gap-3">
+<span class="w-20 text-xs text-on-surface-variant font-semibold">Food</span>
+<input class="food-rating-input flex-1 accent-[#f59e0b]" data-output-id="foodRatingValue" max="5" min="1" step="0.1" type="range" value="4.8"/>
+<span class="w-9 text-right text-xs font-bold text-on-surface" id="foodRatingValue">4.8</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-20 text-xs text-on-surface-variant font-semibold">Service</span>
+<input class="food-rating-input flex-1 accent-[#f59e0b]" data-output-id="serviceRatingValue" max="5" min="1" step="0.1" type="range" value="3.8"/>
+<span class="w-9 text-right text-xs font-bold text-on-surface" id="serviceRatingValue">3.8</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-20 text-xs text-on-surface-variant font-semibold">Staff</span>
+<input class="food-rating-input flex-1 accent-[#f59e0b]" data-output-id="staffRatingValue" max="5" min="1" step="0.1" type="range" value="4.0"/>
+<span class="w-9 text-right text-xs font-bold text-on-surface" id="staffRatingValue">4.0</span>
+</div>
+<div class="flex items-center gap-3">
+<span class="w-20 text-xs text-on-surface-variant font-semibold">Ambience</span>
+<input class="food-rating-input flex-1 accent-[#f59e0b]" data-output-id="ambienceRatingValue" max="5" min="1" step="0.1" type="range" value="4.2"/>
+<span class="w-9 text-right text-xs font-bold text-on-surface" id="ambienceRatingValue">4.2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="pt-4">
+<button class="w-full py-5 rounded-full bg-gradient-to-r from-primary to-primary-container text-on-primary font-bold text-lg shadow-xl shadow-primary/20 active:scale-95 transition-all flex items-center justify-center gap-2" type="button">
+<span id="shareButtonLabel">Share Outfit Post</span>
+<span class="material-symbols-outlined">send</span>
+</button>
+<p class="text-center text-xs text-outline-variant mt-6 px-12">By posting, you agree to StyleBite's community guidelines. Your post will be visible to your Vibed and on the explore page.</p>
+</section>
+</main>
+<script>
+  (() => {
+    const outfitBtn = document.getElementById("postTypeOutfit");
+    const foodBtn = document.getElementById("postTypeFood");
+    const styleFields = document.getElementById("styleFields");
+    const foodFields = document.getElementById("foodFields");
+    const captionInput = document.getElementById("captionInput");
+    const tagsInput = document.getElementById("tagsInput");
+    const shareButtonLabel = document.getElementById("shareButtonLabel");
+    const locationInput = document.getElementById("locationInput");
+    const dishNameInput = document.getElementById("dishNameInput");
+    const restaurantNameInput = document.getElementById("restaurantNameInput");
+    const foodPreviewTitle = document.getElementById("foodPreviewTitle");
+    const foodPreviewLocation = document.getElementById("foodPreviewLocation");
+    const overallFoodRating = document.getElementById("overallFoodRating");
+    const ratingInputs = Array.from(document.querySelectorAll(".food-rating-input"));
+
+    const buttons = [outfitBtn, foodBtn];
+
+    function updateButtonState(activeType) {
+      buttons.forEach((button) => {
+        const isActive = button.dataset.postType === activeType;
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.classList.toggle("border-primary/20", isActive);
+        button.classList.toggle("shadow-[0_10px_26px_rgba(255,77,109,0.12)]", isActive);
+        button.classList.toggle("border-transparent", !isActive);
+        button.classList.toggle("bg-surface-container-lowest", isActive);
+        button.classList.toggle("bg-surface-container-low", !isActive);
+      });
+    }
+
+    function syncFoodPreview() {
+      const dishName = dishNameInput.value.trim();
+      const placeName = locationInput.value.trim();
+      const restaurant = restaurantNameInput.value.trim();
+      foodPreviewTitle.textContent = dishName || "BBQ Tonight";
+      if (restaurant && placeName) {
+        foodPreviewLocation.textContent = restaurant + " | " + placeName;
+      } else {
+        foodPreviewLocation.textContent = restaurant || placeName || "karachi_eats | Gulshan, Karachi";
+      }
+    }
+
+    function syncRatings() {
+      let total = 0;
+      ratingInputs.forEach((input) => {
+        const value = Number(input.value);
+        total += value;
+        const output = document.getElementById(input.dataset.outputId);
+        if (output) output.textContent = value.toFixed(1);
+      });
+      const avg = total / ratingInputs.length;
+      overallFoodRating.textContent = avg.toFixed(1);
+    }
+
+    function setPostType(type) {
+      updateButtonState(type);
+      const isFood = type === "food";
+      styleFields.classList.toggle("hidden", isFood);
+      foodFields.classList.toggle("hidden", !isFood);
+
+      if (isFood) {
+        captionInput.placeholder = "Share your food review, taste notes, and service experience...";
+        tagsInput.placeholder = "bbq, karachi, spicy, family-dinner";
+        shareButtonLabel.textContent = "Share Food Post";
+      } else {
+        captionInput.placeholder = "Write a short vibe check...";
+        tagsInput.placeholder = "streetwear, brunch, vibe";
+        shareButtonLabel.textContent = "Share Outfit Post";
+      }
+    }
+
+    outfitBtn.addEventListener("click", () => setPostType("outfit"));
+    foodBtn.addEventListener("click", () => setPostType("food"));
+
+    [dishNameInput, restaurantNameInput, locationInput].forEach((field) => {
+      if (!field) return;
+      field.addEventListener("input", syncFoodPreview);
+    });
+
+    ratingInputs.forEach((input) => {
+      input.addEventListener("input", syncRatings);
+    });
+
+    syncFoodPreview();
+    syncRatings();
+    setPostType("outfit");
+  })();
+</script>
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="post_creation.html" aria-current="page"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+</body></html>
+
+
+

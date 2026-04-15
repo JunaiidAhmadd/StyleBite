@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notifications - StyleBite</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "tertiary-container": "#f9cc61",
+                    "primary-dim": "#a20033",
+                    "on-tertiary-container": "#5b4400",
+                    "error-container": "#fb5151",
+                    "inverse-surface": "#0e0e0e",
+                    "tertiary-dim": "#664c00",
+                    "surface-container-lowest": "#ffffff",
+                    "secondary-fixed-dim": "#ffb194",
+                    "background": "#f9f6f5",
+                    "on-error-container": "#570008",
+                    "primary-container": "#ff7386",
+                    "on-error": "#ffefee",
+                    "on-background": "#2f2f2e",
+                    "surface-dim": "#d6d4d3",
+                    "on-primary-container": "#4e0014",
+                    "surface-tint": "#b60d3d",
+                    "secondary-dim": "#8b3309",
+                    "on-primary-fixed-variant": "#5f001b",
+                    "surface-variant": "#dedcdb",
+                    "secondary-container": "#ffc4af",
+                    "on-tertiary-fixed": "#443100",
+                    "on-secondary-container": "#802b02",
+                    "secondary": "#9b3f15",
+                    "on-primary": "#ffefef",
+                    "outline": "#787676",
+                    "error-dim": "#9f0519",
+                    "primary": "#b60d3d",
+                    "on-tertiary": "#fff1da",
+                    "surface-bright": "#f9f6f5",
+                    "surface-container-low": "#f3f0ef",
+                    "on-surface-variant": "#5c5b5b",
+                    "inverse-on-surface": "#9e9c9c",
+                    "primary-fixed-dim": "#ff5773",
+                    "surface-container": "#eae8e7",
+                    "outline-variant": "#afadac",
+                    "on-secondary-fixed-variant": "#8d340a",
+                    "on-surface": "#2f2f2e",
+                    "secondary-fixed": "#ffc4af",
+                    "on-secondary": "#ffefeb",
+                    "surface-container-highest": "#dedcdb",
+                    "surface": "#f9f6f5",
+                    "error": "#b31b25",
+                    "tertiary-fixed": "#f9cc61",
+                    "surface-container-high": "#e4e2e1",
+                    "on-secondary-fixed": "#611e00",
+                    "primary-fixed": "#ff7386",
+                    "tertiary-fixed-dim": "#eabe55",
+                    "inverse-primary": "#ff506f",
+                    "on-tertiary-fixed-variant": "#674d00",
+                    "on-primary-fixed": "#000000",
+                    "tertiary": "#745700"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+      }
+      body {
+        font-family: 'Be Vietnam Pro', sans-serif;
+      }
+      h1, h2, h3 {
+        font-family: 'Plus Jakarta Sans', sans-serif;
+      }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-surface">
+<!-- TopAppBar -->
+<nav class="fixed top-0 w-full z-50 flex justify-between items-center px-6 py-4 bg-stone-50/80 dark:bg-stone-900/80 backdrop-blur-2xl shadow-[0_40px_60px_-10px_rgba(47,47,46,0.06)]">
+<div class="flex items-center gap-4">
+<a class="material-symbols-outlined text-stone-500 hover:scale-105 transition-transform duration-300" data-icon="arrow_back" href="home_page.html">arrow_back</a>
+<span class="text-2xl font-black text-rose-600 dark:text-rose-500 italic tracking-tighter">StyleBite</span>
+</div>
+<a class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container hover:scale-105 transition-transform duration-300" href="profile_page.html">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a stylish young woman with neon city lights reflected in the background, professional photography style" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCCvAXDQC1-P7gHPSoUq2Nygaj9k8ba66-tjWW5yvoqavkl2bF2WG6XEGc8Mqo1GQD1CE0iK56QBGuvV2BAQLXmJ6roOiRMAdt9wMN73XZOTuAS-7cggdBir6zcynEMCyCXrC72rM1HPof_YXmQmT031Qn6fApqJUdYR3YtZYT_oPTgGN9IFFKuPr0My4IIa41l4iEKZSYD9HNQARxEJspRHZvtuMz6B22Xgg7nolRLcOVuNFhNPajhTMML3cCZwh_6VxHUYFyIDUI"/>
+</a>
+</nav>
+<!-- Main Content Canvas -->
+<main class="pt-24 pb-32 px-6 max-w-2xl mx-auto">
+<header class="mb-10 flex items-end justify-between gap-3">
+<div>
+<h1 class="text-4xl font-extrabold tracking-tighter text-on-surface">Notifications</h1>
+<p class="text-on-surface-variant font-medium mt-1">Stay updated with your style circle</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-4 py-1.5 rounded-full bg-surface-container-low text-on-surface-variant text-xs font-bold uppercase tracking-widest hover:bg-surface-container-high transition-colors" id="markAllRead" type="button">Mark Read</button>
+<span class="bg-primary/10 text-primary px-4 py-1.5 rounded-full text-xs font-bold uppercase tracking-widest" id="newCountBadge">3 New</span>
+</div>
+</header>
+<!-- Notification List -->
+<div class="flex flex-col gap-6">
+<!-- Type 1: Vibe Request -->
+<div class="notification-card relative group bg-surface-container-lowest/80 backdrop-blur-xl p-6 rounded-xl shadow-[0_40px_60px_-10px_rgba(47,47,46,0.04)] hover:scale-[1.02] transition-all duration-300">
+<div class="unread-dot absolute top-6 right-6 w-2.5 h-2.5 bg-rose-500 rounded-full"></div>
+<div class="flex items-start gap-4">
+<img alt="Username" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="Portrait of a young man with a modern haircut wearing a denim jacket in a sunlit urban setting, shallow depth of field" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCl3lLK-ZTkxiH4Bn8CC5yanA46iICxDlS4Yth9y0m70rfV-H2DG4OqoJib3pubHMclpgYBczsJGRvSh3psNcA0iN0stqNcx4sszFkol7dAyUyJVSKL7UOXlItBldnlg0TqZoNL5xy5127DSJpeJv06NIwZhDRtyMjruKj1yR9R1B4mSPTq_u3i-LM6I8YusN2xGtXxomSKanZ4x6WVjhFRXryeX_VBckK1Z6hCnyHZFzBLLUobI4mG4b3rgMtZOWdz6NuqzP0nHx0"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-on-surface tracking-tight">marcus_vibe</span>
+<span class="text-[11px] text-on-surface-variant font-medium">2h ago</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">You got Vibed. Re-Vibe?</p>
+<div class="flex gap-3">
+<button class="vibe-action flex-1 bg-gradient-to-tr from-[#FF4D6D] to-[#FF8A5B] text-white py-2.5 rounded-full text-sm font-bold shadow-lg shadow-rose-500/20 active:scale-95 transition-all" data-action="Vibe Returned" type="button">Re-Vibe</button>
+<button class="vibe-action flex-1 border-1.5 border-outline-variant text-on-surface-variant py-2.5 rounded-full text-sm font-bold hover:bg-surface-container-low transition-colors" data-action="De-Vibed" type="button">De-Vibe</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Type 2: Like -->
+<div class="bg-surface-container-lowest/60 backdrop-blur-md p-6 rounded-xl shadow-[0_40px_60px_-10px_rgba(47,47,46,0.04)] hover:scale-[1.02] transition-all duration-300">
+<div class="flex items-start gap-4">
+<img alt="Username" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="Smiling young woman with long dark hair wearing a minimalist white shirt, bright studio lighting, clean aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDoa5pH9XAJ0oLxa9FgjGXQFBSwLTL78LjEemy_wnq9sqdk7_J9_8YvQ-RRody4w1oQQq_D3hsOAObaoFBqP8P2oFhqvy3HLscD03VYp0i6vKcjYLDRykIJEaUlpvc-dlvqovBuC8uWtPY0vc90ro6KFIpCHcXapzziNkjSguQ0emQ2sza8FKYFI0udWl8PJyiYEUubC3B9vPVTqPdzyvQTmaYuqng27G9mQXw_OAQCJ7BetHXJFMpY6YRlWmnSyZQjyF0Zx_asNK4"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-on-surface tracking-tight">elara_designs</span>
+<span class="text-[11px] text-on-surface-variant font-medium">2h ago</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Your post was liked</p>
+<a class="notification-link flex items-center gap-2 text-rose-600 text-sm font-bold group" href="home_page.html">
+                            View Post
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+<div class="w-14 h-14 rounded-lg overflow-hidden flex-shrink-0">
+<img alt="Post Thumbnail" class="w-full h-full object-cover" data-alt="Editorial fashion shot of a model wearing vibrant yellow streetwear against a minimalist concrete background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDrXAmXlMuWbQnWyEJkeGJcbMxLXGvXaxE5LtBrDI6XfQtxREi4Ys0xgGWB1_0vsK15GQr5sSbyWGlQFEcQ_m9PtK0vGX_-a4SUMt8z0w-t7t4ZZ3G2_nfB2zzovOuhh5UNkPgDbR13AZfIRIlvVNUONx86KAyfdH_2CjU0lp33LrM5UYiDuPeC-Rg20laSNfqndW7ipycvl7wDjwBJ3mjzu8g8F2ap-6KWD_tkc1hNuRsUSv26hEJlxprqQPyN9Ly3JrtaKS1qqvI"/>
+</div>
+</div>
+</div>
+<!-- Type 5: Contest (High Impact) -->
+<div class="relative bg-gradient-to-tr from-stone-900 to-stone-800 p-6 rounded-xl shadow-2xl overflow-hidden group hover:scale-[1.02] transition-all duration-300">
+<div class="unread-dot absolute top-6 right-6 w-2.5 h-2.5 bg-rose-400 rounded-full z-10"></div>
+<div class="absolute -right-4 -top-4 opacity-20 group-hover:scale-110 transition-transform duration-500">
+<span class="material-symbols-outlined text-8xl text-tertiary-container" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div class="relative z-10 flex items-start gap-4">
+<div class="w-10 h-10 bg-tertiary-container rounded-full flex items-center justify-center flex-shrink-0 shadow-lg">
+<span class="material-symbols-outlined text-on-tertiary-container" data-icon="emoji_events" style="font-variation-settings: 'FILL' 1;">emoji_events</span>
+</div>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-white tracking-tight">Summer Lookbook Challenge</span>
+<span class="text-[11px] text-stone-400 font-medium">2h ago</span>
+</div>
+<p class="text-stone-300 text-sm mb-4">You're now winning! Keep it up to claim the reward.</p>
+<a class="notification-link inline-block px-6 py-2 bg-white text-stone-900 rounded-full text-xs font-black uppercase tracking-widest hover:bg-tertiary-container transition-colors" href="contest_home.html">View Contest</a>
+</div>
+</div>
+</div>
+<!-- Type 3: Comment -->
+<div class="relative bg-surface-container-lowest/80 backdrop-blur-xl p-6 rounded-xl shadow-[0_40px_60px_-10px_rgba(47,47,46,0.04)] hover:scale-[1.02] transition-all duration-300">
+<div class="unread-dot absolute top-6 right-6 w-2.5 h-2.5 bg-rose-500 rounded-full"></div>
+<div class="flex items-start gap-4">
+<img alt="Username" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="Close-up of a stylish man with glasses smiling in a modern office space, soft warm lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC-Gcei0fRk7g3REJ20VluuztAXHX_4W-WYzZcXdxGAmRl9Ciu49n4GSTfjusZfXExzfFmwaNJHx9TbvDNQ4k_SyrVBMct01HOcD-H66oemMCfhPvPdW2aGyeqcs_RFA_JwCP5dOSXbF6YWrqh5jcwhlPnAySolK2K3H_YyMcfHem_nDEiIMUeZ3C2t8yKfbni38DMNhBRiBgDw_fAbAuYp0Wkci5FSEIVVAinX4CM3fwT6clSr0uydOiKsqaBoBLRApqz700EJBPk"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-on-surface tracking-tight">david_stylist</span>
+<span class="text-[11px] text-on-surface-variant font-medium">2h ago</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">New comment on your post: "This aesthetic is exactly what we need for the fall collection!"</p>
+<a class="notification-link flex items-center gap-2 text-rose-600 text-sm font-bold group" href="home_page.html">
+                            View Comment
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="chevron_right">chevron_right</span>
+</a>
+</div>
+</div>
+</div>
+<!-- Type 4: Message -->
+<div class="bg-surface-container-lowest/60 backdrop-blur-md p-6 rounded-xl shadow-[0_40px_60px_-10px_rgba(47,47,46,0.04)] hover:scale-[1.02] transition-all duration-300">
+<div class="flex items-start gap-4">
+<img alt="Username" class="w-10 h-10 rounded-full object-cover flex-shrink-0" data-alt="Candid portrait of a young woman with curly hair laughing in a cafe, natural window light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAitZ6epB_gHpasdFNd3etpds5kf4LQmdqkixAEkpUhmW6GuYBAOdS6cHZHT4MK_w2teB1xH4gner1LlANxA3GheKZ6mXniJVsTKXxNOXS9ixVDQLalbvP6nxuJOVncv6AScXLf8kR0AiECn0divr8JkTBvSqBTGmF4ehdQuyYSOXWGaVOMjc11XU72jicCJgBfCtAARAZ0204WFvRW9R26aLfczd0NyPNranyJ4Q19pdCSv-SE2QQP86NTaRXxtj2YSYHr1WQgb7k"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-1">
+<span class="font-bold text-on-surface tracking-tight">claire_mondrian</span>
+<span class="text-[11px] text-on-surface-variant font-medium">2h ago</span>
+</div>
+<p class="text-on-surface-variant text-sm mb-4">Received a new message</p>
+<a class="notification-link flex items-center gap-2 text-rose-600 text-sm font-bold group" href="message.html">
+                            Open Chat
+                            <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="chat">chat</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</main>
+<div class="fixed left-1/2 -translate-x-1/2 translate-y-4 bottom-24 opacity-0 pointer-events-none z-[90] transition-all duration-300 bg-on-surface text-surface px-4 py-2 rounded-full text-xs font-semibold shadow-xl" id="notifyToast">
+<span id="notifyToastText">Updated</span>
+</div>
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+<script>
+  (() => {
+    const toast = document.getElementById("notifyToast");
+    const toastText = document.getElementById("notifyToastText");
+    const markAllReadBtn = document.getElementById("markAllRead");
+    const badge = document.getElementById("newCountBadge");
+    const unreadDots = () => Array.from(document.querySelectorAll(".unread-dot"));
+    const vibeActions = Array.from(document.querySelectorAll(".vibe-action"));
+    const notificationLinks = Array.from(document.querySelectorAll(".notification-link"));
+
+    function showToast(message) {
+      toastText.textContent = message;
+      toast.classList.remove("opacity-0", "translate-y-4");
+      toast.classList.add("opacity-100", "translate-y-0");
+      setTimeout(() => {
+        toast.classList.add("opacity-0", "translate-y-4");
+        toast.classList.remove("opacity-100", "translate-y-0");
+      }, 1400);
+    }
+
+    function syncUnreadCount() {
+      const unreadCount = unreadDots().length;
+      if (unreadCount > 0) {
+        badge.textContent = unreadCount + " New";
+        badge.classList.remove("hidden");
+      } else {
+        badge.classList.add("hidden");
+      }
+    }
+
+    function markNearestRead(element) {
+      const container = element.closest(".notification-card") || element.closest(".relative");
+      if (!container) return;
+      const dot = container.querySelector(".unread-dot");
+      if (dot) {
+        dot.remove();
+        syncUnreadCount();
+      }
+    }
+
+    vibeActions.forEach((button) => {
+      button.addEventListener("click", () => {
+        button.disabled = true;
+        button.textContent = button.dataset.action;
+        button.classList.add("opacity-80");
+        const sibling = button.parentElement.querySelectorAll(".vibe-action");
+        sibling.forEach((item) => {
+          if (item !== button) item.classList.add("hidden");
+        });
+        markNearestRead(button);
+        showToast(button.dataset.action);
+      });
+    });
+
+    notificationLinks.forEach((link) => {
+      link.addEventListener("click", () => {
+        markNearestRead(link);
+      });
+    });
+
+    markAllReadBtn.addEventListener("click", () => {
+      unreadDots().forEach((dot) => dot.remove());
+      syncUnreadCount();
+      showToast("All notifications marked as read");
+    });
+
+    syncUnreadCount();
+  })();
+</script>
+</body></html>
+

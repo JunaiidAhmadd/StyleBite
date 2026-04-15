@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>StyleBite - Home</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#FF8A5B",
+                    "on-tertiary-container": "#7A2E00",
+                    "secondary-container": "#FFE1D6",
+                    "outline": "#9A8F8A",
+                    "primary-fixed-dim": "#FF6B57",
+                    "surface-container-low": "#f3f0ef",
+                    "on-surface-variant": "#5c5b5b",
+                    "secondary-fixed-dim": "#FFC29E",
+                    "surface-container": "#eae7e7",
+                    "inverse-surface": "#0e0e0e",
+                    "secondary-dim": "#B14A1F",
+                    "surface-tint": "#FF4D6D",
+                    "error-dim": "#a70138",
+                    "inverse-primary": "#FF8A5B",
+                    "surface-bright": "#f9f6f5",
+                    "on-primary": "#fff7f3",
+                    "error": "#b41340",
+                    "tertiary-dim": "#E9B949",
+                    "primary-dim": "#E54360",
+                    "secondary": "#C65A22",
+                    "secondary-fixed": "#FFD4BF",
+                    "tertiary": "#FFD166",
+                    "error-container": "#f74b6d",
+                    "on-secondary-fixed-variant": "#8B3A14",
+                    "on-tertiary-fixed": "#5A3A00",
+                    "background": "#f9f6f5",
+                    "on-primary-fixed": "#000000",
+                    "on-surface": "#2f2f2e",
+                    "surface": "#f9f6f5",
+                    "inverse-on-surface": "#9e9c9c",
+                    "on-primary-container": "#5C1F28",
+                    "on-primary-fixed-variant": "#7A2834",
+                    "on-error-container": "#510017",
+                    "tertiary-fixed-dim": "#F3D98B",
+                    "on-background": "#2f2f2e",
+                    "tertiary-fixed": "#FFE29A",
+                    "surface-variant": "#dfdcdc",
+                    "surface-dim": "#d6d4d3",
+                    "on-secondary-container": "#7A2F10",
+                    "on-tertiary-fixed-variant": "#8A5A00",
+                    "on-error": "#ffefef",
+                    "outline-variant": "#afadac",
+                    "surface-container-highest": "#dfdcdc",
+                    "on-secondary-fixed": "#5A1E00",
+                    "on-secondary": "#fff3ec",
+                    "on-tertiary": "#5A3A00",
+                    "primary": "#FF4D6D",
+                    "primary-fixed": "#FF8A5B",
+                    "surface-container-high": "#e4e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#FFE7A8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Be Vietnam Pro', sans-serif; background-color: #f9f6f5; color: #2f2f2e; }
+        .headline-font { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .glass { backdrop-filter: blur(24px); -webkit-backdrop-filter: blur(24px); }
+        .power-gradient { background: linear-gradient(135deg, #FF4D6D, #FF8A5B); }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="bg-[#f9f6f5]/70 dark:bg-[#2f2f2e]/70 backdrop-blur-xl docked full-width top-0 z-50 sticky flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary-container/20">
+<img alt="User Profile Avatar" class="w-full h-full object-cover" data-alt="Close-up portrait of a stylish young woman with neon lighting, vibrant and energetic mood, high-end fashion aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAmThVWAgF4z9Hf5AQLwepw90x93Oj5GUpSEy6YiaNqal9NyA1AuobSY_6k3Sk-szwdyHipm0XEyvbqDpR1eEf4kGnRVIRIwmkqm90vPeg8BU137w4lBSATx9R1dUTetfJudq84g5jO0lZSegWVfDMdcxGyhoRwyWxzBqLml4bJ4hYj2-VBLipMkXPSTRgcQFADfoHBCQYCs_B7u0TAKlTh2ShT5bqeENwDsAF4UHF_cb3tM_h2I0unJVJOGdzIknYeTHSnzM3iTsaa"/>
+</div>
+<div class="inline-flex items-center gap-1 rounded-full bg-white/85 p-1 shadow-[0_8px_20px_-16px_rgba(47,47,46,0.5)]" id="feedTypeToggle">
+<button aria-pressed="true" class="feed-tab-btn rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] px-4 py-1.5 text-[11px] font-bold tracking-wider text-white transition-all active:scale-95" data-feed-target="style" type="button">Style</button>
+<button aria-pressed="false" class="feed-tab-btn rounded-full px-4 py-1.5 text-[11px] font-bold tracking-wider text-on-surface-variant transition-all hover:text-on-surface active:scale-95" data-feed-target="bite" type="button">Bite</button>
+</div>
+</div>
+<div class="flex items-center gap-2">
+
+<!-- Search -->
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+<a href="explore_page.html">
+<span class="material-symbols-outlined text-on-surface">search</span>
+</a>
+</button>
+
+<!-- Notifications -->
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all relative">
+<a href="notification.html">
+<span class="material-symbols-outlined text-on-surface">notifications</span>
+</a>
+
+<!-- Notification Dot -->
+<span class="absolute top-2 right-2 w-2 h-2 bg-[#FFD166] rounded-full"></span>
+</button>
+
+<!-- Messages -->
+<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-surface-container-high transition-all">
+<a href="message.html">
+<span class="material-symbols-outlined text-on-surface">chat</span>
+</a>
+</button>
+
+</div>
+</header>
+<main class="max-w-md mx-auto px-4 pt-4 space-y-8">
+<section class="mb-5">
+<div class="flex justify-center">
+<div class="inline-flex items-center gap-1.5 rounded-full border border-white/80 bg-white/75 p-1.5 backdrop-blur-xl shadow-[0_12px_28px_-22px_rgba(47,47,46,0.6)]">
+<button class="min-w-[104px] px-5 py-2 rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] text-white text-xs font-bold tracking-wide shadow-[0_8px_16px_-10px_rgba(255,77,109,0.75)] active:scale-95 transition-all">For You</button>
+<button class="min-w-[104px] px-5 py-2 rounded-full text-on-surface-variant text-xs font-semibold tracking-wide hover:text-on-surface hover:bg-surface-container-low transition-all active:scale-95">Nearby</button>
+</div>
+</div>
+</section>
+<!-- Floating Battle Highlight Section -->
+<section class="mb-8 relative overflow-hidden rounded-3xl power-gradient p-4 shadow-[0_16px_30px_-16px_rgba(255,77,109,0.38)] min-h-[148px]">
+<div class="absolute -right-10 -top-10 w-28 h-28 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10 flex items-center justify-between gap-3">
+<div class="max-w-[58%]">
+<span class="inline-block px-2.5 py-1 bg-white/20 rounded-full text-[9px] font-bold uppercase tracking-widest text-white mb-2">Live Now</span>
+<h2 class="font-headline text-xl font-extrabold text-white leading-tight">Neon Street vs. Pastel Retro</h2>
+</div>
+<div class="flex -space-x-2.5">
+<img alt="" class="w-10 h-10 rounded-xl border-2 border-[#FF4D6D] object-cover" data-alt="vibrant neon street style outfit with bright colors and creative lighting on a woman model" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-J82vUV121lCSjSlsrpi35xRx5srSuoHWdcWR6qdp1xRkSC2-XMZDyXZM_wuWV8jGl1ZtqhJ3zHyJuGlrMs_lFnte71_ohmyck8cJYZ5at3aV06Eepbkp0-pLKnYNVeGQtcLeOq9a1o0uzNIo5Aj1HAkfANIAHGdguyYg4QSMMDhSx10Rj1h9RlNsNYn3LWjd6d1cPoWN08jsicvxj4yGSZuiZ0rgto_etVuEpIZVolX6eEYAXNRn5_YzAWCID4g5BpyU-Ki4XkaM"/>
+<img alt="" class="w-10 h-10 rounded-xl border-2 border-[#FF4D6D] object-cover" data-alt="soft pastel retro fashion look with vintage aesthetics and warm film grain lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCOTEw5WM4JJkSlXy_cthPNMICXaQCOuVgG4YzTHM3G72hq5Bk-s1OdmCqF4hsTUnY9zi8RdJeFeIcZokhn62RZXJfC0YCrkADSgwIy-uRMeEThii63dGgaGOKMpvNIQR-p_Sn2hq8W1GruFC1oyWg-qCoauj9n1U95yL7QzNYP2pvxDPVbF0WzlrWf9rBW4zbtTDU3TLmIb3frNTd3vtiVMd7F4B5AKo9Sh2wQPCEaZ5w1gisRyqSg7ySxBzxKBsxV8uFdU527p6p-"/>
+<div class="w-10 h-10 rounded-xl border-2 border-[#FF4D6D] bg-white/20 backdrop-blur-sm flex items-center justify-center text-white font-bold text-sm">+42</div>
+</div>
+</div>
+<div class="relative z-10 mt-3">
+<a href="contest_home.html"><button class="bg-white text-[#FF4D6D] px-4 py-2 rounded-full font-bold text-xs hover:scale-105 active:scale-95 transition-all shadow-lg">Vote &amp; Win</button></a>
+</div>
+</section>
+<!-- Vertical Outfit Feed -->
+<div class="space-y-12">
+<!-- Post 1 -->
+<article class="feed-card bg-surface-container-low rounded-xl overflow-hidden relative group" data-feed="style">
+<!-- User Header -->
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden ring-2 ring-primary/10">
+<img alt="User" class="w-full h-full object-cover" data-alt="Portrait of a fashionable young model wearing trendy eyewear, high contrast, minimalist background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBweq0cPXVSjgbQdNGH9-lbKvWMrVOyV0iysiPLTFS6go89QBltD42UjKangHQNNJf2EbBMLGANwd8s_2_T1wZ3T0U2zWFbIp58yQkgo3vxJFOVr8UJMWnoZa_9LXQs34nW0B94pGoC-0vjhfCsSgU7jzROermeTyTNw1NltcxtgpJ_5kDmofKM4ZeXqiIC_VJ9PzawPh1eQHmmPpLDnSI18DfVPYbAiSP3d1ZtJZHRMJ2UX_OA8n3mvtm0ue9Jx-oA6fYw30hoiFI7"/>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-bold text-sm text-on-surface">@kai_vibe</h3>
+<div class="bg-primary/10 text-primary text-[10px] font-black px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                                    12D
+                                </div>
+</div>
+<p class="text-[10px] font-medium text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+                                TOKYO, JP
+                            </p>
+</div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</button>
+</div>
+<!-- Main Content Image -->
+<div class="px-3 pb-3">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative shadow-inner">
+<img alt="OOTD" class="w-full h-full object-cover" data-alt="Full body shot of a stylish person in techwear fashion, futuristic urban neon background, high-end editorial photography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gy6FrY_AcMiXN2HBlJBy8gt_HHiDXxtp8UW5tAPt-o4W0rK9xfqZ9jdDzDJZUjjLkOQ76CMVrRXC6DZS_-P5hGT6vyYeVKj7eekFpzJ5xgyncDsLB_IbtOrs8Z15xa5OEACtAnM7nu9TGp5oCRuEGH25hPpfEhIsC0WUuNc0Zs3CNVvA1IPhpjtuKATK_jpqQ6WXGE8OyU5_wZavMhAgtXrlU9iB-1HlXBWWLq0NakDbQoeSfnkAVrLDm8X-cXsqueXmRpFwsVsc"/>
+<!-- Rating Overlay Score -->
+<div class="absolute top-4 right-4 glass bg-white/40 px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline font-black text-on-surface">4.8</span>
+</div>
+<!-- Swipe/Rate Interaction Overlay (Conceptual) -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] glass bg-white/20 p-4 rounded-xl flex justify-between items-center">
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">1</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">2</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">3</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95 border-2 border-primary-container">4</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-110 transition-transform active:scale-95">5</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Actions -->
+<div class="px-5 pb-6 flex items-center justify-between">
+<div class="flex items-center gap-5">
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">1.2k</span>
+</button>
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">chat_bubble</span>
+<span class="text-xs font-bold">48</span>
+</button>
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">share</span>
+</button>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface">bookmark</span>
+</button>
+</div>
+</article>
+<!-- Post 2 -->
+<article class="feed-card bg-surface-container-low rounded-xl overflow-hidden relative group" data-feed="bite">
+<!-- User Header -->
+<div class="p-4 flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden ring-2 ring-primary/10">
+<img alt="User" class="w-full h-full object-cover" data-alt="Candid portrait of a young man laughing, natural lighting, outdoors in a stylish city street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4kDC68A-S2blSU39whC-C26nkXjfhYM58s-eiznxTZjLDwyMWsPHVwJ8eJgKh7oVCfnJ-U9xC39aBvjAjA6u7tai3qAvMgZ8N3AE8z9oNdNN9cKGX8-PfFVvvrDXVoDzX5_XGt3YNf7blaM6OMaejqkOd7F85DH9cjLwndHYxJrse6mLvKnGZskK7c8BkB5wKueJh4nKWy6v3Xb0E4Tr452thoebstaE8T9SHOaThUj5GedWVb00YOX_Dg8AGiakd6fQ3KtQ2S1Ii"/>
+<img alt="User" class="w-full h-full object-cover" data-alt="Candid portrait of a young man laughing, natural lighting, outdoors in a stylish city street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4kDC68A-S2blSU39whC-C26nkXjfhYM58s-eiznxTZjLDwyMWsPHVwJ8eJgKh7oVCfnJ-U9xC39aBvjAjA6u7tai3qAvMgZ8N3AE8z9oNdNN9cKGX8-PfFVvvrDXVoDzX5_XGt3YNf7blaM6OMaejqkOd7F85DH9cjLwndHYxJrse6mLvKnGZskK7c8BkB5wKueJh4nKWy6v3Xb0E4Tr452thoebstaE8T9SHOaThUj5GedWVb00YOX_Dg8AGiakd6fQ3KtQ2S1Ii"/>
+</div>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-bold text-sm text-on-surface">@bite_lab</h3>
+<div class="bg-primary/10 text-primary text-[10px] font-black px-2 py-0.5 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-[10px]" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+                                    12D
+                                </div>
+</div>
+<p class="text-[10px] font-medium text-on-surface-variant flex items-center gap-0.5">
+<span class="material-symbols-outlined text-[12px]">location_on</span>
+                                LAHORE, PK
+                            </p>
+</div>
+</div>
+<button class="w-8 h-8 flex items-center justify-center rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined text-on-surface-variant">more_vert</span>
+</button>
+</div>
+<!-- Main Content Image -->
+<div class="px-3 pb-3">
+<div class="aspect-[4/5] rounded-lg overflow-hidden relative shadow-inner">
+<img alt="Food Review" class="w-full h-full object-cover" data-alt="Close-up top view of plated fusion street-food meal with colorful presentation in warm cafe lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-gy6FrY_AcMiXN2HBlJBy8gt_HHiDXxtp8UW5tAPt-o4W0rK9xfqZ9jdDzDJZUjjLkOQ76CMVrRXC6DZS_-P5hGT6vyYeVKj7eekFpzJ5xgyncDsLB_IbtOrs8Z15xa5OEACtAnM7nu9TGp5oCRuEGH25hPpfEhIsC0WUuNc0Zs3CNVvA1IPhpjtuKATK_jpqQ6WXGE8OyU5_wZavMhAgtXrlU9iB-1HlXBWWLq0NakDbQoeSfnkAVrLDm8X-cXsqueXmRpFwsVsc"/>
+<!-- Rating Overlay Score -->
+<div class="absolute top-4 right-4 glass bg-white/40 px-3 py-1.5 rounded-full flex items-center gap-1.5 shadow-xl">
+<span class="material-symbols-outlined text-primary text-lg" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="font-headline font-black text-on-surface">4.8</span>
+</div>
+<!-- Swipe/Rate Interaction Overlay (Conceptual) -->
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 w-[85%] glass bg-white/20 p-4 rounded-xl flex justify-between items-center">
+<div class="flex gap-2">
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">1</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">2</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95">3</button>
+<button class="w-10 h-10 rounded-full bg-white flex items-center justify-center text-on-surface shadow-sm hover:scale-110 transition-transform active:scale-95 border-2 border-primary-container">4</button>
+<button class="w-10 h-10 rounded-full bg-primary text-white flex items-center justify-center shadow-lg shadow-primary/20 hover:scale-110 transition-transform active:scale-95">5</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Social Actions -->
+<div class="px-5 pb-6 flex items-center justify-between">
+<div class="flex items-center gap-5">
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">favorite</span>
+<span class="text-xs font-bold">1.2k</span>
+</button>
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">chat_bubble</span>
+<span class="text-xs font-bold">48</span>
+</button>
+<button class="flex items-center gap-1.5 group/btn">
+<span class="material-symbols-outlined text-on-surface group-hover/btn:text-primary transition-colors">share</span>
+</button>
+</div>
+<button class="w-10 h-10 rounded-full flex items-center justify-center hover:bg-surface-container-high transition-colors">
+<span class="material-symbols-outlined text-on-surface">bookmark</span>
+</button>
+</div>
+</article>
+</div>
+</main>
+<!-- FAB Suppression: On home, we show the Add/Create button if it were defined as a FAB, but here it's in the BottomNavBar -->
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="home_page.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+<script>
+  (() => {
+    const tabButtons = Array.from(document.querySelectorAll(".feed-tab-btn"));
+    const feedCards = Array.from(document.querySelectorAll(".feed-card"));
+
+    function setFeed(activeFeed) {
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.feedTarget === activeFeed;
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.classList.toggle("bg-gradient-to-r", isActive);
+        button.classList.toggle("from-[#FF4D6D]", isActive);
+        button.classList.toggle("to-[#FF8A5B]", isActive);
+        button.classList.toggle("text-white", isActive);
+        button.classList.toggle("text-on-surface-variant", !isActive);
+      });
+
+      feedCards.forEach((card) => {
+        card.classList.toggle("hidden", card.dataset.feed !== activeFeed);
+      });
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => setFeed(button.dataset.feedTarget));
+    });
+
+    setFeed("style");
+  })();
+</script>
+</body></html>
+
+
+

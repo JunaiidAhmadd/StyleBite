@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>StyleBite | Messages</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+  <script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          colors: {
+            primary: "#FF4D6D",
+            "primary-container": "#FF8A5B",
+            background: "#f9f6f5",
+            surface: "#ffffff",
+            "surface-container-low": "#f3f0ef",
+            "surface-container-high": "#e4e2e1",
+            "on-surface": "#2f2f2e",
+            "on-surface-variant": "#5c5b5b"
+          },
+          fontFamily: {
+            headline: ["Plus Jakarta Sans"],
+            body: ["Be Vietnam Pro"]
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+    .power-gradient {
+      background: linear-gradient(135deg, #FF4D6D 0%, #FF8A5B 100%);
+    }
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-background text-on-surface font-body">
+  <header class="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-xl border-b border-white/50">
+    <div class="max-w-2xl mx-auto flex items-center justify-between px-6 py-4">
+      <div class="flex items-center gap-3">
+        <a class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high active:scale-95 transition-transform" href="home_page.html">
+          <img alt="Profile" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9HgAdQf-2zhr5dMzGQFIHr647c0pvKwIXp-aRUyttQefTcqYvoJLM39eVSS43z3ykhs35yEvvDHDAPlqiKcZ-XEgrQEHi7DJS_jiMxTkMcvWvGedEmi8gpZDFq2Li2Wbn5fj4Sn_2MH2i5Xcq1Swx0SYb0ZlysJAkymnX5GtZxnlsIfY4N9zElUklM3R-xcrHTOdeQvN_kRj00Av8DLlbgaaj78bPoBjpHmYuOrLXnDtexiZ06bcUOsZILg4jeMCHGA3qtPb9jQLc"/>
+        </a>
+        <h1 class="font-headline text-xl font-extrabold tracking-tight bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent">Messages</h1>
+      </div>
+      <a class="material-symbols-outlined text-on-surface-variant hover:text-on-surface transition-colors" href="profile_page.html">settings</a>
+    </div>
+  </header>
+
+  <main class="max-w-2xl mx-auto pt-24 pb-32 px-6">
+    <div class="relative mb-6">
+      <span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+      <input class="w-full h-14 pl-12 pr-4 rounded-2xl border-none bg-surface-container-low focus:ring-2 focus:ring-primary/20" id="chatSearch" placeholder="Search contacts or chats..." type="text"/>
+    </div>
+
+    <div class="space-y-4">
+      <a class="chat-item block" data-chat="marcus v." data-preview="that look was absolutely fire! did you get the link for the..." href="chat_screen.html?name=Marcus%20V.&status=Active%20Now&avatar=https%3A%2F%2Flh3.googleusercontent.com%2Faida-public%2FAB6AXuAvYQe3q12wz4_RzSu1iMbvJnHuTcHkzpO36MR5tralWD7PRWWsVaPognHDrwNbjgFQoJiiJIla3XIuXC4PxFEcvlDNhiMiEZPgCWHC5aN9aUmCW-nwn4UdBiJRvjtqHE_j0WwRRjE6GBejGUJ50E12QgSww9a1yK_lUxw_aCuVZKo1rOMpb_3jdVa94Ym8WWPO9Q3aYQIP9bCQdw9Hst73vPPn-R5e9tdBhw5T1S9m4MtYO8h6u7_Lcs6B1vJarp5nZibPlk9GyEgd&online=1">
+        <div class="bg-surface rounded-[2rem] p-4 flex items-center gap-4 border border-white/60 shadow-[0_18px_20px_-14px_rgba(0,0,0,0.2)] hover:scale-[1.01] transition-transform">
+          <div class="relative w-[50px] h-[50px] flex-shrink-0">
+            <img alt="Marcus" class="w-full h-full rounded-full object-cover ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAvYQe3q12wz4_RzSu1iMbvJnHuTcHkzpO36MR5tralWD7PRWWsVaPognHDrwNbjgFQoJiiJIla3XIuXC4PxFEcvlDNhiMiEZPgCWHC5aN9aUmCW-nwn4UdBiJRvjtqHE_j0WwRRjE6GBejGUJ50E12QgSww9a1yK_lUxw_aCuVZKo1rOMpb_3jdVa94Ym8WWPO9Q3aYQIP9bCQdw9Hst73vPPn-R5e9tdBhw5T1S9m4MtYO8h6u7_Lcs6B1vJarp5nZibPlk9GyEgd"/>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-headline font-bold truncate">Marcus V.</h3>
+              <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">2m ago</span>
+            </div>
+            <p class="text-sm text-on-surface-variant truncate">That look was absolutely fire! Did you get the link for the...</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="chat-item block" data-chat="elena s." data-preview="i sent the moodboard for the tokyo shoot. check it out!" href="chat_screen.html?name=Elena%20S.&status=Offline&avatar=https%3A%2F%2Flh3.googleusercontent.com%2Faida-public%2FAB6AXuBrrphqbwvluryFcTBX6SX_JB2LMJhQgyI22Yoj_A70PaBk6pMIkZ5n_GMeEVxFJg1imUb9eOlfzLv9G_k-th-zrobj7D6DGKc8qy3bgL0aTpsCHhwIhl-ZOSTK2b74ScgjZDq540eWURbTj1KMvuJpevs_ppYGMg75wz_3DMoLKlzRqoN1vHwdLtUD3oItXRFH7RheVnm_KkIvb9ys_3MpXHLeVrlcANlzTtoK91lvZVfL5ZAAQsxttdw-_g82P_ULw5UDoHEcSVGG&online=0">
+        <div class="bg-surface-container-low rounded-[2rem] p-4 flex items-center gap-4 hover:bg-surface transition-colors">
+          <div class="relative w-[50px] h-[50px] flex-shrink-0">
+            <img alt="Elena" class="w-full h-full rounded-full object-cover ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrrphqbwvluryFcTBX6SX_JB2LMJhQgyI22Yoj_A70PaBk6pMIkZ5n_GMeEVxFJg1imUb9eOlfzLv9G_k-th-zrobj7D6DGKc8qy3bgL0aTpsCHhwIhl-ZOSTK2b74ScgjZDq540eWURbTj1KMvuJpevs_ppYGMg75wz_3DMoLKlzRqoN1vHwdLtUD3oItXRFH7RheVnm_KkIvb9ys_3MpXHLeVrlcANlzTtoK91lvZVfL5ZAAQsxttdw-_g82P_ULw5UDoHEcSVGG"/>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-zinc-300 border-2 border-white"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-headline font-bold truncate">Elena S.</h3>
+              <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">45m ago</span>
+            </div>
+            <p class="text-sm text-on-surface-variant truncate">I sent the moodboard for the Tokyo shoot. Check it out!</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="chat-item block" data-chat="jordan" data-preview="see you at the pop-up event later? it starts at 7." href="chat_screen.html?name=Jordan&status=Active%20Now&avatar=https%3A%2F%2Flh3.googleusercontent.com%2Faida-public%2FAB6AXuD-82L7ER8AOBYB47lJlD63YephakWHzXx8Z2d8FgWsDmYwpKurT6HNcZ_YGgiwohHu8pFrbwoVGMXqkfN8rpdEETGOMCqx65BnvKLNNJ-d1XQ7wbRVXOdJvt7kQC5RNOTwUYf9OeAysWaKnf7fJKjOMtO8QJv6t9s7k-hvdCOSUbLVZV60LEveftR3CcvkNK8vpmVSz7XDW5FeVXt0ZyLjrErI_AOym55Qz9bthwjLca6KT4AGoSScQkRG9ufqE_psothBUts_Lenp&online=1">
+        <div class="bg-surface rounded-[2rem] p-4 flex items-center gap-4 border border-white/60 shadow-[0_18px_20px_-14px_rgba(0,0,0,0.2)] hover:scale-[1.01] transition-transform">
+          <div class="relative w-[50px] h-[50px] flex-shrink-0">
+            <img alt="Jordan" class="w-full h-full rounded-full object-cover ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-82L7ER8AOBYB47lJlD63YephakWHzXx8Z2d8FgWsDmYwpKurT6HNcZ_YGgiwohHu8pFrbwoVGMXqkfN8rpdEETGOMCqx65BnvKLNNJ-d1XQ7wbRVXOdJvt7kQC5RNOTwUYf9OeAysWaKnf7fJKjOMtO8QJv6t9s7k-hvdCOSUbLVZV60LEveftR3CcvkNK8vpmVSz7XDW5FeVXt0ZyLjrErI_AOym55Qz9bthwjLca6KT4AGoSScQkRG9ufqE_psothBUts_Lenp"/>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-headline font-bold truncate">Jordan</h3>
+              <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">1h ago</span>
+            </div>
+            <p class="text-sm text-on-surface-variant truncate">See you at the pop-up event later? It starts at 7.</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="chat-item block" data-chat="sasha" data-preview="the vintage drops are amazing!" href="chat_screen.html?name=Sasha&status=Offline&avatar=https%3A%2F%2Flh3.googleusercontent.com%2Faida-public%2FAB6AXuBEbjZZuIqxEk5FeVWkqFiioIsLZ4-NKJIbKj-qAKNgSi67y9KM6L0Sfvyv2GG704KhXbn1FnrklHJtqPsj8UdaryKbJ_alLqpYhXeJNty4JDRJ4hzCBy0_hoGx3USdLMSVzgTA53xE3veZNqRUd8Z_7wRDFFPQ4krOTnuEqN1dW48kgCYben8IFFHDWptVbOXGwL4u8uoeEFrQcCCDd0tfdM2Eli9b8Jrv4m_Xe2NzOL6JUoJZkrwjG65dMCaFzyhfLi70MpS_64BE&online=0">
+        <div class="bg-surface-container-low rounded-[2rem] p-4 flex items-center gap-4 hover:bg-surface transition-colors">
+          <div class="relative w-[50px] h-[50px] flex-shrink-0">
+            <img alt="Sasha" class="w-full h-full rounded-full object-cover ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBEbjZZuIqxEk5FeVWkqFiioIsLZ4-NKJIbKj-qAKNgSi67y9KM6L0Sfvyv2GG704KhXbn1FnrklHJtqPsj8UdaryKbJ_alLqpYhXeJNty4JDRJ4hzCBy0_hoGx3USdLMSVzgTA53xE3veZNqRUd8Z_7wRDFFPQ4krOTnuEqN1dW48kgCYben8IFFHDWptVbOXGwL4u8uoeEFrQcCCDd0tfdM2Eli9b8Jrv4m_Xe2NzOL6JUoJZkrwjG65dMCaFzyhfLi70MpS_64BE"/>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-zinc-300 border-2 border-white"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-headline font-bold truncate">Sasha</h3>
+              <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">3h ago</span>
+            </div>
+            <p class="text-sm text-on-surface-variant truncate">The vintage drops are amazing!</p>
+          </div>
+        </div>
+      </a>
+
+      <a class="chat-item block" data-chat="julian" data-preview="thanks for the recommendation!" href="chat_screen.html?name=Julian&status=Active%20Now&avatar=https%3A%2F%2Flh3.googleusercontent.com%2Faida-public%2FAB6AXuBrMiHyGtuVX1d91SXc7Rf0nwTl_M0kMphVIO8jZMqnnnjbRXc6P-kGuqC49zwMThoGRbGxIt19SvnFWd0C8Yhui7MJIRlwU2otZWniYOqQNkGcWGL9_fYFCyrWBv31TGuRAi5C_xsKghTHSWWg7lbVzlEd6Guf58kdgunfzlbOREwbSBf2zmq6qteWjjXBLljs9bOSTrTnDVob4T2vvL22nY-QkRaI6T-fqkXMnZC3-G4PmHGmOFywZjfgRRZm3CjrjvchDUPFG9x9&online=1">
+        <div class="bg-surface-container-low rounded-[2rem] p-4 flex items-center gap-4 hover:bg-surface transition-colors">
+          <div class="relative w-[50px] h-[50px] flex-shrink-0">
+            <img alt="Julian" class="w-full h-full rounded-full object-cover ring-2 ring-white" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrMiHyGtuVX1d91SXc7Rf0nwTl_M0kMphVIO8jZMqnnnjbRXc6P-kGuqC49zwMThoGRbGxIt19SvnFWd0C8Yhui7MJIRlwU2otZWniYOqQNkGcWGL9_fYFCyrWBv31TGuRAi5C_xsKghTHSWWg7lbVzlEd6Guf58kdgunfzlbOREwbSBf2zmq6qteWjjXBLljs9bOSTrTnDVob4T2vvL22nY-QkRaI6T-fqkXMnZC3-G4PmHGmOFywZjfgRRZm3CjrjvchDUPFG9x9"/>
+            <span class="absolute bottom-0 right-0 w-3.5 h-3.5 rounded-full bg-emerald-500 border-2 border-white"></span>
+          </div>
+          <div class="flex-1 min-w-0">
+            <div class="flex justify-between items-baseline">
+              <h3 class="font-headline font-bold truncate">Julian</h3>
+              <span class="text-[10px] uppercase tracking-widest text-on-surface-variant">Yesterday</span>
+            </div>
+            <p class="text-sm text-on-surface-variant truncate">Thanks for the recommendation!</p>
+          </div>
+        </div>
+      </a>
+    </div>
+  </main>
+
+  <nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+    <div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+      <div class="flex items-center justify-between px-3 py-2">
+        <a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+        <a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+        <a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+        <a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+        <a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+      </div>
+    </div>
+  </nav>
+
+  <script>
+    (() => {
+      const searchInput = document.getElementById("chatSearch");
+      const chats = Array.from(document.querySelectorAll(".chat-item"));
+
+      function applyFilter() {
+        const term = searchInput.value.trim().toLowerCase();
+        chats.forEach((chat) => {
+          const text = (chat.dataset.chat + " " + chat.dataset.preview).toLowerCase();
+          chat.classList.toggle("hidden", term.length > 0 && !text.includes(term));
+        });
+      }
+
+      searchInput.addEventListener("input", applyFilter);
+    })();
+  </script>
+</body>
+</html>

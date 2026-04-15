@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .plus-jakarta { font-family: 'Plus Jakarta Sans', sans-serif; }
+        .manrope { font-family: 'Manrope', sans-serif; }
+        .glass-card {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+        }
+    </style>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary-fixed-variant": "#91002d",
+                        "surface": "#f9f9fb",
+                        "error-container": "#ffdad6",
+                        "surface-bright": "#f9f9fb",
+                        "outline-variant": "#e2bec0",
+                        "on-primary": "#ffffff",
+                        "on-surface-variant": "#5a4042",
+                        "tertiary-fixed-dim": "#c8c6c5",
+                        "secondary": "#9f4118",
+                        "primary": "#b60e3d",
+                        "on-background": "#1a1c1d",
+                        "surface-container-low": "#f3f3f5",
+                        "surface-variant": "#e2e2e4",
+                        "on-primary-container": "#fffbff",
+                        "on-secondary-fixed": "#370e00",
+                        "on-error": "#ffffff",
+                        "primary-fixed-dim": "#ffb2b8",
+                        "secondary-container": "#fd885a",
+                        "on-tertiary-fixed-variant": "#474746",
+                        "surface-tint": "#ba1340",
+                        "secondary-fixed": "#ffdbce",
+                        "on-tertiary-container": "#f7feff",
+                        "on-error-container": "#93000a",
+                        "tertiary": "#5d5c5b",
+                        "on-tertiary": "#ffffff",
+                        "outline": "#8e6f71",
+                        "on-tertiary-fixed": "#1c1b1b",
+                        "surface-dim": "#d9dadc",
+                        "on-primary-fixed": "#40000f",
+                        "surface-container-high": "#e8e8ea",
+                        "secondary-fixed-dim": "#ffb599",
+                        "tertiary-fixed": "#e5e2e1",
+                        "tertiary-container": "#757474",
+                        "surface-container-lowest": "#ffffff",
+                        "inverse-surface": "#2f3132",
+                        "inverse-on-surface": "#f0f0f2",
+                        "surface-container": "#edeef0",
+                        "inverse-primary": "#ffb2b8",
+                        "error": "#ba1a1a",
+                        "background": "#f9f9fb",
+                        "surface-container-highest": "#e2e2e4",
+                        "primary-container": "#da3054",
+                        "on-secondary-fixed-variant": "#7f2b01",
+                        "on-secondary-container": "#702400",
+                        "on-surface": "#1a1c1d",
+                        "primary-fixed": "#ffdadb",
+                        "on-secondary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Plus Jakarta Sans"],
+                        "body": ["Manrope"],
+                        "label": ["Manrope"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface font-body selection:bg-primary-container/30">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-white/80 dark:bg-zinc-950/80 backdrop-blur-xl shadow-[0_40px_40px_-15px_rgba(26,26,26,0.04)]">
+<div class="flex justify-between items-center px-6 h-20 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/20">
+<img alt="User Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a stylish young man with a modern haircut smiling in natural light urban setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDNku1FmVydNSA4wIey18357XAWpKipBULPBASZSLVfCsQUK4Xa-5UFTKpM_vdH9t2AWSTGJiFpHzy4_PsRSMbhp7-P97JcxyMTMhH6BuXw6HYg461EaRuyp31r1Kh-E-ESpaKG54AisYB-23PRxvGW0fDrlHnfNvandOq7MAUCHXk1BXuuzsqcK1plcTHu5El-eOMEtIAcGDGAdG6z_W9-5kIeVR4WE-UlD7xk8OPa8jkD2BVwHlqwwDEH17x-p_bZlGcRJWpPzT6a"/>
+</div>
+<span class="text-2xl font-extrabold bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent plus-jakarta tracking-tight">StyleBite</span>
+</div>
+<div class="flex items-center gap-6">
+<nav class="hidden md:flex gap-8">
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-rose-400 transition-all font-bold manrope text-sm uppercase tracking-widest" href="#">Home</a>
+<a class="text-on-surface font-bold border-b-2 border-[#FF4D6D] manrope text-sm uppercase tracking-widest" href="#">Create</a>
+<a class="text-zinc-500 dark:text-zinc-400 hover:text-rose-400 transition-all font-bold manrope text-sm uppercase tracking-widest" href="#">Explore</a>
+</nav>
+<button class="material-symbols-outlined text-zinc-600 hover:bg-zinc-100/50 p-2 rounded-full transition-all" data-icon="settings">settings</button>
+</div>
+</div>
+</header>
+<main class="pt-32 pb-40 px-6 max-w-4xl mx-auto">
+<!-- Editorial Header -->
+<div class="mb-12">
+<span class="label-md text-primary font-bold tracking-[0.2em] uppercase mb-2 block">New Contest</span>
+<h1 class="display-lg text-on-surface plus-jakarta font-extrabold leading-tight mb-4">The Creative <span class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent">Canvas</span></h1>
+<p class="body-lg text-on-surface-variant max-w-xl">Ignite the community with your unique vision. Use the steps below to launch your style battle.</p>
+</div>
+<!-- Progress Indicator -->
+<div class="flex justify-between items-center mb-16 relative">
+<div class="absolute top-1/2 left-0 w-full h-[2px] bg-surface-container-high -z-10"></div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-gradient-to-tr from-[#FF4D6D] to-[#FF8A5B] text-white font-bold shadow-lg shadow-primary/20">1</div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant font-bold">2</div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant font-bold">3</div>
+<div class="flex items-center justify-center w-10 h-10 rounded-full bg-surface-container-high text-on-surface-variant font-bold">4</div>
+</div>
+<form class="space-y-12">
+<!-- Step 1: Select Type -->
+<section class="space-y-6">
+<div class="flex items-end justify-between">
+<h2 class="headline-md plus-jakarta font-bold">Step 1: Battle Format</h2>
+<span class="text-primary font-bold manrope text-xs tracking-widest uppercase">Required</span>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-6" id="contestTypeGrid">
+<button aria-pressed="true" class="contest-type-option group relative p-8 rounded-3xl bg-surface-container-lowest border-2 border-primary ring-4 ring-primary/5 text-left transition-all hover:scale-[1.02]" data-type="1v1" type="button">
+<span class="material-symbols-outlined text-4xl text-primary mb-4 block contest-type-icon" data-icon="swords">swords</span>
+<h3 class="title-lg font-bold mb-2">1v1 Battle</h3>
+<p class="text-sm text-on-surface-variant">Face-to-face style showdown between two creators.</p>
+</button>
+<button aria-pressed="false" class="contest-type-option group p-8 rounded-3xl bg-surface-container-lowest border-2 border-transparent text-left transition-all hover:bg-white hover:shadow-xl hover:shadow-zinc-200/50 hover:scale-[1.02]" data-type="group" type="button">
+<span class="material-symbols-outlined text-4xl text-zinc-400 group-hover:text-primary transition-colors mb-4 block contest-type-icon" data-icon="groups">groups</span>
+<h3 class="title-lg font-bold mb-2">Group Battle</h3>
+<p class="text-sm text-on-surface-variant">Multiple participants competing for the top spot.</p>
+</button>
+<button aria-pressed="false" class="contest-type-option group p-8 rounded-3xl bg-surface-container-lowest border-2 border-transparent text-left transition-all hover:bg-white hover:shadow-xl hover:shadow-zinc-200/50 hover:scale-[1.02]" data-type="city" type="button">
+<span class="material-symbols-outlined text-4xl text-zinc-400 group-hover:text-primary transition-colors mb-4 block contest-type-icon" data-icon="location_city">location_city</span>
+<h3 class="title-lg font-bold mb-2">City vs City</h3>
+<p class="text-sm text-on-surface-variant">Represent your local fashion scene against others.</p>
+</button>
+<button aria-pressed="false" class="contest-type-option group p-8 rounded-3xl bg-surface-container-lowest border-2 border-transparent text-left transition-all hover:bg-white hover:shadow-xl hover:shadow-zinc-200/50 hover:scale-[1.02]" data-type="brand" type="button">
+<span class="material-symbols-outlined text-4xl text-zinc-400 group-hover:text-primary transition-colors mb-4 block contest-type-icon" data-icon="campaign">campaign</span>
+<h3 class="title-lg font-bold mb-2">Brand Sponsored</h3>
+<p class="text-sm text-on-surface-variant">Launch a paid campaign in partnership with a brand.</p>
+</button>
+</div>
+</section>
+<!-- Step 2: Inputs -->
+<section class="space-y-6">
+<h2 class="headline-md plus-jakarta font-bold">Step 2: Core Details</h2>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Contest Title</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="e.g. Urban Summer Vibes" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Category</label>
+<select class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium">
+<option>Streetwear</option>
+<option>Avant Garde</option>
+<option>Minimalist</option>
+<option>Vintage Retro</option>
+</select>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Description</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-3xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="Tell the world what this battle is about..." rows="4"></textarea>
+</div>
+<div class="md:col-span-2 hidden space-y-6" id="brandSponsoredFields">
+<div class="rounded-3xl border border-primary/15 bg-primary/5 p-6">
+<p class="plus-jakarta font-bold text-lg text-on-surface mb-1">Brand Sponsored Details</p>
+<p class="text-sm text-on-surface-variant">These fields are required when the contest is sponsored by a brand.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Brand Name</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="e.g. Nova Streetwear" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Sponsor Contact Email</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="brand@company.com" type="email"/>
+</div>
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Campaign Budget</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="e.g. PKR 150,000" type="text"/>
+</div>
+<div class="space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Brand Website / Product URL</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="https://brand.com/campaign" type="url"/>
+</div>
+<div class="md:col-span-2 space-y-2">
+<label class="label-md uppercase tracking-wider text-on-surface-variant ml-1">Deliverables & Guidelines</label>
+<textarea class="w-full bg-surface-container-low border-none rounded-3xl py-4 px-6 focus:ring-2 focus:ring-primary/20 focus:bg-white transition-all text-lg font-medium" placeholder="Mention required hashtags, product visibility, styling constraints, etc." rows="4"></textarea>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 3: Rules -->
+<section class="space-y-6">
+<h2 class="headline-md plus-jakarta font-bold">Step 3: Battle Rules</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-surface-container-low p-6 rounded-3xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+</div>
+<div>
+<p class="label-md uppercase opacity-60">Participants</p>
+<p class="font-bold text-lg">Max 50</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="timer">timer</span>
+</div>
+<div>
+<p class="label-md uppercase opacity-60">Enrollment</p>
+<p class="font-bold text-lg">48 Hours</p>
+</div>
+</div>
+<div class="bg-surface-container-low p-6 rounded-3xl flex items-center gap-4">
+<div class="w-12 h-12 rounded-2xl bg-white flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="how_to_vote">how_to_vote</span>
+</div>
+<div>
+<p class="label-md uppercase opacity-60">Voting</p>
+<p class="font-bold text-lg">72 Hours</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Step 4: Info & Reward -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-gradient-to-tr from-[#FF4D6D] to-[#FF8A5B] p-8 rounded-[2rem] text-white relative overflow-hidden">
+<div class="relative z-10">
+<span class="material-symbols-outlined text-4xl mb-4" data-icon="military_tech">military_tech</span>
+<h3 class="title-lg font-extrabold mb-2">Rewards Program</h3>
+<p class="body-lg opacity-90">Top 10 users will receive reward points based on final ranking and engagement.</p>
+</div>
+<!-- Decorative pattern -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+</div>
+<div class="bg-zinc-900 p-8 rounded-[2rem] text-white flex flex-col justify-center">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined text-rose-500" data-icon="verified_user">verified_user</span>
+<span class="label-md uppercase tracking-[0.2em] text-rose-400">Creator Status</span>
+</div>
+<p class="text-xl font-bold leading-relaxed">Minimum 1000 Vibe Count required to host official contests.</p>
+</div>
+</section>
+<!-- Action Area / Locked State -->
+<div class="pt-8 pb-12 border-t border-surface-container-high">
+<div class="relative group">
+<!-- Locked Overlay -->
+<div class="absolute inset-0 z-20 flex flex-col items-center justify-center bg-surface/80 backdrop-blur-[2px] rounded-full cursor-not-allowed">
+<div class="flex items-center gap-2 bg-white px-6 py-2 rounded-full shadow-lg border border-surface-container-high animate-pulse">
+<span class="material-symbols-outlined text-rose-500 text-sm" data-icon="lock">lock</span>
+<span class="text-sm font-bold text-on-surface">You need 1000 Vibe Count to create contest</span>
+</div>
+</div>
+<button class="w-full h-20 rounded-full bg-zinc-200 text-zinc-400 font-extrabold text-xl flex items-center justify-center gap-3 cursor-not-allowed opacity-50" disabled="">
+                        Create Contest
+                        <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+<p class="text-center mt-6 text-on-surface-variant text-sm font-medium">By creating this contest, you agree to our <a class="underline decoration-primary/30 hover:decoration-primary text-on-surface" href="#">Community Guidelines</a>.</p>
+</div>
+</form>
+</main>
+<!-- Bottom Navigation Bar (Mobile View) -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="contest_home.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+<script>
+    (() => {
+      const typeButtons = Array.from(document.querySelectorAll(".contest-type-option"));
+      const brandFields = document.getElementById("brandSponsoredFields");
+
+      function applySelection(selectedType) {
+        typeButtons.forEach((button) => {
+          const isSelected = button.dataset.type === selectedType;
+          const icon = button.querySelector(".contest-type-icon");
+
+          button.setAttribute("aria-pressed", isSelected ? "true" : "false");
+          button.classList.toggle("border-primary", isSelected);
+          button.classList.toggle("ring-4", isSelected);
+          button.classList.toggle("ring-primary/5", isSelected);
+          button.classList.toggle("border-transparent", !isSelected);
+          button.classList.toggle("shadow-[0_8px_24px_rgba(182,14,61,0.08)]", isSelected);
+
+          if (icon) {
+            icon.classList.toggle("text-primary", isSelected);
+            icon.classList.toggle("text-zinc-400", !isSelected);
+          }
+        });
+
+        brandFields.classList.toggle("hidden", selectedType !== "brand");
+      }
+
+      typeButtons.forEach((button) => {
+        button.addEventListener("click", () => applySelection(button.dataset.type));
+      });
+
+      applySelection("1v1");
+    })();
+  </script>
+</body></html>
+
+

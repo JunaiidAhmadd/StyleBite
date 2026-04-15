@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>StyleBite | Profile Swipe</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&amp;family=Manrope:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#a90094",
+              "primary-container": "#ff62df",
+              surface: "#fff3fb",
+              "surface-container-low": "#ffebfc",
+              "on-surface": "#412445"
+            },
+            borderRadius: {
+              full: "9999px"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Manrope"],
+              label: ["Manrope"]
+            }
+          }
+        }
+      }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+      touch-action: pan-x;
+    }
+  </style>
+</head>
+<body class="bg-black text-on-surface font-body overflow-hidden">
+
+<main class="h-screen w-full relative" id="swipeArea">
+  <div class="absolute inset-0 z-0">
+    <img
+      class="w-full h-full object-cover"
+      alt="Profile cover"
+      src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZpKUb7RXUugXI9Z2kuCRUVHCzPZdk9o8BR2nnko5OTr24J9L9J6cT3gfzynTHWSZnJUqkzdlWsFoQHs98BOVpNm4vcAfhQ5uYM8FaR2oC4tC3o7Fkw3jPIOuPGy-FQfv3Uj7eTZa5uGE6sxhYzSopbu9UWMdmNJbXgiYQ0UNakqeYh_rDDVfgPzQ_DUH-hrzqiaFzIWDMAXlsT1Pmv00K3EHAC6t_-QYgl1Xkz9psPCImVQM5A3ONa8ZQlzhL0NJIXShRH5ov7A0"
+    />
+    <div class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-black/20"></div>
+  </div>
+
+  <button
+    class="fixed bottom-28 left-1/2 -translate-x-1/2 z-40 w-10 h-10 rounded-full border border-white/40 bg-white/15 backdrop-blur-md text-white flex items-center justify-center active:scale-95 transition-all"
+    id="swipeTrigger"
+    type="button"
+    aria-label="Swipe up to open profile details"
+  >
+    <span class="material-symbols-outlined text-[22px]" style="font-variation-settings: 'FILL' 1;">keyboard_arrow_up</span>
+  </button>
+</main>
+
+<!-- Bottom Navigation Bar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="profile_page.html" aria-current="page"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">person</span></a>
+</div>
+</div>
+</nav>
+
+<script>
+  (() => {
+    const swipeArea = document.getElementById("swipeArea");
+    const swipeTrigger = document.getElementById("swipeTrigger");
+    const nextPage = "profile_detail.html";
+    let startY = null;
+    let opened = false;
+
+    function openDetails() {
+      if (opened) return;
+      opened = true;
+      window.location.href = nextPage;
+    }
+
+    swipeArea.addEventListener("touchstart", (event) => {
+      startY = event.touches[0].clientY;
+    }, { passive: true });
+
+    swipeArea.addEventListener("touchend", (event) => {
+      if (startY === null) return;
+      const endY = event.changedTouches[0].clientY;
+      const deltaY = startY - endY;
+      startY = null;
+      if (deltaY > 65) {
+        openDetails();
+      }
+    }, { passive: true });
+
+    swipeArea.addEventListener("wheel", (event) => {
+      if (event.deltaY > 40) {
+        openDetails();
+      }
+    }, { passive: true });
+
+    swipeTrigger.addEventListener("click", openDetails);
+    swipeTrigger.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openDetails();
+      }
+    });
+  })();
+</script>
+
+</body>
+</html>
+
+

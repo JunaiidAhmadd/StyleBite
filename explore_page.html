@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "primary-container": "#FF8A5B",
+                    "on-tertiary-container": "#7A2E00",
+                    "secondary-container": "#FFE1D6",
+                    "outline": "#9A8F8A",
+                    "primary-fixed-dim": "#FF6B57",
+                    "surface-container-low": "#f3f0ef",
+                    "on-surface-variant": "#5c5b5b",
+                    "secondary-fixed-dim": "#FFC29E",
+                    "surface-container": "#eae7e7",
+                    "inverse-surface": "#0e0e0e",
+                    "secondary-dim": "#B14A1F",
+                    "surface-tint": "#FF4D6D",
+                    "error-dim": "#a70138",
+                    "inverse-primary": "#FF8A5B",
+                    "surface-bright": "#f9f6f5",
+                    "on-primary": "#fff7f3",
+                    "error": "#b41340",
+                    "tertiary-dim": "#E9B949",
+                    "primary-dim": "#E54360",
+                    "secondary": "#C65A22",
+                    "secondary-fixed": "#FFD4BF",
+                    "tertiary": "#FFD166",
+                    "error-container": "#f74b6d",
+                    "on-secondary-fixed-variant": "#8B3A14",
+                    "on-tertiary-fixed": "#5A3A00",
+                    "background": "#f9f6f5",
+                    "on-primary-fixed": "#000000",
+                    "on-surface": "#2f2f2e",
+                    "surface": "#f9f6f5",
+                    "inverse-on-surface": "#9e9c9c",
+                    "on-primary-container": "#5C1F28",
+                    "on-primary-fixed-variant": "#7A2834",
+                    "on-error-container": "#510017",
+                    "tertiary-fixed-dim": "#F3D98B",
+                    "on-background": "#2f2f2e",
+                    "tertiary-fixed": "#FFE29A",
+                    "surface-variant": "#dfdcdc",
+                    "surface-dim": "#d6d4d3",
+                    "on-secondary-container": "#7A2F10",
+                    "on-tertiary-fixed-variant": "#8A5A00",
+                    "on-error": "#ffefef",
+                    "outline-variant": "#afadac",
+                    "surface-container-highest": "#dfdcdc",
+                    "on-secondary-fixed": "#5A1E00",
+                    "on-secondary": "#fff3ec",
+                    "on-tertiary": "#5A3A00",
+                    "primary": "#FF4D6D",
+                    "primary-fixed": "#FF8A5B",
+                    "surface-container-high": "#e4e2e1",
+                    "surface-container-lowest": "#ffffff",
+                    "tertiary-container": "#FFE7A8"
+            },
+            "borderRadius": {
+                    "DEFAULT": "1rem",
+                    "lg": "2rem",
+                    "xl": "3rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Plus Jakarta Sans"],
+                    "body": ["Be Vietnam Pro"],
+                    "label": ["Be Vietnam Pro"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hide-scrollbar::-webkit-scrollbar { display: none; }
+        .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        .interactive-card {
+            cursor: pointer;
+        }
+        .interactive-card:hover .card-media {
+            transform: scale(1.04);
+        }
+        .interactive-card .card-media {
+            transition: transform 450ms ease;
+        }
+        .chip-active {
+            background: linear-gradient(135deg, #FF4D6D, #FF8A5B);
+            color: #fff7f3;
+            box-shadow: 0 12px 24px -16px rgba(255, 77, 109, 0.7);
+        }
+        .hidden-by-filter {
+            display: none !important;
+        }
+        .sheet-open {
+            transform: translateY(0);
+        }
+        .toast-show {
+            opacity: 1;
+            transform: translate(-50%, 0);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface">
+<!-- TopAppBar -->
+<header class="bg-[#f9f6f5]/70 backdrop-blur-xl text-2xl font-black docked full-width top-0 z-50 sticky flex justify-between items-center w-full px-6 py-4">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden">
+<img class="w-full h-full object-cover" data-alt="close-up portrait of a trendy Gen-Z woman with vibrant accessories in soft natural studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClgvgTERNW5qiqtOEwzVcwltrD8F1WmbcAVf9m4IC5jB4tABn-D-rHAsma0HGYER1-4f3rjddNX7gdLVBC4PQ3NA6h7drTm8ywgWjBeyJI8Ut5BTz1SCSlKzL8Pncq-67tdNsw-xlu8YVKDzuN_lYHUNyYPAu_xXKT9BGsuxmSrWY23QeQsR6mScE6BAfmxnDNkshIe-AiEkhpxUx6XkguIWOHHPj4xiFhnP3n1pt232J9O4Ck1cjWdLZWzWubT1faagfRI1XB7cdF"/>
+</div>
+<span class="bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] bg-clip-text text-transparent font-black tracking-tight">StyleBite</span>
+</div>
+<div class="flex items-center gap-3">
+<button id="streakBtn" class="w-10 h-10 flex items-center justify-center rounded-full bg-surface-container-low hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined text-[#FF4D6D]">local_fire_department</span>
+</button>
+</div>
+</header>
+<main class="pb-28">
+<!-- Search & Filter Section -->
+<section class="px-6 pt-4 space-y-4">
+<div class="flex items-center gap-3">
+<div class="flex-1 flex items-center bg-surface-container-low rounded-full px-5 py-3.5 focus-within:bg-surface-container-lowest transition-colors">
+<span class="material-symbols-outlined text-outline mr-3">search</span>
+<input id="exploreSearch" class="bg-transparent border-none p-0 focus:ring-0 text-sm font-medium w-full placeholder:text-outline-variant" placeholder="Users, tags, restaurants..." type="text"/>
+</div>
+<div class="relative">
+<button id="cityToggle" class="bg-surface-container-low h-12 px-5 rounded-full flex items-center gap-2 hover:opacity-80 transition-opacity">
+<span id="cityLabel" class="text-xs font-bold font-label uppercase tracking-widest text-on-surface-variant">Multan</span>
+<span class="material-symbols-outlined text-sm">expand_more</span>
+</button>
+<div id="cityMenu" class="hidden absolute right-0 top-14 w-44 rounded-2xl bg-white/95 backdrop-blur-xl p-2 border border-outline-variant/30 shadow-2xl z-30">
+<button class="city-option w-full text-left px-3 py-2 rounded-xl text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors" data-city="Multan">Multan</button>
+<button class="city-option w-full text-left px-3 py-2 rounded-xl text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors" data-city="Lahore">Lahore</button>
+<button class="city-option w-full text-left px-3 py-2 rounded-xl text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors" data-city="Karachi">Karachi</button>
+<button class="city-option w-full text-left px-3 py-2 rounded-xl text-sm font-semibold text-on-surface hover:bg-surface-container-low transition-colors" data-city="Islamabad">Islamabad</button>
+</div>
+</div>
+</div>
+<!-- Top Tabs -->
+<div id="topTabs" class="flex overflow-x-auto hide-scrollbar gap-2 py-2">
+<button class="tab-btn chip-active px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap scale-100 hover:scale-95 transition-transform" data-tab="outfits">Outfits</button>
+<button class="tab-btn bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:opacity-80 transition-opacity" data-tab="food">Food</button>
+<button class="tab-btn bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:opacity-80 transition-opacity" data-tab="battles">Battles</button>
+<button class="tab-btn bg-surface-container-highest text-on-surface px-6 py-2.5 rounded-full font-bold text-sm whitespace-nowrap hover:opacity-80 transition-opacity" data-tab="brands">Brands</button>
+</div>
+</section>
+<!-- Trending Section (Bento Grid) -->
+<section id="trendingSection" class="mt-8 px-6">
+<div class="flex justify-between items-end mb-6">
+<h2 class="font-headline font-extrabold text-3xl tracking-tight text-on-surface">Trending Now</h2>
+<button id="viewAllBtn" class="text-primary font-bold text-sm hover:opacity-80 transition-opacity">Tab Mode</button>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="relative rounded-xl overflow-hidden h-72 col-span-1 group interactive-card action-card" data-category="outfits brands" data-city="all" data-search="#y2krevival neon street style fashion trend" data-title="#Y2KRevival" data-meta="Outfit Trend">
+<img class="card-media w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="fashion photography of a street style outfit with neon accents against a minimalist grey urban background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDa0h4-Hea4nBBWmPTl9KlsIojR7YdO_lz1_ddGrtoTPH1JiDvTC5FW9ZSZ26-K7L6d_N9VnuQ53ZXxoa8kG7m22KCUXv-O3bxHyN02fogPCi57d5ludWZoVPFkMy-HUL32fHB2Imv_FdqpVL9xns9pdDcZf4WuUXysXprl4k5_O0K4dsjGcJ-hUZOrKF9DPMridFrL5KI-YfHwUOTk2KKe3irtppCWlk70I2yaNUZtAbip8dBo4UP00-2ReJ-URlPFSswPQsLyQkmi"/>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/60 to-transparent">
+<p class="text-white font-bold text-sm">#Y2KRevival</p>
+</div>
+</div>
+<div class="grid grid-rows-2 gap-4 col-span-1">
+<div class="relative rounded-xl overflow-hidden group interactive-card action-card" data-category="food" data-city="multan lahore" data-search="fusion plate gourmet food live trend" data-title="Fusion Plate Live" data-meta="Food Spotlight">
+<img class="card-media w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="gourmet fusion dish featuring colorful microgreens and vibrant sauces artfully plated on dark stoneware" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBTDqrtFFOTPbsJ0Ri61hmqkEFMUOK-r-do2CJiExSK2CJGNbDsJHHvFNbedRar6sOY9extDN599xGzd4RtON62bQubbh__e1G-PwWnIjWrceTrTvy1AaOK5Z0A34FZ9ut0Qo-bzWqt2o43X-mGa3LtgiqcqFlid_yutI9Z-NrLWVJwgVjSuLUcUIo5bLR32RTRSPHUacECqcXh3SKWB3N-IN-BgIRLWHKXHo7j6yKPh6t5J5faAaPcy3zmVyklVGQ3RnNGrMlKmpXx"/>
+<div class="absolute top-3 right-3 bg-tertiary px-3 py-1 rounded-full">
+<span class="text-[10px] text-white font-black uppercase tracking-tighter">Live</span>
+</div>
+</div>
+<div class="relative rounded-xl overflow-hidden group interactive-card action-card" data-category="battles brands" data-city="karachi islamabad" data-search="sneaker battle versus brands duel trend" data-title="Sneaker Battle" data-meta="Battle Arena">
+<img class="card-media w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" data-alt="dramatic lighting on two luxury sneakers positioned for a fashion battle competition" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAxInCJci7sgOmmLDjey34TutNNBO4-vGfrjQT-_VAd6dMBner3XRzpk1f4H84zBBlTE7x1VfrXL4pj3ksGnsidjhYlWDZqubWItIUv4ZPMxDxTO09z2KEulWeOGrIeT-DKdzDkKbB3dMb29cEzrU0Bes-GghaYjNmszqZGD1lUIOpAT4yAzaa6176n4fERhIIMcxvnC-r3ykuUPk-D01ltbbwy8XvrL5lrt91bMtEg_yA5Vf-x5JmuId1xOna8l_y31yfS3IVWt4if"/>
+<div class="absolute inset-0 flex items-center justify-center">
+<span class="bg-white/20 backdrop-blur-md text-white font-black text-2xl italic px-4 py-1 rounded-lg border border-white/30">VS</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Food Section (Horizontal Cards) -->
+<section id="foodSection" class="mt-10">
+<div class="px-6 flex justify-between items-end mb-6">
+<div>
+<p class="text-xs font-bold text-primary uppercase tracking-[0.2em] mb-1">Curation</p>
+<h2 id="foodHeading" class="font-headline font-extrabold text-3xl tracking-tight">Top in Multan</h2>
+</div>
+</div>
+<div class="flex overflow-x-auto hide-scrollbar gap-6 px-6 pb-6">
+<!-- Food Card 1 -->
+<div class="flex-shrink-0 w-80 bg-surface-container-low rounded-xl overflow-hidden flex flex-col interactive-card action-card" data-category="food" data-city="multan" data-search="bistro garden continental gulgasht taste quality ambience staff food" data-title="The Bistro Garden" data-meta="Continental - Gulgasht">
+<div class="h-48 relative">
+<img class="card-media w-full h-full object-cover" data-alt="close up of a juicy artisan burger with melting cheese and fresh lettuce in a warm golden lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAAq5ZcX5zkG-K3E2yFNqoBzh1SMgFcHcqABP7LO3T9vZWDinEGP_4X0oqgC5RRpOo7f2fUXiHP-YBNx938RaQJB3O_wfoZxfNf-GN6YT6h1Ye5A1TpcJ4IZ2cSyJ15IHRNO6IHwWslrjX21THXX6IEP2S9hGfD4zUSBTdObIRApbBg__MzXwlNZIpLmg87CsJnRSHfTXIj5V2ylT7PY_Azlo47HDUO-udYApuzZ4G0KPbAHzD5e7_HwaNrUcs_gc9GpBsix-uMU6Il"/>
+<div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.9</span>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-on-surface leading-tight">The Bistro Garden</h3>
+<p class="text-xs text-on-surface-variant font-medium">Continental • Gulgasht</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Taste</span>
+<span class="text-sm font-bold text-primary">9.8</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Quality</span>
+<span class="text-sm font-bold text-primary">9.5</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Staff</span>
+<span class="text-sm font-bold text-primary">8.9</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Ambience</span>
+<span class="text-sm font-bold text-primary">9.2</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Food Card 2 -->
+<div class="flex-shrink-0 w-80 bg-surface-container-low rounded-xl overflow-hidden flex flex-col interactive-card action-card" data-category="food" data-city="lahore karachi" data-search="saffron grill desi cantt taste quality ambience staff bbq food" data-title="Saffron Grill" data-meta="Desi - Cantt">
+<div class="h-48 relative">
+<img class="card-media w-full h-full object-cover" data-alt="a spread of traditional pakistani bbq with steam rising and vibrant red spices under warm evening lights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBJlxsZWLWZD7j80Hj-vv_XrRQlqsdWJEyUlVgf8VznDIC6SiAUo2FbXesb53wAm0j1fH2aBTa9XNfnglUzHIILhvMAI_Oq0rtCPqq7aHPYp4vybHGqfvD0vqihsSX0gSfLNeZM-uQxBiL6-IR1NC6PhM0OTxgD59aHXB24L_uieRphLfYsoW7EDY_VOCeBWVn2DSk2drMtnJmx_5sYG2LgDd9ij3qW4wwrwQm1zDRfxbECnwvrwfrsxaMsV6alBttImbLPd7iMVLQI"/>
+<div class="absolute top-4 left-4 bg-white/80 backdrop-blur-md px-3 py-1 rounded-full flex items-center gap-1">
+<span class="material-symbols-outlined text-sm text-primary" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="text-xs font-bold text-on-surface">4.7</span>
+</div>
+</div>
+<div class="p-5 space-y-4">
+<div class="flex justify-between items-start">
+<div>
+<h3 class="font-bold text-lg text-on-surface leading-tight">Saffron Grill</h3>
+<p class="text-xs text-on-surface-variant font-medium">Desi • Cantt</p>
+</div>
+</div>
+<div class="grid grid-cols-2 gap-2">
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Taste</span>
+<span class="text-sm font-bold text-primary">9.4</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Quality</span>
+<span class="text-sm font-bold text-primary">9.1</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Staff</span>
+<span class="text-sm font-bold text-primary">9.5</span>
+</div>
+<div class="bg-surface-container-highest/50 px-3 py-2 rounded-lg flex flex-col items-center">
+<span class="text-[9px] uppercase font-bold text-on-surface-variant tracking-wider">Ambience</span>
+<span class="text-sm font-bold text-primary">8.5</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Tags Cloud -->
+<section id="tagsSection" class="mt-6 px-6">
+<h3 class="text-xs font-bold text-on-surface-variant uppercase tracking-widest mb-4">Popular Tags</h3>
+<div class="flex flex-wrap gap-2">
+<button class="tag-pill bg-white px-4 py-2 rounded-full text-xs font-bold border border-outline-variant/15 text-primary hover:opacity-80 transition-opacity" data-tag="streetwear">#streetwear</button>
+<button class="tag-pill bg-white px-4 py-2 rounded-full text-xs font-bold border border-outline-variant/15 text-on-surface-variant hover:opacity-80 transition-opacity" data-tag="multanfoodies">#multanfoodies</button>
+<button class="tag-pill bg-white px-4 py-2 rounded-full text-xs font-bold border border-outline-variant/15 text-on-surface-variant hover:opacity-80 transition-opacity" data-tag="summerfits">#summerfits</button>
+<button class="tag-pill bg-white px-4 py-2 rounded-full text-xs font-bold border border-outline-variant/15 text-on-surface-variant hover:opacity-80 transition-opacity" data-tag="brunchspots">#brunchspots</button>
+<button class="tag-pill bg-white px-4 py-2 rounded-full text-xs font-bold border border-outline-variant/15 text-on-surface-variant hover:opacity-80 transition-opacity" data-tag="aesthetic">#aesthetic</button>
+</div>
+</section>
+<div id="emptyState" class="hidden mx-6 mt-8 rounded-2xl border border-outline-variant/25 bg-surface-container-low p-6 text-center">
+<p class="text-sm font-bold text-on-surface">No matches found</p>
+<p class="text-xs text-on-surface-variant mt-1">Try another city, tag, or search keyword.</p>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="contest_home.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">emoji_events</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 0;">person</span></a>
+</div>
+</div>
+</nav>
+<div id="sheetBackdrop" class="hidden fixed inset-0 bg-black/25 backdrop-blur-[2px] z-[70]"></div>
+<section id="actionSheet" class="fixed inset-x-0 bottom-0 translate-y-full transition-transform duration-300 z-[80] px-4 pb-6">
+<div class="max-w-md mx-auto rounded-[2rem] bg-white/95 border border-outline-variant/25 p-5 shadow-[0_18px_36px_-18px_rgba(255,77,109,0.55)] backdrop-blur-xl">
+<div class="w-12 h-1.5 rounded-full bg-surface-container-high mx-auto mb-4"></div>
+<div class="flex items-start justify-between gap-4">
+<div>
+<p id="sheetMeta" class="text-[11px] uppercase tracking-[0.14em] text-primary font-bold">Quick Action</p>
+<h3 id="sheetTitle" class="font-headline text-xl font-extrabold tracking-tight text-on-surface mt-1">Selected Card</h3>
+</div>
+<button id="sheetClose" class="w-9 h-9 rounded-full bg-surface-container-low flex items-center justify-center hover:opacity-80 transition-opacity" type="button">
+<span class="material-symbols-outlined text-on-surface-variant">close</span>
+</button>
+</div>
+<div class="grid grid-cols-3 gap-2 mt-5">
+<button id="sheetViewBtn" class="bg-surface-container-low rounded-2xl py-3 font-semibold text-xs text-on-surface hover:opacity-80 transition-opacity" type="button">View</button>
+<button id="sheetSaveBtn" class="bg-surface-container-low rounded-2xl py-3 font-semibold text-xs text-on-surface hover:opacity-80 transition-opacity flex items-center justify-center gap-1.5" type="button">
+<span id="sheetSaveIcon" class="material-symbols-outlined text-sm">bookmark</span>
+<span id="sheetSaveText">Save</span>
+</button>
+<button id="sheetShareBtn" class="bg-surface-container-low rounded-2xl py-3 font-semibold text-xs text-on-surface hover:opacity-80 transition-opacity" type="button">Share</button>
+</div>
+</div>
+</section>
+<div id="appToast" class="fixed left-1/2 -translate-x-1/2 translate-y-4 bottom-24 opacity-0 pointer-events-none z-[90] transition-all duration-300 bg-on-surface text-surface px-4 py-2 rounded-full text-xs font-semibold shadow-xl">
+<span id="toastMessage">Done</span>
+</div>
+<script>
+    (() => {
+      const state = {
+        activeTab: "outfits",
+        city: "Multan",
+        search: "",
+        forceAll: true,
+        activeTag: ""
+      };
+
+      const tabButtons = Array.from(document.querySelectorAll(".tab-btn"));
+      const cards = Array.from(document.querySelectorAll(".action-card"));
+      const tagPills = Array.from(document.querySelectorAll(".tag-pill"));
+      const navActions = Array.from(document.querySelectorAll(".nav-action"));
+      const cityOptions = Array.from(document.querySelectorAll(".city-option"));
+
+      const searchInput = document.getElementById("exploreSearch");
+      const cityToggle = document.getElementById("cityToggle");
+      const cityMenu = document.getElementById("cityMenu");
+      const cityLabel = document.getElementById("cityLabel");
+      const foodHeading = document.getElementById("foodHeading");
+      const viewAllBtn = document.getElementById("viewAllBtn");
+      const streakBtn = document.getElementById("streakBtn");
+
+      const trendingSection = document.getElementById("trendingSection");
+      const foodSection = document.getElementById("foodSection");
+      const tagsSection = document.getElementById("tagsSection");
+      const emptyState = document.getElementById("emptyState");
+
+      const sheetBackdrop = document.getElementById("sheetBackdrop");
+      const actionSheet = document.getElementById("actionSheet");
+      const sheetTitle = document.getElementById("sheetTitle");
+      const sheetMeta = document.getElementById("sheetMeta");
+      const sheetClose = document.getElementById("sheetClose");
+      const sheetViewBtn = document.getElementById("sheetViewBtn");
+      const sheetSaveBtn = document.getElementById("sheetSaveBtn");
+      const sheetSaveIcon = document.getElementById("sheetSaveIcon");
+      const sheetSaveText = document.getElementById("sheetSaveText");
+      const sheetShareBtn = document.getElementById("sheetShareBtn");
+
+      const appToast = document.getElementById("appToast");
+      const toastMessage = document.getElementById("toastMessage");
+
+      let toastTimer;
+      let selectedCard = null;
+      const savedCards = new Set();
+
+      const normalize = (value) => (value || "").toLowerCase();
+
+      function cardId(card) {
+        return normalize(card.dataset.title) + "::" + normalize(card.dataset.meta);
+      }
+
+      function showToast(message) {
+        toastMessage.textContent = message;
+        appToast.classList.add("toast-show");
+        clearTimeout(toastTimer);
+        toastTimer = setTimeout(() => appToast.classList.remove("toast-show"), 1800);
+      }
+
+      function refreshSaveButton() {
+        if (!selectedCard) {
+          return;
+        }
+        const isSaved = savedCards.has(cardId(selectedCard));
+        sheetSaveText.textContent = isSaved ? "Saved" : "Save";
+        sheetSaveIcon.style.fontVariationSettings = isSaved
+          ? "'FILL' 1, 'wght' 500, 'GRAD' 0, 'opsz' 24"
+          : "'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24";
+      }
+
+      function openSheet(card) {
+        selectedCard = card;
+        sheetTitle.textContent = card.dataset.title || "Selected Card";
+        sheetMeta.textContent = card.dataset.meta || "Quick Action";
+        refreshSaveButton();
+        sheetBackdrop.classList.remove("hidden");
+        actionSheet.classList.add("sheet-open");
+        document.body.classList.add("overflow-hidden");
+      }
+
+      function closeSheet() {
+        sheetBackdrop.classList.add("hidden");
+        actionSheet.classList.remove("sheet-open");
+        document.body.classList.remove("overflow-hidden");
+      }
+
+      function markActiveTab(tabName) {
+        tabButtons.forEach((button) => {
+          const isActive = button.dataset.tab === tabName;
+          button.classList.toggle("chip-active", isActive);
+          button.classList.toggle("bg-surface-container-highest", !isActive);
+          button.classList.toggle("text-on-surface", !isActive);
+        });
+      }
+
+      function markActiveTag() {
+        tagPills.forEach((pill) => {
+          const isActive = pill.dataset.tag === state.activeTag;
+          pill.classList.toggle("chip-active", isActive);
+          pill.classList.toggle("text-on-surface-variant", !isActive && pill.dataset.tag !== "streetwear");
+          pill.classList.toggle("text-primary", !isActive && pill.dataset.tag === "streetwear");
+        });
+      }
+
+      function matchesCard(card) {
+        const cardCategories = normalize(card.dataset.category).split(" ");
+        const cardCities = normalize(card.dataset.city).split(" ");
+        const cardSearch = normalize(card.dataset.search);
+        const query = normalize(state.search).replace("#", "");
+
+        const tabPass = state.forceAll || cardCategories.includes(state.activeTab);
+        const cityPass = cardCities.includes("all") || cardCities.includes(normalize(state.city));
+        const queryPass = !query || cardSearch.includes(query);
+
+        return tabPass && cityPass && queryPass;
+      }
+
+      function applyFilters() {
+        let visibleCards = 0;
+        let trendingVisible = 0;
+        let foodVisible = 0;
+
+        cards.forEach((card) => {
+          const visible = matchesCard(card);
+          card.classList.toggle("hidden-by-filter", !visible);
+          if (!visible) {
+            return;
+          }
+          visibleCards += 1;
+          if (trendingSection.contains(card)) {
+            trendingVisible += 1;
+          }
+          if (foodSection.contains(card)) {
+            foodVisible += 1;
+          }
+        });
+
+        trendingSection.classList.toggle("hidden-by-filter", trendingVisible === 0);
+        foodSection.classList.toggle("hidden-by-filter", foodVisible === 0);
+        tagsSection.classList.toggle("hidden-by-filter", visibleCards === 0);
+        emptyState.classList.toggle("hidden", visibleCards !== 0);
+
+        foodHeading.textContent = "Top in " + state.city;
+      }
+
+      tabButtons.forEach((button) => {
+        button.addEventListener("click", () => {
+          state.activeTab = button.dataset.tab;
+          state.forceAll = false;
+          markActiveTab(state.activeTab);
+          viewAllBtn.textContent = "View All";
+          applyFilters();
+          showToast(button.textContent.trim() + " tab selected");
+        });
+      });
+
+      searchInput.addEventListener("input", () => {
+        state.search = searchInput.value.trim();
+        state.activeTag = "";
+        markActiveTag();
+        applyFilters();
+      });
+
+      cityToggle.addEventListener("click", (event) => {
+        event.stopPropagation();
+        cityMenu.classList.toggle("hidden");
+      });
+
+      cityOptions.forEach((option) => {
+        option.addEventListener("click", () => {
+          state.city = option.dataset.city;
+          cityLabel.textContent = state.city;
+          cityMenu.classList.add("hidden");
+          applyFilters();
+          showToast("Switched to " + state.city);
+        });
+      });
+
+      document.addEventListener("click", (event) => {
+        if (!cityMenu.contains(event.target) && !cityToggle.contains(event.target)) {
+          cityMenu.classList.add("hidden");
+        }
+      });
+
+      viewAllBtn.addEventListener("click", () => {
+        state.forceAll = !state.forceAll;
+        viewAllBtn.textContent = state.forceAll ? "Tab Mode" : "View All";
+        applyFilters();
+        showToast(state.forceAll ? "All categories on" : "Tab filter on");
+      });
+
+      tagPills.forEach((pill) => {
+        pill.addEventListener("click", () => {
+          const tagName = pill.dataset.tag;
+          state.activeTag = state.activeTag === tagName ? "" : tagName;
+          state.search = state.activeTag ? "#" + state.activeTag : "";
+          searchInput.value = state.search;
+          markActiveTag();
+          applyFilters();
+          showToast(state.activeTag ? "#" + state.activeTag + " applied" : "Tag filter cleared");
+        });
+      });
+
+      cards.forEach((card) => {
+        card.addEventListener("click", () => openSheet(card));
+      });
+
+      sheetClose.addEventListener("click", closeSheet);
+      sheetBackdrop.addEventListener("click", closeSheet);
+
+      sheetViewBtn.addEventListener("click", () => {
+        closeSheet();
+        showToast("Opening " + (selectedCard?.dataset.title || "item"));
+      });
+
+      sheetSaveBtn.addEventListener("click", () => {
+        if (!selectedCard) {
+          return;
+        }
+        const id = cardId(selectedCard);
+        if (savedCards.has(id)) {
+          savedCards.delete(id);
+          showToast("Removed from saved");
+        } else {
+          savedCards.add(id);
+          showToast("Saved to your list");
+        }
+        refreshSaveButton();
+      });
+
+      sheetShareBtn.addEventListener("click", async () => {
+        const shareText = (selectedCard?.dataset.title || "StyleBite") + " - " + (selectedCard?.dataset.meta || "Explore");
+        try {
+          if (navigator.clipboard && navigator.clipboard.writeText) {
+            await navigator.clipboard.writeText(shareText);
+            showToast("Copied for sharing");
+          } else {
+            showToast("Share text ready");
+          }
+        } catch (error) {
+          showToast("Could not copy, try again");
+        }
+      });
+
+      streakBtn.addEventListener("click", () => {
+        showToast("Streak boosted. Keep exploring.");
+      });
+
+      navActions.forEach((button) => {
+        button.addEventListener("click", () => {
+          showToast(button.dataset.navAction + " space coming soon");
+        });
+      });
+
+      document.addEventListener("keydown", (event) => {
+        if (event.key === "Escape") {
+          closeSheet();
+          cityMenu.classList.add("hidden");
+        }
+      });
+
+      markActiveTab(state.activeTab);
+      markActiveTag();
+      applyFilters();
+    })();
+  </script>
+</body></html>
+
+
+
