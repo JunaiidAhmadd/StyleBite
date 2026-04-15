@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0, viewport-fit=cover" name="viewport"/>
+<title>StyleBite | Memories</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&amp;family=Be+Vietnam+Pro:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: "#FF4D6D",
+              secondary: "#FF8A5B",
+              accent: "#FFD166",
+              background: "#f9f6f5",
+              surface: "#ffffff",
+              textMain: "#2f2f2e",
+              textSoft: "#5c5b5b"
+            },
+            fontFamily: {
+              headline: ["Plus Jakarta Sans"],
+              body: ["Be Vietnam Pro"]
+            }
+          }
+        }
+      };
+    </script>
+<style>
+    .material-symbols-outlined {
+      font-variation-settings: "FILL" 0, "wght" 400, "GRAD" 0, "opsz" 24;
+    }
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    .no-scrollbar {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+    body {
+      background: #f9f6f5;
+      color: #2f2f2e;
+      font-family: "Be Vietnam Pro", sans-serif;
+    }
+  </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-textMain pb-32">
+<header class="fixed top-0 left-0 right-0 z-50 bg-[#f9f6f5]/92 backdrop-blur-xl border-b border-white/80">
+<div class="max-w-md mx-auto h-[72px] px-4 flex items-center justify-between">
+<div>
+<h1 class="font-headline text-[30px] leading-none font-extrabold text-textMain">Memories</h1>
+<p class="text-[11px] text-textSoft mt-0.5">Style moments you never want to lose</p>
+</div>
+<div class="flex items-center gap-2">
+<button class="h-10 w-10 rounded-full bg-white/85 text-textSoft hover:text-textMain hover:bg-white active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">search</span>
+</button>
+<button class="h-10 w-10 rounded-full bg-white/85 text-textSoft hover:text-textMain hover:bg-white active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">notifications</span>
+</button>
+<button class="h-10 w-10 rounded-full bg-white/85 text-textSoft hover:text-textMain hover:bg-white active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[20px]">chat_bubble</span>
+</button>
+</div>
+</div>
+</header>
+
+<main class="max-w-md mx-auto pt-24 px-3 space-y-4">
+<section class="rounded-[22px] border border-[#f5e6ef] bg-gradient-to-br from-[#ffeef6] to-[#f6edf8] p-4 shadow-[0_14px_28px_-24px_rgba(47,47,46,0.7)]">
+<div class="inline-flex items-center gap-1.5 rounded-full bg-[#ffd9ea] px-3 py-1 text-[11px] font-semibold text-primary">
+<span class="material-symbols-outlined text-[14px]">location_on</span>
+<span>Travel Memories</span>
+</div>
+<h2 class="font-headline text-[32px] leading-[1.1] font-extrabold mt-3 text-textMain">Your Journey in Looks</h2>
+<p class="text-sm text-textSoft mt-1 max-w-[290px]">Capture moments, outfits, and vibes from every place you visit.</p>
+</section>
+
+<section class="overflow-x-auto no-scrollbar pb-1">
+<div class="flex items-center gap-2" id="memoryFilters">
+<button aria-pressed="true" class="memory-filter-btn rounded-full bg-gradient-to-r from-[#FF4D6D] to-[#FF8A5B] px-5 py-2 text-xs font-bold text-white shadow-[0_10px_20px_-12px_rgba(255,77,109,0.9)]" data-filter="all" type="button">All</button>
+<button aria-pressed="false" class="memory-filter-btn rounded-full bg-white px-5 py-2 text-xs font-semibold text-textSoft" data-filter="2024" type="button">2024</button>
+<button aria-pressed="false" class="memory-filter-btn rounded-full bg-white px-5 py-2 text-xs font-semibold text-textSoft" data-filter="2023" type="button">2023</button>
+<button aria-pressed="false" class="memory-filter-btn rounded-full bg-white px-5 py-2 text-xs font-semibold text-textSoft" data-filter="favorites" type="button">Favorites</button>
+</div>
+</section>
+
+<section class="rounded-[22px] bg-surface p-2.5 shadow-[0_18px_35px_-24px_rgba(47,47,46,0.65)]" id="featuredMemoryCard">
+<div class="grid grid-cols-2 gap-1.5 overflow-hidden rounded-[18px]">
+<img alt="Selected memory image 1" class="h-[184px] w-full rounded-[14px] object-cover" id="featuredImage1" src=""/>
+<img alt="Selected memory image 2" class="h-[184px] w-full rounded-[14px] object-cover" id="featuredImage2" src=""/>
+</div>
+<div class="px-1.5 pt-3 pb-1.5">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline text-[26px] leading-tight font-extrabold text-textMain" id="featuredTitle"></h3>
+<span class="rounded-full bg-[#ffe7d9] px-2 py-1 text-[10px] font-bold text-secondary" id="featuredLocation"></span>
+</div>
+<p class="text-[12px] text-textSoft mt-1" id="featuredMeta"></p>
+<div class="mt-2 flex items-center justify-between">
+<div class="inline-flex items-center gap-1 text-xs font-semibold text-textSoft">
+<span class="material-symbols-outlined text-[16px]">favorite</span>
+<span id="featuredLikes"></span>
+</div>
+<button class="h-8 w-8 rounded-full bg-[#f8f8f8] text-textSoft hover:text-textMain active:scale-95 transition-all" type="button">
+<span class="material-symbols-outlined text-[18px]">chevron_right</span>
+</button>
+</div>
+</div>
+</section>
+
+<section class="space-y-3 pb-3" id="memoryList"></section>
+</main>
+
+<nav class="fixed bottom-6 left-0 right-0 z-50 flex justify-center px-4">
+<div class="w-full max-w-sm rounded-full border border-white/70 bg-[#fff3fb]/92 backdrop-blur-[24px] shadow-[0_14px_34px_rgba(24,24,24,0.28)]">
+<div class="flex items-center justify-between px-3 py-2">
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="home_page.html"><span class="material-symbols-outlined text-[22px] leading-none">home</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="reels.html"><span class="material-symbols-outlined text-[22px] leading-none">smart_display</span></a>
+<a class="flex h-12 w-12 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="post_creation.html"><span class="material-symbols-outlined text-[30px] leading-none" style="font-variation-settings: 'FILL' 1;">add_circle</span></a>
+<a aria-current="page" class="flex h-11 w-11 items-center justify-center rounded-full bg-gradient-to-br from-[#FF4D6D] to-[#FF8A5B] text-white shadow-[0_8px_20px_rgba(255,77,109,0.38)] transition-all duration-300 active:scale-95" href="memories.html"><span class="material-symbols-outlined text-[22px] leading-none" style="font-variation-settings: 'FILL' 1;">location_on</span></a>
+<a class="flex h-11 w-11 items-center justify-center rounded-full bg-white/65 text-[#2f2f2e] opacity-80 shadow-[inset_0_0_0_1px_rgba(255,255,255,0.55)] transition-all duration-300 hover:opacity-100 hover:bg-white active:scale-95" href="profile_page.html"><span class="material-symbols-outlined text-[22px] leading-none">person</span></a>
+</div>
+</div>
+</nav>
+
+<div class="hidden fixed inset-0 z-[70] bg-black/50" id="memoryDetailBackdrop"></div>
+<section class="hidden fixed inset-x-0 bottom-0 z-[71] rounded-t-3xl bg-surface max-h-[78dvh] overflow-y-auto no-scrollbar px-4 pt-4 pb-7 shadow-[0_-16px_38px_-22px_rgba(47,47,46,0.7)]" id="memoryDetailSheet">
+<div class="mx-auto h-1.5 w-14 rounded-full bg-[#e6e6e6]"></div>
+<div class="mt-3 flex items-center justify-between">
+<h2 class="font-headline text-2xl font-extrabold text-textMain">Memory Details</h2>
+<button class="h-9 w-9 rounded-full bg-[#f5f5f5] text-textSoft hover:text-textMain active:scale-95 transition-all" id="closeMemoryDetail" type="button">
+<span class="material-symbols-outlined text-[20px]">close</span>
+</button>
+</div>
+<div class="mt-4 rounded-2xl overflow-hidden">
+<img alt="Memory detail image" class="w-full h-[220px] object-cover" id="detailImage" src=""/>
+</div>
+<div class="mt-4 space-y-2">
+<div class="flex items-start justify-between gap-2">
+<h3 class="font-headline text-3xl font-extrabold leading-tight text-textMain" id="detailTitle"></h3>
+<span class="rounded-full bg-[#ffe7d9] px-3 py-1 text-[11px] font-bold text-secondary" id="detailLocation"></span>
+</div>
+<p class="text-xs text-textSoft" id="detailMeta"></p>
+<p class="text-sm text-textSoft leading-relaxed" id="detailDescription"></p>
+</div>
+<div class="mt-5 grid grid-cols-2 gap-3">
+<div class="rounded-xl bg-[#fff5f8] p-3">
+<p class="text-[11px] uppercase tracking-widest text-textSoft font-semibold">Likes</p>
+<p class="font-headline text-2xl font-extrabold text-textMain mt-0.5" id="detailLikes"></p>
+</div>
+<div class="rounded-xl bg-[#fff7f1] p-3">
+<p class="text-[11px] uppercase tracking-widest text-textSoft font-semibold">Rating</p>
+<p class="font-headline text-2xl font-extrabold text-textMain mt-0.5" id="detailRating"></p>
+</div>
+<div class="rounded-xl bg-[#f7f7ff] p-3">
+<p class="text-[11px] uppercase tracking-widest text-textSoft font-semibold">Comments</p>
+<p class="font-headline text-2xl font-extrabold text-textMain mt-0.5" id="detailComments"></p>
+</div>
+<div class="rounded-xl bg-[#f7fff8] p-3">
+<p class="text-[11px] uppercase tracking-widest text-textSoft font-semibold">Saved</p>
+<p class="font-headline text-2xl font-extrabold text-textMain mt-0.5" id="detailSaved"></p>
+</div>
+</div>
+</section>
+
+<script>
+  (() => {
+    const memoryData = [
+      {
+        id: "paris-2024",
+        title: "Magical Christmas in the city of lights",
+        shortTitle: "Magical Christmas in the city of lights",
+        date: "Dec 25, 2024",
+        note: "Winter chic look",
+        location: "Paris, France",
+        likes: 234,
+        rating: "4.8",
+        comments: 48,
+        saved: 112,
+        description: "Layered winter outfit with soft neutral tones captured near the Seine at golden hour.",
+        year: "2024",
+        favorite: true,
+        image1: "https://images.unsplash.com/photo-1549144511-f099e773c147?auto=format&fit=crop&w=900&q=80",
+        image2: "https://images.unsplash.com/photo-1471623320832-752e8bbf8413?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        id: "tokyo-2024",
+        title: "Exploring the streets of Shibuya",
+        shortTitle: "Exploring the streets of Shibuya",
+        date: "Oct 08, 2024",
+        note: "Neon lane style diary",
+        location: "Tokyo, Japan",
+        likes: 310,
+        rating: "4.9",
+        comments: 63,
+        saved: 146,
+        description: "Bold neon palette with oversized outerwear and utility sneakers in Shibuya night lights.",
+        year: "2024",
+        favorite: false,
+        image1: "https://images.unsplash.com/photo-1536098561742-ca998e48cbcc?auto=format&fit=crop&w=900&q=80",
+        image2: "https://images.unsplash.com/photo-1491884662610-dfcd28f30cfb?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        id: "istanbul-2023",
+        title: "Sunset layers near Galata",
+        shortTitle: "Sunset layers near Galata",
+        date: "Nov 02, 2023",
+        note: "Cafe stroll outfit",
+        location: "Istanbul, Turkey",
+        likes: 187,
+        rating: "4.6",
+        comments: 31,
+        saved: 84,
+        description: "Earth-tone layers with scarf detail, shot during a relaxed walk around Galata district.",
+        year: "2023",
+        favorite: true,
+        image1: "https://images.unsplash.com/photo-1527838832700-5059252407fa?auto=format&fit=crop&w=900&q=80",
+        image2: "https://images.unsplash.com/photo-1541417904950-b855846fe074?auto=format&fit=crop&w=900&q=80"
+      },
+      {
+        id: "karachi-2023",
+        title: "Beachside brunch looks",
+        shortTitle: "Beachside brunch looks",
+        date: "Jun 15, 2023",
+        note: "Soft summer palette",
+        location: "Karachi, Pakistan",
+        likes: 164,
+        rating: "4.5",
+        comments: 22,
+        saved: 69,
+        description: "Lightweight coastal brunch fit with linen layers and pastel accents near Clifton beach.",
+        year: "2023",
+        favorite: false,
+        image1: "https://images.unsplash.com/photo-1473116763249-2faaef81ccda?auto=format&fit=crop&w=900&q=80",
+        image2: "https://images.unsplash.com/photo-1493976040374-85c8e12f0c0e?auto=format&fit=crop&w=900&q=80"
+      }
+    ];
+
+    const filterButtons = Array.from(document.querySelectorAll(".memory-filter-btn"));
+    const memoryList = document.getElementById("memoryList");
+    const featuredImage1 = document.getElementById("featuredImage1");
+    const featuredImage2 = document.getElementById("featuredImage2");
+    const featuredTitle = document.getElementById("featuredTitle");
+    const featuredLocation = document.getElementById("featuredLocation");
+    const featuredMeta = document.getElementById("featuredMeta");
+    const featuredLikes = document.getElementById("featuredLikes");
+    const featuredCard = document.getElementById("featuredMemoryCard");
+    const memoryDetailBackdrop = document.getElementById("memoryDetailBackdrop");
+    const memoryDetailSheet = document.getElementById("memoryDetailSheet");
+    const closeMemoryDetail = document.getElementById("closeMemoryDetail");
+    const detailImage = document.getElementById("detailImage");
+    const detailTitle = document.getElementById("detailTitle");
+    const detailLocation = document.getElementById("detailLocation");
+    const detailMeta = document.getElementById("detailMeta");
+    const detailDescription = document.getElementById("detailDescription");
+    const detailLikes = document.getElementById("detailLikes");
+    const detailRating = document.getElementById("detailRating");
+    const detailComments = document.getElementById("detailComments");
+    const detailSaved = document.getElementById("detailSaved");
+
+    let currentFilter = "all";
+    let selectedMemoryId = memoryData[0].id;
+
+    function filterMemories() {
+      if (currentFilter === "all") return memoryData;
+      if (currentFilter === "favorites") return memoryData.filter((item) => item.favorite);
+      return memoryData.filter((item) => item.year === currentFilter);
+    }
+
+    function updateFeaturedCard(memory) {
+      featuredImage1.src = memory.image1;
+      featuredImage2.src = memory.image2;
+      featuredTitle.textContent = memory.title + " *";
+      featuredLocation.textContent = memory.location;
+      featuredMeta.textContent = memory.date + " - " + memory.note;
+      featuredLikes.textContent = memory.likes;
+    }
+
+    function openMemoryDetails(memory) {
+      detailImage.src = memory.image1;
+      detailTitle.textContent = memory.title;
+      detailLocation.textContent = memory.location;
+      detailMeta.textContent = memory.date + " - " + memory.note;
+      detailDescription.textContent = memory.description;
+      detailLikes.textContent = memory.likes;
+      detailRating.textContent = memory.rating;
+      detailComments.textContent = memory.comments;
+      detailSaved.textContent = memory.saved;
+      memoryDetailBackdrop.classList.remove("hidden");
+      memoryDetailSheet.classList.remove("hidden");
+    }
+
+    function closeMemoryDetails() {
+      memoryDetailBackdrop.classList.add("hidden");
+      memoryDetailSheet.classList.add("hidden");
+    }
+
+    function setFilterButtonState() {
+      filterButtons.forEach((button) => {
+        const isActive = button.dataset.filter === currentFilter;
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.classList.toggle("bg-gradient-to-r", isActive);
+        button.classList.toggle("from-[#FF4D6D]", isActive);
+        button.classList.toggle("to-[#FF8A5B]", isActive);
+        button.classList.toggle("text-white", isActive);
+        button.classList.toggle("font-bold", isActive);
+        button.classList.toggle("shadow-[0_10px_20px_-12px_rgba(255,77,109,0.9)]", isActive);
+        button.classList.toggle("bg-white", !isActive);
+        button.classList.toggle("text-textSoft", !isActive);
+        button.classList.toggle("font-semibold", !isActive);
+      });
+    }
+
+    function renderMemoryList() {
+      const filtered = filterMemories();
+      if (!filtered.some((item) => item.id === selectedMemoryId) && filtered.length > 0) {
+        selectedMemoryId = filtered[0].id;
+      }
+
+      memoryList.innerHTML = "";
+
+      filtered.forEach((memory) => {
+        const isSelected = memory.id === selectedMemoryId;
+        const card = document.createElement("button");
+        card.type = "button";
+        card.className = "w-full text-left rounded-[22px] bg-surface p-2.5 shadow-[0_14px_30px_-24px_rgba(47,47,46,0.75)] border transition-all duration-300 active:scale-[0.99]";
+        card.classList.add(isSelected ? "border-primary/40" : "border-transparent");
+        card.dataset.memoryId = memory.id;
+
+        card.innerHTML =
+          "<div class='grid grid-cols-2 gap-1.5 overflow-hidden rounded-[16px]'>" +
+            "<img class='h-[138px] w-full rounded-[12px] object-cover' src='" + memory.image1 + "' alt='Memory image 1'/>" +
+            "<img class='h-[138px] w-full rounded-[12px] object-cover' src='" + memory.image2 + "' alt='Memory image 2'/>" +
+          "</div>" +
+          "<div class='px-1.5 pt-3 pb-1 flex items-start justify-between gap-2'>" +
+            "<div>" +
+              "<p class='font-headline text-[20px] leading-tight font-extrabold text-textMain'>" + memory.shortTitle + "</p>" +
+              "<p class='text-[11px] text-textSoft mt-1'>" + memory.date + " - " + memory.note + "</p>" +
+            "</div>" +
+            "<span class='shrink-0 rounded-full bg-[#ffe7d9] px-2 py-1 text-[10px] font-bold text-secondary'>" + memory.location + "</span>" +
+          "</div>" +
+          "<div class='px-1.5 pb-1.5 flex items-center justify-between'>" +
+            "<span class='inline-flex items-center gap-1 text-xs font-semibold text-textSoft'><span class='material-symbols-outlined text-[16px]'>favorite</span>" + memory.likes + "</span>" +
+            "<span class='material-symbols-outlined text-[18px] text-textSoft'>chevron_right</span>" +
+          "</div>";
+
+        card.addEventListener("click", () => {
+          selectedMemoryId = memory.id;
+          updateFeaturedCard(memory);
+          renderMemoryList();
+          openMemoryDetails(memory);
+        });
+
+        memoryList.appendChild(card);
+      });
+
+      const selected = memoryData.find((item) => item.id === selectedMemoryId);
+      if (selected) updateFeaturedCard(selected);
+    }
+
+    filterButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        currentFilter = button.dataset.filter;
+        setFilterButtonState();
+        renderMemoryList();
+      });
+    });
+
+    featuredCard.addEventListener("click", () => {
+      const selected = memoryData.find((item) => item.id === selectedMemoryId);
+      if (selected) openMemoryDetails(selected);
+    });
+
+    closeMemoryDetail.addEventListener("click", closeMemoryDetails);
+    memoryDetailBackdrop.addEventListener("click", closeMemoryDetails);
+    document.addEventListener("keydown", (event) => {
+      if (event.key === "Escape") closeMemoryDetails();
+    });
+
+    setFilterButtonState();
+    renderMemoryList();
+  })();
+</script>
+</body></html>

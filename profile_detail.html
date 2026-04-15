@@ -121,7 +121,7 @@
 </div>
 <div class="flex items-center gap-4">
 <span class="material-symbols-outlined text-[#2f2f2e]/70 hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200" data-icon="share">share</span>
-<span class="material-symbols-outlined text-[#2f2f2e]/70 hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200" data-icon="settings">settings</span>
+<a class="material-symbols-outlined text-[#2f2f2e]/70 hover:opacity-80 transition-opacity cursor-pointer active:scale-95 duration-200" data-icon="settings" href="settings.html">settings</a>
 </div>
 </header>
 <main class="pt-24 pb-32 max-w-4xl mx-auto px-6">
@@ -150,10 +150,14 @@
 </button>
 </div>
 </div>
-<div class="flex items-center justify-center md:justify-start mt-2">
+<div class="flex flex-wrap items-center justify-center md:justify-start gap-3 mt-2">
 <a class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low text-on-surface font-semibold text-sm active:scale-95 transition-all hover:opacity-90" href="private_earning.html">
 <span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">account_balance_wallet</span>
                                 My Earnings
+                            </a>
+<a class="inline-flex items-center gap-2 px-5 py-2 rounded-full bg-surface-container-low text-on-surface font-semibold text-sm active:scale-95 transition-all hover:opacity-90" href="memories.html">
+<span class="material-symbols-outlined text-base" style="font-variation-settings: 'FILL' 1;">photo_library</span>
+                                Memories
                             </a>
 </div>
 <!-- Stats Row -->
@@ -172,7 +176,7 @@
 </div>
 </div>
 <p class="text-on-surface font-medium leading-relaxed max-w-md">
-                        Digital Fashion Enthusiast | Curating the future of streetwear ⚡ | Winner of Summer ’23 Street Style Battle
+                        Digital Fashion Enthusiast | Curating the future of streetwear | Winner of Summer 23 Street Style Battle
                     </p>
 </div>
 </div>
@@ -248,84 +252,54 @@
 <!-- Content Feed Section -->
 <section>
 <div class="flex items-center justify-between mb-8 border-b border-outline-variant/10 pb-4">
-<div class="flex gap-8">
-<div class="relative pb-4">
-<span class="font-headline font-extrabold text-lg text-on-background cursor-pointer">Outfits</span>
-<div class="absolute bottom-0 left-0 w-full h-1 bg-primary rounded-t-full"></div>
-</div>
-<div class="relative pb-4">
-<span class="font-headline font-bold text-lg text-on-surface-variant/50 cursor-pointer hover:text-on-background transition-colors">Saved</span>
-</div>
+<div class="flex gap-5" id="profileContentTabs">
+<button aria-pressed="true" class="profile-tab-btn relative pb-4 font-headline font-extrabold text-lg text-on-background" data-tab="outfits" type="button">Outfits<div class="profile-tab-indicator absolute bottom-0 left-0 h-1 w-full rounded-t-full bg-primary"></div></button>
+<button aria-pressed="false" class="profile-tab-btn relative pb-4 font-headline font-bold text-lg text-on-surface-variant/60 hover:text-on-background transition-colors" data-tab="saved" type="button">Saved<div class="profile-tab-indicator absolute bottom-0 left-0 h-1 w-full rounded-t-full bg-primary hidden"></div></button>
+<button aria-pressed="false" class="profile-tab-btn relative pb-4 font-headline font-bold text-lg text-on-surface-variant/60 hover:text-on-background transition-colors" data-tab="food" type="button">Food<div class="profile-tab-indicator absolute bottom-0 left-0 h-1 w-full rounded-t-full bg-primary hidden"></div></button>
 </div>
 <div class="flex bg-surface-container-low rounded-full p-1 gap-1">
-<button class="p-2 rounded-full bg-surface-container-lowest fashion-shadow text-primary">
+<button class="p-2 rounded-full bg-surface-container-lowest fashion-shadow text-primary" type="button">
 <span class="material-symbols-outlined block text-xl" data-icon="grid_view">grid_view</span>
 </button>
-<button class="p-2 rounded-full text-on-surface-variant">
+<button class="p-2 rounded-full text-on-surface-variant" type="button">
 <span class="material-symbols-outlined block text-xl" data-icon="view_day">view_day</span>
 </button>
 </div>
 </div>
-<!-- Masonry-style Grid -->
+
+<div class="profile-tab-content" data-content="outfits">
 <div class="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-6">
-<!-- Grid Item 1 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Streetwear Look" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Editorial street photography of a model in oversized layered monochrome techwear with high-visibility pink accents on a rainy city street" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ZL8V5erknEVmsuiLWND9WpN-sco3ls3wCgh0gHN7CaYhUxs3DzcEXwHw0LuytY9A70nY5pswQHpFz8tghzbI1hjMHjMx17QGjjYP6lSRWgxoE22Hi47KJ3WQqvHPqlQbeR-JopY2DCvWXErbLANvyP5hIlvmLcZKXNyOFgCQTO_OYZgyycJK9GRSF02FJO2psJtclRxtWzQ48--e8VuxERBNthjSIgRSSD0xLM94hrrRr7H2YetEidusKsjRBKRfWFVNJKGoIzo"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            2.4k
-                        </div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Streetwear Look" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ZL8V5erknEVmsuiLWND9WpN-sco3ls3wCgh0gHN7CaYhUxs3DzcEXwHw0LuytY9A70nY5pswQHpFz8tghzbI1hjMHjMx17QGjjYP6lSRWgxoE22Hi47KJ3WQqvHPqlQbeR-JopY2DCvWXErbLANvyP5hIlvmLcZKXNyOFgCQTO_OYZgyycJK9GRSF02FJO2psJtclRxtWzQ48--e8VuxERBNthjSIgRSSD0xLM94hrrRr7H2YetEidusKsjRBKRfWFVNJKGoIzo"/></div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Avant-Garde Style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAQ8RAJkJU1OcQoiMKxas4BlGV4chhudN-5kyU1oytOiQA6a0OohRfaVXjAXFC9kFoeVnPHt-NDRywEvRxkI4OnRbjekfBmFe3agEkI4yZ3hmG7wl3fCvCE7g-bs2m1rN1xw7oV-57TnDpHMIrivbnBssS-g1b9ZoN8ribG48e4rK7nRp4CoRRTFlZlpvGOnUHKpjq_b74a8k2jTuANqhfhNvOXZtAyrUE-woJRb48csT-ZB0cT8QLbL0jl-q8pIDNptqIivL8RY"/></div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Editorial Fashion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCChNQSF7lNOVgM6WIxA98_EjGqR7XZW1pGB7hixTYqrfTDvqKdu3cbRuUGSfXlQKOb7MxG2szC-rumOu9ixTZ491xeG6ZqVKnEr7LYxvJFpbfbLdFk7bKGnJTE-1DnO0XxAMhicJ4q0IiLfmcKHPJ6W1KFA6SCKzuDkNI0w0hQtusDl_cKZRaI44PpxOL8AYOD1tAsjV89yj5ptOpXxZ5_4IVFkFr-U2A2zCpO6CMf6Pdd36JEyQMtLIqvaZIbbrOEIS28dHwOXmA"/></div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Cyberpunk Aesthetic" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxUHPOVFyu0ty5CDLL6RQN4cMXvZe__VEuldUquqK57VdUpoLgzTnVM8x6gsut_KS2NE24GjBgMUaRxxgX312Ovh0_ySOAbp0RF8Uxmi8hXCwucocOoOgdPJba9JF2yKh_iyFwTzcxJvlHltMfKRvQMsqpPJapUL1oU1zycQhHBsSj9sL1Q7c4hQYctX3vgb27HKb3Ynk9s6v_0YnU9Erv9Ssmv2wPA5rdMI4b7gVtz5fv4hHZr5OBSDesMs2EpCG1_dHCH4BmkME"/></div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Summer Street Style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZBMLtjp7r_u_ei0nItv7U1rkFKMB0aLnr7k66zTcoYdiThQNDSNWTptr6KXJNOgXwfXvU7G1XpggyyFIDd9Jj_UvFKTTsKlcsm_bZRgsNdsRIc5J0wUahgDoJ8aUHHqjftRlh0Nkt2CIlf9JJajnACHGwPyMgtPcwxmi4zOHurOG3eaAjvxHY7PBxDkoi3aByMBfOEHUGoUptsVZj0xOmS4frNZkdItePEntLd1ksktdSQo-99ehBk3IlUdF2GgOTrHRkMP_L8w"/></div>
+<div class="relative aspect-[3/4] rounded-lg overflow-hidden group"><img alt="Modern Minimalist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwG2OcSpcR6u77CpgwLUldZC0icZdWXv8cX54Aj53vGDTCcPg4wlqMKm0mDalhrH1s1l6bUI8asgwytvaVOe5jFogNJ9I3ZHtkYRdibB-HOVMr2jnPzNfwBKjwsW5S9XVTNzS01jkcyuovXkhy2mt15c3OnBBxXhmX97CODte31l_YnOEAEOKd3dIr7AiO2yKs6bxR6qD8w8Nsxdzpv2H7wQ3dIFnpa2FIU4RJmNdkWKBz4xUPaCW10esjD6S8foyY_OYDUadl-Mk"/></div>
 </div>
 </div>
-<!-- Grid Item 2 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Avant-Garde Style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High fashion studio shot of a model wearing an avant-garde sculptural coat made of metallic materials, vibrant magenta lighting and deep shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAQ8RAJkJU1OcQoiMKxas4BlGV4chhudN-5kyU1oytOiQA6a0OohRfaVXjAXFC9kFoeVnPHt-NDRywEvRxkI4OnRbjekfBmFe3agEkI4yZ3hmG7wl3fCvCE7g-bs2m1rN1xw7oV-57TnDpHMIrivbnBssS-g1b9ZoN8ribG48e4rK7nRp4CoRRTFlZlpvGOnUHKpjq_b74a8k2jTuANqhfhNvOXZtAyrUE-woJRb48csT-ZB0cT8QLbL0jl-q8pIDNptqIivL8RY"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            1.8k
-                        </div>
+
+<div class="profile-tab-content hidden" data-content="saved">
+<div class="bg-surface-container-low rounded-xl p-6 mb-4">
+<p class="font-headline font-bold text-xl text-on-surface mb-1">Saved Looks</p>
+<p class="text-sm text-on-surface-variant">Your saved inspiration appears here for quick styling reference.</p>
+</div>
+<div class="grid grid-cols-2 gap-3 md:gap-6">
+<div class="rounded-lg overflow-hidden bg-surface-container-low"><img alt="Saved look 1" class="w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-ZL8V5erknEVmsuiLWND9WpN-sco3ls3wCgh0gHN7CaYhUxs3DzcEXwHw0LuytY9A70nY5pswQHpFz8tghzbI1hjMHjMx17QGjjYP6lSRWgxoE22Hi47KJ3WQqvHPqlQbeR-JopY2DCvWXErbLANvyP5hIlvmLcZKXNyOFgCQTO_OYZgyycJK9GRSF02FJO2psJtclRxtWzQ48--e8VuxERBNthjSIgRSSD0xLM94hrrRr7H2YetEidusKsjRBKRfWFVNJKGoIzo"/></div>
+<div class="rounded-lg overflow-hidden bg-surface-container-low"><img alt="Saved look 2" class="w-full aspect-[3/4] object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBKAQ8RAJkJU1OcQoiMKxas4BlGV4chhudN-5kyU1oytOiQA6a0OohRfaVXjAXFC9kFoeVnPHt-NDRywEvRxkI4OnRbjekfBmFe3agEkI4yZ3hmG7wl3fCvCE7g-bs2m1rN1xw7oV-57TnDpHMIrivbnBssS-g1b9ZoN8ribG48e4rK7nRp4CoRRTFlZlpvGOnUHKpjq_b74a8k2jTuANqhfhNvOXZtAyrUE-woJRb48csT-ZB0cT8QLbL0jl-q8pIDNptqIivL8RY"/></div>
 </div>
 </div>
-<!-- Grid Item 3 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Editorial Fashion" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Fashion photography of a model in a minimal beige suit with a shocking pink silk scarf against a brutalist concrete architecture backdrop" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCChNQSF7lNOVgM6WIxA98_EjGqR7XZW1pGB7hixTYqrfTDvqKdu3cbRuUGSfXlQKOb7MxG2szC-rumOu9ixTZ491xeG6ZqVKnEr7LYxvJFpbfbLdFk7bKGnJTE-1DnO0XxAMhicJ4q0IiLfmcKHPJ6W1KFA6SCKzuDkNI0w0hQtusDl_cKZRaI44PpxOL8AYOD1tAsjV89yj5ptOpXxZ5_4IVFkFr-U2A2zCpO6CMf6Pdd36JEyQMtLIqvaZIbbrOEIS28dHwOXmA"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            3.1k
-                        </div>
+
+<div class="profile-tab-content hidden" data-content="food">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+<div class="bg-surface-container-low rounded-xl p-3">
+<img alt="Food post 1" class="w-full aspect-[4/3] rounded-lg object-cover mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZBMLtjp7r_u_ei0nItv7U1rkFKMB0aLnr7k66zTcoYdiThQNDSNWTptr6KXJNOgXwfXvU7G1XpggyyFIDd9Jj_UvFKTTsKlcsm_bZRgsNdsRIc5J0wUahgDoJ8aUHHqjftRlh0Nkt2CIlf9JJajnACHGwPyMgtPcwxmi4zOHurOG3eaAjvxHY7PBxDkoi3aByMBfOEHUGoUptsVZj0xOmS4frNZkdItePEntLd1ksktdSQo-99ehBk3IlUdF2GgOTrHRkMP_L8w"/>
+<p class="font-headline font-bold text-on-surface">BBQ Tonight</p>
+<p class="text-sm text-on-surface-variant">Service 3.8 | Food 4.8 | Ambience 4.2</p>
 </div>
-</div>
-<!-- Grid Item 4 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Cyberpunk Aesthetic" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Full body shot of a person in high-fashion cyberpunk streetwear, wearing cargo pants and a sheer mesh top with digital glow effects" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxUHPOVFyu0ty5CDLL6RQN4cMXvZe__VEuldUquqK57VdUpoLgzTnVM8x6gsut_KS2NE24GjBgMUaRxxgX312Ovh0_ySOAbp0RF8Uxmi8hXCwucocOoOgdPJba9JF2yKh_iyFwTzcxJvlHltMfKRvQMsqpPJapUL1oU1zycQhHBsSj9sL1Q7c4hQYctX3vgb27HKb3Ynk9s6v_0YnU9Erv9Ssmv2wPA5rdMI4b7gVtz5fv4hHZr5OBSDesMs2EpCG1_dHCH4BmkME"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            942
-                        </div>
-</div>
-</div>
-<!-- Grid Item 5 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Summer Street Style" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="Street style photo of a model in a neon green tracksuit and pink chunky sneakers, walking through a minimalist urban plaza" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZBMLtjp7r_u_ei0nItv7U1rkFKMB0aLnr7k66zTcoYdiThQNDSNWTptr6KXJNOgXwfXvU7G1XpggyyFIDd9Jj_UvFKTTsKlcsm_bZRgsNdsRIc5J0wUahgDoJ8aUHHqjftRlh0Nkt2CIlf9JJajnACHGwPyMgtPcwxmi4zOHurOG3eaAjvxHY7PBxDkoi3aByMBfOEHUGoUptsVZj0xOmS4frNZkdItePEntLd1ksktdSQo-99ehBk3IlUdF2GgOTrHRkMP_L8w"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            4.5k
-                        </div>
-</div>
-</div>
-<!-- Grid Item 6 -->
-<div class="relative aspect-[3/4] rounded-lg overflow-hidden group">
-<img alt="Modern Minimalist" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110" data-alt="High contrast fashion photo of a model in a sharp black blazer and flowing pink trousers against a bright white gallery wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwG2OcSpcR6u77CpgwLUldZC0icZdWXv8cX54Aj53vGDTCcPg4wlqMKm0mDalhrH1s1l6bUI8asgwytvaVOe5jFogNJ9I3ZHtkYRdibB-HOVMr2jnPzNfwBKjwsW5S9XVTNzS01jkcyuovXkhy2mt15c3OnBBxXhmX97CODte31l_YnOEAEOKd3dIr7AiO2yKs6bxR6qD8w8Nsxdzpv2H7wQ3dIFnpa2FIU4RJmNdkWKBz4xUPaCW10esjD6S8foyY_OYDUadl-Mk"/>
-<div class="absolute inset-0 bg-gradient-to-t from-on-surface/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex flex-col justify-end p-4">
-<div class="flex items-center gap-2 text-white text-xs font-bold">
-<span class="material-symbols-outlined text-sm" data-icon="favorite" style="font-variation-settings: 'FILL' 1;">favorite</span>
-                            1.2k
-                        </div>
+<div class="bg-surface-container-low rounded-xl p-3">
+<img alt="Food post 2" class="w-full aspect-[4/3] rounded-lg object-cover mb-3" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBwG2OcSpcR6u77CpgwLUldZC0icZdWXv8cX54Aj53vGDTCcPg4wlqMKm0mDalhrH1s1l6bUI8asgwytvaVOe5jFogNJ9I3ZHtkYRdibB-HOVMr2jnPzNfwBKjwsW5S9XVTNzS01jkcyuovXkhy2mt15c3OnBBxXhmX97CODte31l_YnOEAEOKd3dIr7AiO2yKs6bxR6qD8w8Nsxdzpv2H7wQ3dIFnpa2FIU4RJmNdkWKBz4xUPaCW10esjD6S8foyY_OYDUadl-Mk"/>
+<p class="font-headline font-bold text-on-surface">Spice House</p>
+<p class="text-sm text-on-surface-variant">Service 4.1 | Food 4.7 | Ambience 4.0</p>
 </div>
 </div>
 </div>
@@ -343,6 +317,37 @@
 </div>
 </div>
 </nav>
+<script>
+  (() => {
+    const tabButtons = Array.from(document.querySelectorAll(".profile-tab-btn"));
+    const tabContents = Array.from(document.querySelectorAll(".profile-tab-content"));
+
+    function setTab(activeTab) {
+      tabButtons.forEach((button) => {
+        const isActive = button.dataset.tab === activeTab;
+        const indicator = button.querySelector(".profile-tab-indicator");
+        button.setAttribute("aria-pressed", isActive ? "true" : "false");
+        button.classList.toggle("font-extrabold", isActive);
+        button.classList.toggle("text-on-background", isActive);
+        button.classList.toggle("font-bold", !isActive);
+        button.classList.toggle("text-on-surface-variant/60", !isActive);
+        if (indicator) indicator.classList.toggle("hidden", !isActive);
+      });
+
+      tabContents.forEach((content) => {
+        content.classList.toggle("hidden", content.dataset.content !== activeTab);
+      });
+    }
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => setTab(button.dataset.tab));
+    });
+
+    setTab("outfits");
+  })();
+</script>
 </body></html>
+
+
 
 
